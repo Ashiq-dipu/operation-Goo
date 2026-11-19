@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support Us & Donate | Operation GO</title>
+  <meta name="description" content="Make a 501(c)(3) tax-deductible donation to Operation GO. Directly sponsor student toolbags, OSHA-10 certifications, and vocational trade scholarships.">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       FLOATING FROSTED NAVBAR
+       ========================================================================== -->
+  <header class="charido-nav-wrapper">
+    <div class="container">
+      <div class="charido-nav-inner">
+        <!-- Brand Logo -->
+        <a href="index.html" class="charido-brand" aria-label="Operation GO Home">
+          <span class="brand-logo-badge">
+            <img src="images/logo.png" alt="Operation GO" class="brand-logo-img">
+          </span>
+        </a>
+
+        <!-- Menu Links -->
+        <nav class="charido-nav-links">
+          <a href="index.html" class="charido-nav-link">Home</a>
+          <a href="about.html" class="charido-nav-link">About</a>
+          <a href="programs.html" class="charido-nav-link">Programs</a>
+          <a href="gallery.html" class="charido-nav-link">Gallery</a>
+          <a href="careers.html" class="charido-nav-link">Careers</a>
+          <a href="get-involved.html" class="charido-nav-link">Get Involved</a>
+          <a href="contact.html" class="charido-nav-link">Contact</a>
+        </nav>
+
+        <!-- Right Action Button -->
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <button class="btn-charido-orange" data-open-modal="donateModal">
+            <span>Donate Now</span>
+            <span class="arrow-box">→</span>
+          </button>
+          <button class="mobile-toggle-btn" id="charidoMobileToggle" aria-label="Toggle navigation">☰</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <section style="background: var(--bg-subtle); padding: 130px 0 50px; border-bottom: 1px solid var(--border-light);">
+    <div class="container">
+      
+      <h1 class="heading-section" style="font-size: 2.75rem; margin-top: 8px;">
+        Invest In Rochester's Working Future
+      </h1>
+      <p class="lead-text" style="max-width: 720px; margin-top: 12px;">
+        100% of your contribution directly purchases student hand toolkits, workshop supplies, and OSHA safety credentials. Zero bloated administrative overhead.
+      </p>
+    </div>
+  </section>
+
+  <!-- Sponsorship Tiers Grid -->
+  <section class="section">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-bottom: 64px;">
+        
+        <!-- Tier 1 -->
+        <div class="tier-card">
+          <div>
+            <div class="tier-title">Student Toolbag Sponsor</div>
+            <div class="tier-amount">$150</div>
+            <p class="tier-desc">
+              Outfits one student with their complete starter toolkit: framing hammer, 25ft tape measure, torpedo level, speed square, and safety eyewear.
+            </p>
+            <div class="tier-perks">
+              <div class="tier-perk-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Hand-written thank you note</span>
+              </div>
+              <div class="tier-perk-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Listed on annual supporter wall</span>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-outline" style="width: 100%;" onclick="alert('Thank you! Please contact info@operationgoroc.org to complete your $150 Student Toolbag donation.')">Sponsor $150</button>
+        </div>
+
+        <!-- Tier 2 -->
+        <div class="tier-card">
+          <div>
+            <div class="tier-title">OSHA-10 Certification Fund</div>
+            <div class="tier-amount">$350</div>
+            <p class="tier-desc">
+              Funds federal testing fees, study courseware, and safety gear verification for one graduating apprentice entering active construction sites.
+            </p>
+            <div class="tier-perks">
+              <div class="tier-perk-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Official graduation certificate copy</span>
+              </div>
+              <div class="tier-perk-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Annual impact report publication</span>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-outline" style="width: 100%;" onclick="alert('Thank you! Please contact info@operationgoroc.org to complete your $350 OSHA-10 donation.')">Sponsor $350</button>
+        </div>
+
+        <!-- Tier 3 (Featured) -->
+        <div class="tier-card featured">
+          <div class="tier-badge">High Impact</div>
+          <div>
+            <div class="tier-title">Full Cohort Seat Scholarship</div>
+            <div class="tier-amount">$1,200</div>
+            <p class="tier-desc">
+              Completely underwrites one student's entire 16-week vocational journey—including lumber, electrical supplies, OSHA-10 testing, and job placement.
+            </p>
+            <div class="tier-perks">
+              <div class="tier-perk-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Personal updates on student placement</span>
+              </div>
+              <div class="tier-perk-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>VIP invitation to cohort graduation</span>
+              </div>
+              <div class="tier-perk-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Permanent sponsor plaque in workshop bay</span>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-primary" style="width: 100%;" onclick="alert('Thank you! Please contact info@operationgoroc.org to complete your $1,200 Scholarship donation.')">Sponsor $1,200</button>
+        </div>
+
+        <!-- Tier 4 -->
+        <div class="tier-card">
+          <div>
+            <div class="tier-title">Workshop Bay Sponsor</div>
+            <div class="tier-amount">$5,000</div>
+            <p class="tier-desc">
+              Names a dedicated training workbench in our Rochester facility, funding industrial machinery and workshop supplies for an entire cohort year.
+            </p>
+            <div class="tier-perks">
+              <div class="tier-perk-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Permanent brass plaque on workshop bay</span>
+              </div>
+              <div class="tier-perk-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Corporate partner logo on site</span>
+              </div>
+              <div class="tier-perk-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Private shop tour with Justin Ortiz</span>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-outline" style="width: 100%;" onclick="alert('Thank you! Please contact info@operationgoroc.org to complete your $5,000 Workshop Bay donation.')">Sponsor $5,000</button>
+        </div>
+
+      </div>
+
+      <!-- Giving Info Box -->
+      <div style="background: var(--bg-subtle); border: 1px solid var(--border-light); border-radius: var(--radius-lg); padding: 40px; text-align: center; max-width: 800px; margin: 0 auto;">
+        <h3 style="font-size: 1.5rem; font-weight: 800; color: var(--color-navy); margin-bottom: 12px;">
+          Prefer To Donate By Check Or Equipment Delivery?
+        </h3>
+        <p style="color: var(--color-text-secondary); font-size: 0.95rem; line-height: 1.7; margin-bottom: 24px;">
+          Checks can be made payable to <strong>Operation GO Inc.</strong> and mailed to our Rochester headquarters. For corporate wire transfers or commercial tool drop-offs, please contact our team directly.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+          <a href="tel:5854840846" class="btn btn-primary">(585) 484-0846</a>
+          <a href="mailto:info@operationgoroc.org" class="btn btn-outline">info@operationgoroc.org</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-minimal-footer">
+    <div class="container">
+      
+      <!-- Main Footer Grid -->
+      <div class="footer-grid">
+        
+        <!-- Brand & Mission Column -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="footer-brand" aria-label="Operation GO Home">
+            <img src="images/logo.png" alt="Operation GO" class="footer-logo">
+          </a>
+          <p class="footer-desc">
+            Rochester’s nonprofit workforce foundry. Cultivating debt-free futures and living-wage careers for youth through hands-on mastery in skilled trades, design, and enterprise.
+          </p>
+          <div class="footer-badges">
+            <span class="footer-badge">501(c)(3) Public Charity</span>
+            <span class="footer-badge">Rochester, NY</span>
+          </div>
+        </div>
+
+        <!-- Links Column 1: Navigation -->
+        <div class="footer-nav-col">
+          <h5 class="footer-col-title">Navigation</h5>
+          <ul class="footer-link-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Operation GO</a></li>
+            <li><a href="programs.html">All Vocational Tracks</a></li>
+            <li><a href="careers.html">Contractor Mentorship</a></li>
+            <li><a href="get-involved.html">Get Involved</a></li>
+            <li><a href="contact.html">Contact &amp; Visit</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Column 2: Foundry Tracks -->
+        <div class="footer-nav-col">
+          <h5 class="footer-col-title">Foundry Tracks</h5>
+          <ul class="footer-link-list">
+            <li><a href="programs.html#trades">The Career Ladder</a></li>
+            <li><a href="programs.html#sneaker">Sneaker Lab &amp; Apparel</a></li>
+            <li><a href="programs.html#media">Academic &amp; Media Studio</a></li>
+            <li><a href="programs.html#biz">Biz Brain Enterprise</a></li>
+            <li><a href="programs.html#reprogram">Reprogram Mindset</a></li>
+            <li><a href="programs.html#realestate">I Own Real Estate</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Column 3: Contact & Connect -->
+        <div class="footer-nav-col">
+          <h5 class="footer-col-title">Foundry &amp; Connect</h5>
+          <ul class="footer-link-list">
+            <li><span class="footer-meta-label">Location:</span> 100 Carlson Rd, Rochester, NY 14610</li>
+            <li><span class="footer-meta-label">Phone:</span> <a href="tel:5854840846">(585) 484-0846</a></li>
+            <li><span class="footer-meta-label">Email:</span> <a href="mailto:info@operationgo.org">info@operationgo.org</a></li>
+          </ul>
+          
+          <div class="footer-social-minimal">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor"></polygon>
+              </svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          © 2026 Operation GO™. All rights reserved.
+        </div>
+        <div class="footer-legal-links">
+          <a href="#">Privacy Policy</a>
+          <span class="sep">•</span>
+          <a href="#">Terms of Use</a>
+          <span class="sep">•</span>
+          <a href="#">501(c)(3) Disclosure</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Student Application Modal -->
+  <div class="modal-overlay" id="studentApplyModal">
+    <div class="modal-container">
+      <button class="modal-close-btn" data-close-modal>&times;</button>
+      <div style="margin-bottom: 24px;">
+        <span class="section-kicker">Free Enrollment Application</span>
+        <h3 style="font-size: 1.75rem; font-weight: 800; color: var(--color-navy); margin-top: 6px;">Apply For Operation GO Cohort</h3>
+        <p style="color: var(--color-text-secondary); font-size: 0.9rem; margin-top: 4px;">
+          Free for Rochester youth ages 12–18. Complete this short form to secure an orientation interview.
+        </p>
+      </div>
+
+      <form data-ajax-form>
+        <div class="form-grid">
+          <div class="form-group">
+            <label class="form-label">Student Full Name *</label>
+            <input type="text" class="form-control" required placeholder="Student Name">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Student Age *</label>
+            <input type="number" class="form-control" required min="12" max="21" placeholder="16">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Parent / Guardian Name *</label>
+            <input type="text" class="form-control" required placeholder="Parent or Guardian">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Contact Phone *</label>
+            <input type="tel" class="form-control" required placeholder="(585) 555-0199">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Contact Email *</label>
+            <input type="email" class="form-control" required placeholder="family@domain.com">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Primary Track Of Interest *</label>
+            <select class="form-control" required>
+              <option value="">Select a vocational track...</option>
+              <option value="construction">01 Construction &amp; Carpentry</option>
+              <option value="summer">02 Summer Youth Employment (Paid Stipend)</option>
+              <option value="sneaker">03 Apparel &amp; Sneaker Lab</option>
+              <option value="media">04 Video Production &amp; Media Studio</option>
+              <option value="realestate">05 Real Estate &amp; Financial Literacy</option>
+              <option value="entrepreneurship">06 Entrepreneurship &amp; Pitch Lab</option>
+              <option value="leadership">07 Public Speaking &amp; Leadership</option>
+              <option value="academic">08 Academic Tutoring &amp; Credit Recovery</option>
+            </select>
+          </div>
+          <div class="form-group full-width">
+            <label class="form-label">Current School &amp; Grade Level</label>
+            <input type="text" class="form-control" placeholder="e.g. East High School, 11th Grade">
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px; font-size: 1rem; margin-top: 12px;">
+          Submit Student Application (Free)
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Quick Job / Contractor Application Modal -->
+  <div class="modal-overlay" id="jobApplyModal">
+    <div class="modal-container">
+      <button class="modal-close-btn" data-close-modal>&times;</button>
+      <div style="margin-bottom: 24px;">
+        <span class="section-kicker">Contractor / Instructor Quick Apply</span>
+        <h3 style="font-size: 1.75rem; font-weight: 800; color: var(--color-navy); margin-top: 6px;">Teach Your Trade In Rochester</h3>
+        <p style="color: var(--color-text-secondary); font-size: 0.9rem; margin-top: 4px;">
+          Competitive hourly compensation ($40–$100/hr). Fast review within 48 business hours.
+        </p>
+      </div>
+
+      <form data-ajax-form>
+        <div class="form-grid">
+          <div class="form-group full-width">
+            <label class="form-label">Position Applied For *</label>
+            <input type="text" class="form-control" data-prefill-job required value="Lead Construction &amp; Carpentry Instructor">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Your Full Name *</label>
+            <input type="text" class="form-control" required placeholder="Marcus Miller">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Phone Number *</label>
+            <input type="tel" class="form-control" required placeholder="(585) 555-0199">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email Address *</label>
+            <input type="email" class="form-control" required placeholder="marcus@builder.com">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Years In The Trade *</label>
+            <input type="text" class="form-control" required placeholder="e.g. 8 Years Commercial Carpentry">
+          </div>
+          <div class="form-group full-width">
+            <label class="form-label">Contractor License / Certifications / Union Local</label>
+            <input type="text" class="form-control" placeholder="e.g. OSHA-30, IBEW Local 86 Journeyman, EPA 608">
+          </div>
+          <div class="form-group full-width">
+            <label class="form-label">Brief Background &amp; Availability</label>
+            <textarea class="form-control" rows="3" placeholder="Tell us about your teaching style, past mentoring, and preferred hours (evenings, Saturdays, or full-time)..."></textarea>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px; font-size: 1rem; margin-top: 12px;">
+          Transmit Application Directly to Justin Ortiz
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

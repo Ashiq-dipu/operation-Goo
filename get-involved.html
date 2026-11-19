@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Involved &bull; Sponsor, Volunteer &amp; Partner | Operation GO™</title>
+  <meta name="description" content="Support Operation GO in Rochester, NY. Sponsor a student's $16/hr trade stipend, donate commercial power tools, volunteer as a shop mentor, or hire certified graduates.">
+  
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=20261119_donation_card_blue">
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       FLOATING FROSTED NAVBAR
+       ========================================================================== -->
+  <header class="charido-nav-wrapper">
+    <div class="container">
+      <div class="charido-nav-inner">
+        <!-- Brand Logo -->
+        <a href="index.html" class="charido-brand" aria-label="Operation GO Home">
+          <span class="brand-logo-badge">
+            <img src="images/logo.png" alt="Operation GO" class="brand-logo-img">
+          </span>
+        </a>
+
+        <!-- Menu Links -->
+        <nav class="charido-nav-links">
+          <a href="index.html" class="charido-nav-link">Home</a>
+          <a href="about.html" class="charido-nav-link">About</a>
+          <a href="programs.html" class="charido-nav-link">Programs</a>
+          <a href="gallery.html" class="charido-nav-link">Gallery</a>
+          <a href="careers.html" class="charido-nav-link">Careers</a>
+          <a href="updates.html" class="charido-nav-link">Updates</a>
+          <a href="get-involved.html" class="charido-nav-link active-page">Get Involved</a>
+          <a href="contact.html" class="charido-nav-link">Contact</a>
+        </nav>
+
+        <!-- Right Action Button -->
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <button class="btn-charido-orange" data-open-modal="donateModal">
+            <span>Donate Now</span>
+            <span class="arrow-box">→</span>
+          </button>
+          <button class="mobile-toggle-btn" id="charidoMobileToggle" aria-label="Toggle navigation">☰</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       VIDEO BACKGROUND HERO SECTION
+       Only Title & Dual Action Buttons (Autoplaying Looping YouTube Background)
+       ========================================================================== -->
+  <section class="video-hero-section">
+    <div class="video-hero-bg">
+      <video class="video-hero-media" id="getInvolvedHeroVideo" autoplay muted loop playsinline webkit-playsinline preload="auto" poster="images/opgo-roc-poster.jpg">
+        <source src="videos/opgo-roc-presentation.mp4" type="video/mp4">
+      </video>
+      <div class="video-hero-overlay"></div>
+    </div>
+
+    <!-- Audio Control Toggle (Click to listen with sound) -->
+    <div class="video-hero-sound-wrap">
+      <button class="video-sound-toggle-btn" id="heroSoundToggleBtn" type="button" aria-label="Listen with Sound" title="Click to unmute video">
+        <span class="sound-icon-box">
+          <svg class="icon-muted" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <line x1="23" y1="9" x2="17" y2="15"></line>
+            <line x1="17" y1="9" x2="23" y2="15"></line>
+          </svg>
+          <svg class="icon-unmuted" style="display:none;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+          </svg>
+        </span>
+        <span class="sound-label">Listen with Sound</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       WAYS TO GET INVOLVED (INTERACTIVE ACCORDION SHOWCASE)
+       Six ways to make an immediate impact - clean, spacious, interactive accordion
+       ========================================================================== -->
+  <section class="involve-accordion-section" id="ways-to-help">
+    <div class="container involve-accordion-container">
+      
+      <div class="causes-section-header text-center" style="margin-bottom: 48px;">
+        <h2 class="involve-accordion-title">
+          Six ways to make an <span class="highlight-orange">immediate</span> impact
+        </h2>
+        <p class="involve-accordion-subtitle">
+          Whether sponsoring youth toolkits, donating equipment, or hiring pre-apprentices—every contribution accelerates debt-free generational careers.
+        </p>
+      </div>
+
+      <div class="involve-split-layout">
+        <div class="involve-accordion" id="involveAccordion">
+        
+        <!-- 01: Sponsor a Youth Builder -->
+        <div class="involve-acc-item active" data-index="1">
+          <button class="involve-acc-header" aria-expanded="true" aria-controls="acc-content-1" id="acc-header-1" type="button">
+            <div class="involve-acc-header-left">
+              <span class="involve-acc-num">01</span>
+              <div class="involve-acc-title-group">
+                <h3 class="involve-acc-title">Sponsor a Youth Builder</h3>
+                <span class="involve-acc-tag">Tax-Deductible 501(c)(3)</span>
+              </div>
+            </div>
+            <div class="involve-acc-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </button>
+          <div class="involve-acc-collapse" id="acc-content-1" role="region" aria-labelledby="acc-header-1">
+            <div class="involve-acc-body">
+              <p class="involve-acc-text">
+                Underwrite the complete $1,200 cost for a student's commercial Milwaukee tool kit, steel-toe boots, OSHA-10 testing credential, and weekly wage stipends. 100% tax-deductible 501(c)(3) contribution with personalized apprentice milestone updates.
+              </p>
+              <div class="involve-acc-action">
+                <button class="btn-charido-orange" data-open-modal="donateModal">
+                  <span>Sponsor Student ($1,200)</span>
+                  <span class="arrow-box">→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 02: Donate Tools & Materials -->
+        <div class="involve-acc-item" data-index="2">
+          <button class="involve-acc-header" aria-expanded="false" aria-controls="acc-content-2" id="acc-header-2" type="button">
+            <div class="involve-acc-header-left">
+              <span class="involve-acc-num">02</span>
+              <div class="involve-acc-title-group">
+                <h3 class="involve-acc-title">Donate Tools &amp; Materials</h3>
+                <span class="involve-acc-tag">Equipment &amp; Supplies</span>
+              </div>
+            </div>
+            <div class="involve-acc-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </button>
+          <div class="involve-acc-collapse" id="acc-content-2" role="region" aria-labelledby="acc-header-2">
+            <div class="involve-acc-body">
+              <p class="involve-acc-text">
+                We welcome commercial donations of Milwaukee &amp; DeWalt cordless power tools, framing timber lumber, Iwata airbrush kits, leather hides, and 4K cinema equipment to directly outfit student lab bays.
+              </p>
+              <div class="involve-acc-action">
+                <button class="btn-charido-forest" data-open-modal="partnerModal">
+                  <span>Donate Equipment</span>
+                  <span class="arrow-box-green">→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 03: Hire an Apprentice Graduate -->
+        <div class="involve-acc-item" data-index="3">
+          <button class="involve-acc-header" aria-expanded="false" aria-controls="acc-content-3" id="acc-header-3" type="button">
+            <div class="involve-acc-header-left">
+              <span class="involve-acc-num">03</span>
+              <div class="involve-acc-title-group">
+                <h3 class="involve-acc-title">Hire an Apprentice Graduate</h3>
+                <span class="involve-acc-tag">Workforce Pipeline</span>
+              </div>
+            </div>
+            <div class="involve-acc-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </button>
+          <div class="involve-acc-collapse" id="acc-content-3" role="region" aria-labelledby="acc-header-3">
+            <div class="involve-acc-body">
+              <p class="involve-acc-text">
+                Connect your commercial framing firm, contracting business, or creative studio directly with OSHA-10 certified, punctual, pre-vetted youth builders ready for immediate union entry and full-time living-wage employment.
+              </p>
+              <div class="involve-acc-action">
+                <button class="btn-charido-forest" data-open-modal="partnerModal">
+                  <span>Request Apprentice Roster</span>
+                  <span class="arrow-box-green">→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 04: Guest Masterclass Speaker -->
+        <div class="involve-acc-item" data-index="4">
+          <button class="involve-acc-header" aria-expanded="false" aria-controls="acc-content-4" id="acc-header-4" type="button">
+            <div class="involve-acc-header-left">
+              <span class="involve-acc-num">04</span>
+              <div class="involve-acc-title-group">
+                <h3 class="involve-acc-title">Guest Masterclass Speaker</h3>
+                <span class="involve-acc-tag">Volunteer Mentorship</span>
+              </div>
+            </div>
+            <div class="involve-acc-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </button>
+          <div class="involve-acc-collapse" id="acc-content-4" role="region" aria-labelledby="acc-header-4">
+            <div class="involve-acc-body">
+              <p class="involve-acc-text">
+                Share your journey, contractor wisdom, union navigation strategies, and trade techniques during our Friday Foundry Masterclass series for rising builders eager to learn from established leaders.
+              </p>
+              <div class="involve-acc-action">
+                <button class="btn-charido-forest" data-open-modal="partnerModal">
+                  <span>Sign Up to Speak</span>
+                  <span class="arrow-box-green">→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 05: Corporate Lab Sponsorship -->
+        <div class="involve-acc-item" data-index="5">
+          <button class="involve-acc-header" aria-expanded="false" aria-controls="acc-content-5" id="acc-header-5" type="button">
+            <div class="involve-acc-header-left">
+              <span class="involve-acc-num">05</span>
+              <div class="involve-acc-title-group">
+                <h3 class="involve-acc-title">Corporate Lab Sponsorship</h3>
+                <span class="involve-acc-tag">Union &amp; Enterprise</span>
+              </div>
+            </div>
+            <div class="involve-acc-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </button>
+          <div class="involve-acc-collapse" id="acc-content-5" role="region" aria-labelledby="acc-header-5">
+            <div class="involve-acc-body">
+              <p class="involve-acc-text">
+                Partner your corporation or union local with Operation GO. Receive named equipment bays, student fellowship branding, custom employee volunteer build days, and priority workforce pipeline agreements.
+              </p>
+              <div class="involve-acc-action">
+                <button class="btn-charido-forest" data-open-modal="partnerModal">
+                  <span>Explore Sponsorships</span>
+                  <span class="arrow-box-green">→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 06: Host a Summer Build Intern -->
+        <div class="involve-acc-item" data-index="6">
+          <button class="involve-acc-header" aria-expanded="false" aria-controls="acc-content-2" id="acc-header-6" type="button">
+            <div class="involve-acc-header-left">
+              <span class="involve-acc-num">06</span>
+              <div class="involve-acc-title-group">
+                <h3 class="involve-acc-title">Host a Summer Build Intern</h3>
+                <span class="involve-acc-tag">Subsidized Apprenticeship</span>
+              </div>
+            </div>
+            <div class="involve-acc-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </div>
+          </button>
+          <div class="involve-acc-collapse" id="acc-content-6" role="region" aria-labelledby="acc-header-6">
+            <div class="involve-acc-body">
+              <p class="involve-acc-text">
+                Host a pair of youth apprentices on your active commercial site during our 6-week Summer Youth Employment program. Wages are subsidized through our foundation while your crew evaluates future talent.
+              </p>
+              <div class="involve-acc-action">
+                <button class="btn-charido-forest" data-open-modal="partnerModal">
+                  <span>Host Interns</span>
+                  <span class="arrow-box-green">→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        </div><!-- /#involveAccordion -->
+
+        <!-- Sticky Donation Campaign Highlight Card (Exact match to User Screenshot 2) -->
+        <aside class="involve-highlight-sidebar">
+          <div class="donation-highlight-card">
+            <div class="dh-top-stats">
+              <div class="dh-progress-circle-wrap">
+                <svg class="dh-progress-svg" viewBox="0 0 72 72">
+                  <circle class="dh-circle-bg" cx="36" cy="36" r="30"></circle>
+                  <circle class="dh-circle-bar" cx="36" cy="36" r="30"></circle>
+                </svg>
+                <span class="dh-circle-label">93%</span>
+              </div>
+              <div class="dh-stats-info">
+                <div class="dh-amount-raised">$69,466 raised</div>
+                <div class="dh-amount-goal">of $75K</div>
+                <div class="dh-donations-count">1.8K donations</div>
+              </div>
+            </div>
+
+            <div class="dh-actions">
+              <button class="dh-btn-donate" data-open-modal="donateModal">Donate now</button>
+              <button class="dh-btn-share" id="dhShareBtn" type="button" aria-label="Copy donation link">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 6px;">
+                  <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
+                  <polyline points="16 6 12 2 8 6"></polyline>
+                  <line x1="12" y1="2" x2="12" y2="15"></line>
+                </svg>
+                <span>Share</span>
+              </button>
+            </div>
+
+            <div class="dh-recent-meta">
+              <div class="dh-trend-row">
+                <span class="dh-trend-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                    <polyline points="17 6 23 6 23 12"></polyline>
+                  </svg>
+                </span>
+                <span class="dh-trend-text"><strong>243</strong> recent donations</span>
+              </div>
+
+              <div class="dh-donor-row">
+                <span class="dh-donor-avatar" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                  </svg>
+                </span>
+                <div class="dh-donor-details">
+                  <span class="dh-donor-name">Anonymous</span>
+                  <span class="dh-donor-meta"><strong>$50</strong> &bull; Recent donation</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div><!-- /.involve-split-layout -->
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FULL-WIDTH BANNER IMAGE
+       ========================================================================== -->
+  <section class="involve-fullwidth-banner" style="width: 100%; line-height: 0; overflow: hidden; background: #0F172A;">
+    <img src="images/gdrive/generation-go-cohort.jpg" alt="Operation GO Youth Apprenticeship Cohort" style="width: 100%; height: 480px; object-fit: cover; object-position: center 25%; display: block;" loading="lazy">
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER (EXACT CHARIDO DEEP FOREST GREEN FOOTER)
+       ========================================================================== -->
+  <footer class="site-minimal-footer">
+    <div class="container">
+      
+      <!-- Main Footer Grid -->
+      <div class="footer-grid">
+        
+        <!-- Brand & Mission Column -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="footer-brand" aria-label="Operation GO Home">
+            <img src="images/logo.png" alt="Operation GO" class="footer-logo">
+          </a>
+          <p class="footer-desc">
+            Rochester’s nonprofit workforce foundry. Cultivating debt-free futures and living-wage careers for youth through hands-on mastery in skilled trades, design, and enterprise.
+          </p>
+          <div class="footer-badges">
+            <span class="footer-badge">501(c)(3) Public Charity</span>
+            <span class="footer-badge">Rochester, NY</span>
+          </div>
+        </div>
+
+        <!-- Links Column 1: Navigation -->
+        <div class="footer-nav-col">
+          <h5 class="footer-col-title">Navigation</h5>
+          <ul class="footer-link-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Operation GO</a></li>
+            <li><a href="programs.html">All Vocational Tracks</a></li>
+            <li><a href="index.html#testimonials">Stories &amp; Testimonials</a></li>
+            <li><a href="careers.html">Contractor Mentorship</a></li>
+            <li><a href="get-involved.html">Get Involved</a></li>
+            <li><a href="contact.html">Contact &amp; Visit</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Column 2: Foundry Tracks -->
+        <div class="footer-nav-col">
+          <h5 class="footer-col-title">Foundry Tracks</h5>
+          <ul class="footer-link-list">
+            <li><a href="programs.html#trades">The Career Ladder</a></li>
+            <li><a href="programs.html#sneaker">Sneaker Lab &amp; Apparel</a></li>
+            <li><a href="programs.html#media">Academic &amp; Media Studio</a></li>
+            <li><a href="programs.html#biz">Biz Brain Enterprise</a></li>
+            <li><a href="programs.html#reprogram">Reprogram Mindset</a></li>
+            <li><a href="programs.html#realestate">I Own Real Estate</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Column 3: Contact & Connect -->
+        <div class="footer-nav-col">
+          <h5 class="footer-col-title">Foundry &amp; Connect</h5>
+          <ul class="footer-link-list">
+            <li><span class="footer-meta-label">Location:</span> 100 Carlson Rd, Rochester, NY 14610</li>
+            <li><span class="footer-meta-label">Phone:</span> <a href="tel:5854840846">(585) 484-0846</a></li>
+            <li><span class="footer-meta-label">Email:</span> <a href="mailto:info@operationgo.org">info@operationgo.org</a></li>
+          </ul>
+          
+          <div class="footer-social-minimal">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor"></polygon>
+              </svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          © 2026 Operation GO™. All rights reserved.
+        </div>
+        <div class="footer-legal-links">
+          <a href="#">Privacy Policy</a>
+          <span class="sep">•</span>
+          <a href="#">Terms of Use</a>
+          <span class="sep">•</span>
+          <a href="#">501(c)(3) Disclosure</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MODAL: PARTNER / TOOL DONATION / HIRE APPRENTICE
+       ========================================================================== -->
+  <div class="charido-modal-overlay" id="partnerModal">
+    <div class="charido-modal-card">
+      <button class="modal-close-btn" aria-label="Close modal">✕</button>
+      <div class="modal-header">
+        <h3>Partner with Operation GO™</h3>
+        <p>Donate tools, hire apprentice graduates, or establish corporate sponsorships.</p>
+      </div>
+
+      <form id="partnerForm" onsubmit="event.preventDefault(); alert('Thank you for partnering! Our director will reach out within 24 hours.'); document.getElementById('partnerModal').classList.remove('active');">
+        <div class="form-group-charido">
+          <label for="partnerOrgName">Your Name / Organization</label>
+          <input type="text" id="partnerOrgName" placeholder="David Henderson / Henderson Framing LLC" required>
+        </div>
+
+        <div class="form-group-charido">
+          <label for="partnerEmail">Contact Email</label>
+          <input type="email" id="partnerEmail" placeholder="david@example.com" required>
+        </div>
+
+        <div class="form-group-charido">
+          <label for="partnerInterest">Area of Partnership</label>
+          <select id="partnerInterest" required>
+            <option value="tools">Tool &amp; Equipment Donation</option>
+            <option value="hiring">Hiring Apprentice Graduates</option>
+            <option value="corporate">Corporate / Foundation Sponsorship</option>
+            <option value="speaker">Guest Masterclass Speaker</option>
+            <option value="summer">Host Summer Build Interns</option>
+          </select>
+        </div>
+
+        <div class="form-group-charido">
+          <label for="partnerNotes">Details / Message</label>
+          <textarea id="partnerNotes" rows="3" placeholder="Tell us how you would like to collaborate..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-charido-orange" style="width: 100%; justify-content: center; margin-top: 10px;">
+          <span>Submit Partnership Request</span>
+          <span class="arrow-box">→</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Donation Modal -->
+  <div class="charido-modal-overlay" id="donateModal">
+    <div class="charido-modal-card">
+      <button class="modal-close-btn" aria-label="Close modal">✕</button>
+      <div class="modal-header">
+        <h3>Support Rochester Youth Trades</h3>
+        <p>100% of your donation directly funds student toolboxes, OSHA-10 safety gear, and paid youth stipends.</p>
+      </div>
+
+      <form id="charidoDonationForm">
+        <div class="donation-preset-row">
+          <button type="button" class="preset-amount-btn" data-amount="50">$50</button>
+          <button type="button" class="preset-amount-btn" data-amount="100">$100</button>
+          <button type="button" class="preset-amount-btn" data-amount="250">$250</button>
+          <button type="button" class="preset-amount-btn active" data-amount="1200">$1,200</button>
+        </div>
+
+        <div class="form-group-charido">
+          <label for="customAmountInput">Amount ($ USD)</label>
+          <input type="number" id="customAmountInput" value="1200" min="5" required>
+        </div>
+
+        <div class="form-group-charido">
+          <label for="donorName">Your Full Name</label>
+          <input type="text" id="donorName" placeholder="Justin Ortiz" required>
+        </div>
+
+        <div class="form-group-charido">
+          <label for="donorEmail">Your Email (for 501(c)(3) Receipt)</label>
+          <input type="email" id="donorEmail" placeholder="justin@example.com" required>
+        </div>
+
+        <button type="submit" class="btn-charido-orange" style="width: 100%; justify-content: center; margin-top: 10px;">
+          <span>Complete Secure Donation</span>
+          <span class="arrow-box">→</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/main.js?v=20261111_acc1"></script>
+  <script>
+    // Donation Share Button: Instant URL Copy with Tactile Feedback
+    document.addEventListener('DOMContentLoaded', () => {
+      const shareBtn = document.getElementById('dhShareBtn');
+      if (shareBtn) {
+        shareBtn.addEventListener('click', async (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+
+          const shareUrl = window.location.href;
+          let copied = false;
+
+          if (navigator.clipboard && window.isSecureContext) {
+            try {
+              await navigator.clipboard.writeText(shareUrl);
+              copied = true;
+            } catch (err) {
+              console.warn('Clipboard API failed, falling back', err);
+            }
+          }
+
+          if (!copied) {
+            try {
+              const tempInput = document.createElement('textarea');
+              tempInput.value = shareUrl;
+              tempInput.style.position = 'fixed';
+              tempInput.style.opacity = '0';
+              tempInput.style.left = '-9999px';
+              document.body.appendChild(tempInput);
+              tempInput.focus();
+              tempInput.select();
+              document.execCommand('copy');
+              document.body.removeChild(tempInput);
+              copied = true;
+            } catch (fallbackErr) {
+              console.error('Fallback copy failed', fallbackErr);
+            }
+          }
+
+          // Visual Feedback Animation
+          const originalHTML = shareBtn.innerHTML;
+          shareBtn.classList.add('copied');
+          shareBtn.innerHTML = `
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 6px;">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Link Copied!</span>
+          `;
+
+          setTimeout(() => {
+            shareBtn.classList.remove('copied');
+            shareBtn.innerHTML = originalHTML;
+          }, 2400);
+        });
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Operation GO™ Updates — Youth Skilled Trades &amp; Workforce Dispatches</title>
+  <meta name="description" content="The official digital dispatches documenting debt-free youth trade apprenticeships, commercial construction, apparel design, and modern craftsmanship in Rochester, NY.">
+  
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  
+  <!-- High-Performance Typography: Inter Tight, Barlow Condensed, Inter, Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;0,900;1,700;1,800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800&family=Inter+Tight:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;1,400;1,500&display=swap" rel="stylesheet">
+  
+  <!-- Base Site Styles + Magazine Specific Stylesheet -->
+  <link rel="stylesheet" href="css/style.css?v=20261119_blog_teal_blue">
+  <link rel="stylesheet" href="css/magazine-blog.css?v=20261119_btn_blue">
+
+  <!-- GSAP 3 Modern Animation Engine -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body class="updates-page-body">
+
+  <!-- ==========================================================================
+       SITE-WIDE FLOATING FROSTED NAVBAR (EXACT MATCH TO INDEX & ABOUT)
+       ========================================================================== -->
+  <header class="charido-nav-wrapper">
+    <div class="container">
+      <div class="charido-nav-inner">
+        <!-- Brand Logo -->
+        <a href="index.html" class="charido-brand" aria-label="Operation GO Home">
+          <span class="brand-logo-badge">
+            <img src="images/logo.png" alt="Operation GO" class="brand-logo-img">
+          </span>
+        </a>
+
+        <!-- Menu Links -->
+        <nav class="charido-nav-links">
+          <a href="index.html" class="charido-nav-link">Home</a>
+          <a href="about.html" class="charido-nav-link">About</a>
+          <a href="programs.html" class="charido-nav-link">Programs</a>
+          <a href="gallery.html" class="charido-nav-link">Gallery</a>
+          <a href="updates.html" class="charido-nav-link active-page">Updates</a>
+          <a href="careers.html" class="charido-nav-link">Careers</a>
+          <a href="get-involved.html" class="charido-nav-link">Get Involved</a>
+          <a href="contact.html" class="charido-nav-link">Contact</a>
+        </nav>
+
+        <!-- Right Action Button -->
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <button class="btn-charido-orange" data-open-modal="donateModal">
+            <span>Donate Now</span>
+            <span class="arrow-box">→</span>
+          </button>
+          <button class="mobile-toggle-btn" id="charidoMobileToggle" aria-label="Toggle navigation">☰</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       HERO COVER BANNER (FULL BLEED COVERING HEADER LIKE HOMEPAGE)
+       ========================================================================== -->
+  <section class="mag-hero-section" id="channel" aria-label="Featured Story">
+    <img src="images/operation-go-banner-all-cohort.jpg" alt="Operation GO Youth Foundry Cohort" class="mag-hero-bg">
+    <div class="mag-hero-gradient-overlay"></div>
+
+    <div class="mag-hero-content">
+      <h1 class="mag-hero-title">The Debt-Free Apprentice Revolution</h1>
+      <p class="mag-hero-desc">
+        How Rochester teenagers are bypassing $100k student loans to earn $28/hr in commercial construction, precision carpentry, and licensed master craftsmanship.
+      </p>
+      <a href="update-debt-free-apprentice.html" class="mag-hero-btn" data-article-id="hero-1">
+        <span>Read Full Story</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       3. HORIZONTAL EPISODES / TOPIC STRIP (DEEP SLATE WITH BLUE ACCENTS)
+       ========================================================================== -->
+  <section class="mag-episodes-strip" aria-label="Trending Workshop Dispatches">
+    <div class="mag-episodes-container">
+      <div class="mag-episodes-carousel" id="magEpisodesCarousel">
+        
+        <!-- Episode 1 -->
+        <a href="update-timber-framing.html" class="mag-episode-card" data-article-id="ep-1" style="text-decoration: none; color: inherit;">
+          <div class="mag-episode-thumb">
+            <img src="images/carpentry-drill.jpg" alt="Timber &amp; Structural Framing">
+            <div class="mag-play-overlay">▶</div>
+          </div>
+          <h3 class="mag-episode-title">Timber &amp; Framing</h3>
+          <p class="mag-episode-sub">Building Rochester's First Student-Constructed Tiny Home</p>
+        </a>
+
+        <!-- Episode 2 -->
+        <a href="update-high-voltage-grid.html" class="mag-episode-card" data-article-id="ep-2" style="text-decoration: none; color: inherit;">
+          <div class="mag-episode-thumb">
+            <img src="images/blueprint-class.jpg" alt="High Voltage Grid">
+            <div class="mag-play-overlay">▶</div>
+          </div>
+          <h3 class="mag-episode-title">High Voltage Grid</h3>
+          <p class="mag-episode-sub">Commercial Electricians: The Fastest Growing $95k Trade</p>
+        </a>
+
+        <!-- Episode 3 -->
+        <a href="update-apparel-foundry.html" class="mag-episode-card" data-article-id="ep-3" style="text-decoration: none; color: inherit;">
+          <div class="mag-episode-thumb">
+            <img src="images/sneaker-lab.jpg" alt="Apparel Foundry">
+            <div class="mag-play-overlay">▶</div>
+          </div>
+          <h3 class="mag-episode-title">Apparel Foundry</h3>
+          <p class="mag-episode-sub">How Youth Cut, Sew &amp; Launch Limited Streetwear Drops</p>
+        </a>
+
+        <!-- Episode 4 -->
+        <a href="update-barber-academy.html" class="mag-episode-card" data-article-id="ep-4" style="text-decoration: none; color: inherit;">
+          <div class="mag-episode-thumb">
+            <img src="images/barber-academy.jpg" alt="Barber Academy">
+            <div class="mag-play-overlay">▶</div>
+          </div>
+          <h3 class="mag-episode-title">Barber Academy</h3>
+          <p class="mag-episode-sub">Clipper Mastery: Turning 1,000 Hours into Shop Ownership</p>
+        </a>
+
+        <!-- Episode 5 -->
+        <a href="update-financial-wealth.html" class="mag-episode-card" data-article-id="ep-5" style="text-decoration: none; color: inherit;">
+          <div class="mag-episode-thumb">
+            <img src="images/real-estate-finance.jpg" alt="Financial Blueprint">
+            <div class="mag-play-overlay">▶</div>
+          </div>
+          <h3 class="mag-episode-title">Financial Wealth</h3>
+          <p class="mag-episode-sub">Managing Your First $1,200 Weekly Apprenticeship Check</p>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       4. MAIN MAGAZINE LAYOUT (BENTO LEFT + MOST POPULAR RIGHT)
+       ========================================================================== -->
+  <section class="mag-main-section" id="trades">
+    <div class="mag-main-container">
+      
+      <!-- Left Column: Bento Photo Grid -->
+      <div class="mag-bento-cluster">
+        
+        <!-- Bento Card 1: Top Left -->
+        <a href="update-general-contractor-roadmap.html" class="mag-bento-card" data-article-id="bento-1" style="text-decoration: none;">
+          <img src="images/construction-student.jpg" alt="Trades &amp; Licensing" loading="lazy">
+          <div class="mag-bento-overlay">
+            <span class="mag-bento-badge">Trades &amp; Licensing</span>
+            <h4 class="mag-bento-title">From Laborer to Licensed General Contractor</h4>
+          </div>
+        </a>
+
+        <!-- Bento Card 2: Bottom Left -->
+        <a href="update-sneaker-reconstruction.html" class="mag-bento-card" data-article-id="bento-2" style="text-decoration: none;">
+          <img src="images/sneaker-lab.jpg" alt="Creative Labs" loading="lazy">
+          <div class="mag-bento-overlay">
+            <span class="mag-bento-badge">Creative Labs</span>
+            <h4 class="mag-bento-title">Sneaker Reconstruction: Deconstructing Nike &amp; Jordan Silhouettes</h4>
+          </div>
+        </a>
+
+        <!-- Bento Card 3: Tall Right Column -->
+        <a href="update-night-shifts.html" class="mag-bento-card tall" data-article-id="bento-3" style="text-decoration: none;">
+          <img src="images/careers-hero-timber.jpg" alt="Foundry Culture" loading="lazy">
+          <div class="mag-bento-overlay">
+            <span class="mag-bento-badge">Foundry Culture</span>
+            <h4 class="mag-bento-title">Inside the Night Shifts: When Youth Passion Meets Heavy Machinery</h4>
+          </div>
+        </a>
+
+        <!-- Scrubber Line at Bottom of Bento Cluster -->
+        <div class="mag-bento-scrubber">
+          <div class="mag-bento-scrubber-bar"></div>
+        </div>
+
+      </div>
+
+      <!-- Right Column: Ranked "Most Popular" List -->
+      <aside class="mag-popular-col" aria-label="Most Popular Articles">
+        <h2 class="mag-section-heading">
+          MOST POPULAR
+          <span class="sub-tag">/ TRENDING THIS WEEK</span>
+        </h2>
+
+        <div class="mag-popular-list">
+          
+          <!-- Ranked 1 -->
+          <a href="update-skilled-labor-shortage.html" class="mag-popular-item" data-article-id="pop-1" style="text-decoration: none; color: inherit;">
+            <div class="mag-popular-thumb">
+              <img src="images/instructor-mentoring.jpg" alt="Economics" loading="lazy">
+            </div>
+            <div class="mag-popular-body">
+              <div class="mag-popular-cat">U.S. &amp; ECONOMICS</div>
+              <h3 class="mag-popular-title">The 2026 Skilled Labor Shortage: Why Contractors Cannot Hire Fast Enough</h3>
+              <p class="mag-popular-excerpt">With 40% of master craftsmen retiring by 2028, starting wages for young apprentices have surged 34% nationwide.</p>
+            </div>
+          </a>
+
+          <!-- Ranked 2 -->
+          <a href="update-women-in-trades.html" class="mag-popular-item" data-article-id="pop-2" style="text-decoration: none; color: inherit;">
+            <div class="mag-popular-thumb">
+              <img src="images/women-engineers.jpg" alt="Women in Trades" loading="lazy">
+            </div>
+            <div class="mag-popular-body">
+              <div class="mag-popular-cat">CULTURE &amp; EQUITY</div>
+              <h3 class="mag-popular-title">Breaking the Hardhat Ceiling: Female Apprentices Leading Commercial Jobsites</h3>
+              <p class="mag-popular-excerpt">Meet the young women mastering structural welding, electrical conduits, and site logistics in Western NY.</p>
+            </div>
+          </a>
+
+          <!-- Ranked 3 -->
+          <a href="update-marcus-osha10-story.html" class="mag-popular-item" data-article-id="pop-3" style="text-decoration: none; color: inherit;">
+            <div class="mag-popular-thumb">
+              <img src="images/carpentry-student.jpg" alt="Student Spotlight" loading="lazy">
+            </div>
+            <div class="mag-popular-body">
+              <div class="mag-popular-cat">STUDENT SPOTLIGHT</div>
+              <h3 class="mag-popular-title">How Marcus Earned His OSHA-10 at 16 &amp; Bought His First Work Truck Debt-Free</h3>
+              <p class="mag-popular-excerpt">From RCSD sophomore to certified framing crew lead in 14 months through Operation GO.</p>
+            </div>
+          </a>
+
+          <!-- Ranked 4 -->
+          <a href="update-real-estate-equity.html" class="mag-popular-item" data-article-id="pop-4" style="text-decoration: none; color: inherit;">
+            <div class="mag-popular-thumb">
+              <img src="images/entrepreneur-pitch.jpg" alt="Entrepreneurship" loading="lazy">
+            </div>
+            <div class="mag-popular-body">
+              <div class="mag-popular-cat">ENTREPRENEURSHIP</div>
+              <h3 class="mag-popular-title">Turning Trade Skills into Real Estate Equity: The Buy-and-Hold Blueprint</h3>
+              <p class="mag-popular-excerpt">Why the contractors who know how to rebuild homes become the most profitable property owners.</p>
+            </div>
+          </a>
+
+        </div>
+      </aside>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       5. EDITORIAL MANIFESTO BAR ("WHO WE ARE")
+       ========================================================================== -->
+  <section class="mag-manifesto-bar" aria-label="Foundry Manifesto">
+    <div class="mag-manifesto-container">
+      <h3 class="mag-manifesto-title">WHO WE ARE</h3>
+      <p class="mag-manifesto-text">
+        Operation GO Dispatches is a storytelling and vocational revolution empowering Rochester youth to master skilled craftsmanship, debt-free career acceleration, and generational financial wealth.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       6. "MOST SEEN" 3-CARD CAROUSEL 1: WORKSHOP BLUEPRINTS
+       ========================================================================== -->
+  <section class="mag-carousel-section" id="economics" aria-label="In-Depth Workshop Guides">
+    <div class="mag-carousel-container">
+      
+      <div class="mag-section-header-row">
+        <h2 class="mag-section-heading" style="margin: 0; border: none; padding: 0;">
+          MOST SEEN
+          <span class="sub-tag">/ IN-DEPTH GUIDES &amp; WORKSHOP BLUEPRINTS</span>
+        </h2>
+        <div class="mag-carousel-nav">
+          <button class="mag-nav-arrow-btn" aria-label="Previous Stories">❮</button>
+          <button class="mag-nav-arrow-btn" aria-label="Next Stories">❯</button>
+        </div>
+      </div>
+
+      <div class="mag-tri-grid">
+        
+        <!-- Story 1 -->
+        <a href="update-blueprint-reading.html" class="mag-tri-card" data-article-id="blueprint-101" style="text-decoration: none; color: inherit;">
+          <div class="mag-tri-media">
+            <img src="images/blueprint-class.jpg" alt="Blueprint Reading 101" loading="lazy">
+          </div>
+          <h3 class="mag-tri-title">Blueprint Reading 101: Understanding Architectural Scales &amp; Symbols</h3>
+          <p class="mag-tri-excerpt">A beginner's walkthrough on decoding floor plans, elevation schematics, and mechanical callouts before stepping onto the commercial jobsite.</p>
+          <div class="mag-tri-meta">5 Min Read • Architecture &amp; Codes</div>
+        </a>
+
+        <!-- Story 2 -->
+        <a href="update-cinema-production.html" class="mag-tri-card" data-article-id="cinema-4k" style="text-decoration: none; color: inherit;">
+          <div class="mag-tri-media">
+            <img src="images/media-studio.jpg" alt="4K Cinema Production" loading="lazy">
+          </div>
+          <h3 class="mag-tri-title">4K Cinema Production: How We Document Rochester's Hands-On Builders</h3>
+          <p class="mag-tri-excerpt">Youth in our media studio capture 60fps cinematic reels, edit audio tracks, and broadcast live trade showcases for regional employers.</p>
+          <div class="mag-tri-meta">4 Min Read • Digital Media Foundry</div>
+        </a>
+
+        <!-- Story 3 -->
+        <a href="update-maker-mindset.html" class="mag-tri-card" data-article-id="maker-mindset" style="text-decoration: none; color: inherit;">
+          <div class="mag-tri-media">
+            <img src="images/youth-creative-lab.jpg" alt="The Maker Mindset" loading="lazy">
+          </div>
+          <h3 class="mag-tri-title">The Maker Mindset: Why Physical Craftsmanship Sharpens Mental Clarity</h3>
+          <p class="mag-tri-excerpt">Neurological research demonstrates how woodworking, metal fabrication, and hands-on assembly boost cognitive focus and resilience.</p>
+          <div class="mag-tri-meta">6 Min Read • Youth Psychology</div>
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       7. "MOST SEEN" 3-CARD CAROUSEL 2: FOUNDER DISPATCHES
+       ========================================================================== -->
+  <section class="mag-carousel-section" id="stories" aria-label="Success Stories &amp; Dispatches">
+    <div class="mag-carousel-container">
+      
+      <div class="mag-section-header-row">
+        <h2 class="mag-section-heading" style="margin: 0; border: none; padding: 0;">
+          MOST SEEN
+          <span class="sub-tag">/ FOUNDER DISPATCHES &amp; UNION PATHWAYS</span>
+        </h2>
+        <div class="mag-carousel-nav">
+          <button class="mag-nav-arrow-btn" aria-label="Previous Stories">❮</button>
+          <button class="mag-nav-arrow-btn" aria-label="Next Stories">❯</button>
+        </div>
+      </div>
+
+      <div class="mag-tri-grid">
+        
+        <!-- Story 1 -->
+        <a href="update-justin-ortiz-letter.html" class="mag-tri-card" data-article-id="justin-letter" style="text-decoration: none; color: inherit;">
+          <div class="mag-tri-media">
+            <img src="images/justin-ortiz-mentoring.jpg" alt="Justin Ortiz Mentoring" loading="lazy">
+          </div>
+          <h3 class="mag-tri-title">A Letter From Master Contractor Justin Ortiz: Why I Founded Operation GO</h3>
+          <p class="mag-tri-excerpt">Growing up in Rochester public schools, no one handed me a path to ownership. Here is how we are building a lasting generational ladder.</p>
+          <div class="mag-tri-meta">7 Min Read • Founder Dispatch</div>
+        </a>
+
+        <!-- Story 2 -->
+        <a href="update-cohort-04-graduation.html" class="mag-tri-card" data-article-id="cohort-04-grad" style="text-decoration: none; color: inherit;">
+          <div class="mag-tri-media">
+            <img src="images/editorial-celebration.jpg" alt="Cohort 04 Graduation" loading="lazy">
+          </div>
+          <h3 class="mag-tri-title">Cohort 04 Graduation: 42 Students Sign Union Apprenticeship Contracts</h3>
+          <p class="mag-tri-excerpt">A historic night at Rochester Riverside Convention Center as seniors sign with IBEW Electricians, UBC Carpenters, and UA Plumbers.</p>
+          <div class="mag-tri-meta">3 Min Read • Milestones</div>
+        </a>
+
+        <!-- Story 3 -->
+        <a href="update-corporate-advisory-board.html" class="mag-tri-card" data-article-id="corporate-board" style="text-decoration: none; color: inherit;">
+          <div class="mag-tri-media">
+            <img src="images/gdrive/generation-go-team.jpg" alt="Corporate Advisory Board" loading="lazy">
+          </div>
+          <h3 class="mag-tri-title">Corporate Advisory Board: How Top Regional Contractors Fund Our Toolboxes</h3>
+          <p class="mag-tri-excerpt">Local engineering firms, suppliers, and safety directors share why partnering with Operation GO guarantees immediate job-ready talent.</p>
+          <div class="mag-tri-meta">4 Min Read • Industry Partnerships</div>
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       8. "VIDEO BLOG" 6-CARD HORIZONTAL STRIP
+       ========================================================================== -->
+  <section class="mag-video-section" id="culture" aria-label="Video Dispatches">
+    <div class="mag-carousel-container">
+      
+      <div class="mag-section-header-row">
+        <h2 class="mag-section-heading" style="margin: 0; border: none; padding: 0;">
+          VIDEO BLOG
+          <span class="sub-tag">/ WORKSHOP TAPES &amp; JOB SITE LOGS</span>
+        </h2>
+      </div>
+
+      <div class="mag-video-grid">
+        
+        <a href="update-timber-framing.html" class="mag-video-card" data-article-id="ep-1" style="text-decoration: none; color: inherit;">
+          <div class="mag-video-thumb">
+            <img src="images/carpentry-drill.jpg" alt="Framing Shed" loading="lazy">
+            <div class="mag-play-overlay" style="width: 28px; height: 28px; font-size: 0.7rem;">▶</div>
+          </div>
+          <h4 class="mag-video-title">Framing a 12x16 Shed in Under 4 Hours</h4>
+        </a>
+
+        <a href="update-high-voltage-grid.html" class="mag-video-card" data-article-id="ep-2" style="text-decoration: none; color: inherit;">
+          <div class="mag-video-thumb">
+            <img src="images/blueprint-class.jpg" alt="3-Way Switch Wiring" loading="lazy">
+            <div class="mag-play-overlay" style="width: 28px; height: 28px; font-size: 0.7rem;">▶</div>
+          </div>
+          <h4 class="mag-video-title">Wiring a 3-Way Light Switch Circuit</h4>
+        </a>
+
+        <a href="update-apparel-foundry.html" class="mag-video-card" data-article-id="ep-3" style="text-decoration: none; color: inherit;">
+          <div class="mag-video-thumb">
+            <img src="images/sneaker-lab.jpg" alt="Sneaker Sole Dyeing" loading="lazy">
+            <div class="mag-play-overlay" style="width: 28px; height: 28px; font-size: 0.7rem;">▶</div>
+          </div>
+          <h4 class="mag-video-title">Sneaker Sole Dyeing &amp; Airbrush Tutorial</h4>
+        </a>
+
+        <a href="update-barber-academy.html" class="mag-video-card" data-article-id="ep-4" style="text-decoration: none; color: inherit;">
+          <div class="mag-video-thumb">
+            <img src="images/barber-academy.jpg" alt="Fade Clinic" loading="lazy">
+            <div class="mag-play-overlay" style="width: 28px; height: 28px; font-size: 0.7rem;">▶</div>
+          </div>
+          <h4 class="mag-video-title">Fade &amp; Lineup Clinic with Master Barbers</h4>
+        </a>
+
+        <a href="update-general-contractor-roadmap.html" class="mag-video-card" data-article-id="bento-1" style="text-decoration: none; color: inherit;">
+          <div class="mag-video-thumb">
+            <img src="images/construction-student1.jpg" alt="Glazing Day in the Life" loading="lazy">
+            <div class="mag-play-overlay" style="width: 28px; height: 28px; font-size: 0.7rem;">▶</div>
+          </div>
+          <h4 class="mag-video-title">Day in the Life: 17-Year-Old Commercial Glazier</h4>
+        </a>
+
+        <a href="update-real-estate-equity.html" class="mag-video-card" data-article-id="pop-4" style="text-decoration: none; color: inherit;">
+          <div class="mag-video-thumb">
+            <img src="images/gdrive/marketing-agency.jpg" alt="Pitch Competition" loading="lazy">
+            <div class="mag-play-overlay" style="width: 28px; height: 28px; font-size: 0.7rem;">▶</div>
+          </div>
+          <h4 class="mag-video-title">Pitch Day: Student Business Venture Finalists</h4>
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SITE-WIDE MINIMALIST FOOTER (EXACT MATCH TO INDEX & ABOUT)
+       ========================================================================== -->
+  <footer class="site-minimal-footer">
+    <div class="container">
+      
+      <!-- Main Footer Grid -->
+      <div class="footer-grid">
+        
+        <!-- Brand & Mission Column -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="footer-brand" aria-label="Operation GO Home">
+            <img src="images/logo.png" alt="Operation GO" class="footer-logo">
+          </a>
+          <p class="footer-desc">
+            Rochester’s nonprofit workforce foundry. Cultivating debt-free futures and living-wage careers for youth through hands-on mastery in skilled trades, design, and enterprise.
+          </p>
+          <div class="footer-badges">
+            <span class="footer-badge">501(c)(3) Public Charity</span>
+            <span class="footer-badge">Rochester, NY</span>
+          </div>
+        </div>
+
+        <!-- Links Column 1: Explore -->
+        <div class="footer-nav-col">
+          <h5 class="footer-col-title">Navigation</h5>
+          <ul class="footer-link-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Operation GO</a></li>
+            <li><a href="programs.html">All Vocational Tracks</a></li>
+            <li><a href="index.html#testimonials">Stories &amp; Testimonials</a></li>
+            <li><a href="gallery.html">Foundry Gallery</a></li>
+            <li><a href="updates.html">Latest Updates</a></li>
+            <li><a href="careers.html">Contractor Mentorship</a></li>
+            <li><a href="get-involved.html">Get Involved</a></li>
+            <li><a href="contact.html">Contact &amp; Visit</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Column 2: Foundry Tracks -->
+        <div class="footer-nav-col">
+          <h5 class="footer-col-title">Foundry Tracks</h5>
+          <ul class="footer-link-list">
+            <li><a href="programs.html#trades">The Career Ladder</a></li>
+            <li><a href="programs.html#sneaker">Sneaker Lab &amp; Apparel</a></li>
+            <li><a href="programs.html#media">Academic &amp; Media Studio</a></li>
+            <li><a href="programs.html#biz">Biz Brain Enterprise</a></li>
+            <li><a href="programs.html#reprogram">Reprogram Mindset</a></li>
+            <li><a href="programs.html#realestate">I Own Real Estate</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Column 3: Contact & Connect -->
+        <div class="footer-nav-col">
+          <h5 class="footer-col-title">Foundry &amp; Connect</h5>
+          <ul class="footer-link-list">
+            <li><span class="footer-meta-label">Location:</span> 100 Carlson Rd, Rochester, NY 14610</li>
+            <li><span class="footer-meta-label">Phone:</span> <a href="tel:5854840846">(585) 484-0846</a></li>
+            <li><span class="footer-meta-label">Email:</span> <a href="mailto:info@operationgo.org">info@operationgo.org</a></li>
+          </ul>
+          
+          <div class="footer-social-minimal">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor"></polygon>
+              </svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          © 2026 Operation GO™. All rights reserved.
+        </div>
+        <div class="footer-legal-links">
+          <a href="#">Privacy Policy</a>
+          <span class="sep">•</span>
+          <a href="#">Terms of Use</a>
+          <span class="sep">•</span>
+          <a href="#">501(c)(3) Disclosure</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       SITE-WIDE MODAL 1: DONATION MODAL
+       ========================================================================== -->
+  <div class="charido-modal-overlay" id="donateModal">
+    <div class="charido-modal-card">
+      <button class="modal-close-btn" aria-label="Close modal">✕</button>
+      <div class="modal-header">
+        <h3>Support Rochester Youth Trades</h3>
+        <p>100% of your donation directly funds student toolboxes, OSHA-10 safety gear, and paid youth stipends.</p>
+      </div>
+
+      <form id="charidoDonationForm">
+        <label style="font-size: 0.88rem; font-weight: 700; color: #1B4D3E; margin-bottom: 8px; display: block;">Select Amount</label>
+        <div class="donation-preset-row">
+          <button type="button" class="preset-amount-btn active" data-amount="50">$50</button>
+          <button type="button" class="preset-amount-btn" data-amount="100">$100</button>
+          <button type="button" class="preset-amount-btn" data-amount="250">$250</button>
+          <button type="button" class="preset-amount-btn" data-amount="500">$500</button>
+        </div>
+
+        <div class="form-group-charido">
+          <label for="donorName">Your Full Name</label>
+          <input type="text" id="donorName" placeholder="Justin Ortiz" required>
+        </div>
+
+        <div class="form-group-charido">
+          <label for="donorEmail">Your Email (for 501(c)(3) Tax Receipt)</label>
+          <input type="email" id="donorEmail" placeholder="justin@example.com" required>
+        </div>
+
+        <button type="submit" class="btn-charido-orange" style="width: 100%; justify-content: center; margin-top: 10px;">
+          <span>Complete Secure Donation</span>
+          <span class="arrow-box">→</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       INTERACTIVE ARTICLE READER MODAL
+       ========================================================================== -->
+  <div class="mag-modal-overlay" id="magReaderModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="mag-modal-card">
+      <button class="mag-modal-close-btn" id="magModalClose" aria-label="Close article">✕</button>
+      
+      <div class="mag-modal-media-wrap">
+        <img id="magModalImg" src="" alt="Cover">
+      </div>
+
+      <div class="mag-modal-content">
+        <span class="mag-modal-cat-tag" id="magModalTag">CATEGORY</span>
+        <h2 class="mag-modal-headline" id="magModalTitle">Article Headline</h2>
+        <div class="mag-modal-author-bar" id="magModalAuthor">By Author • Date</div>
+        <div class="mag-modal-article-body" id="magModalBody">
+          <!-- Dynamically populated via JS -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Site-Wide Script + Updates Page Interactive Script -->
+  <script src="js/main.js"></script>
+  <script src="js/magazine-blog.js?v=20261115_mag_v2"></script>
+</body>
+</html>

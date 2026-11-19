@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Careers &amp; Contractor Hiring Board | Operation GO™</title>
+  <meta name="description" content="We are actively hiring trade instructors, master carpenters, and contractor mentors to train youth in Rochester, NY. Competitive pay ($45–$65/hr), urgent $100/hr contract.">
+  
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body class="careers-page-jobgio">
+
+  <!-- ==========================================================================
+       FLOATING FROSTED NAVBAR
+       ========================================================================== -->
+  <header class="charido-nav-wrapper">
+    <div class="container">
+      <div class="charido-nav-inner">
+        <!-- Brand Logo -->
+        <a href="index.html" class="charido-brand" aria-label="Operation GO Home">
+          <span class="brand-logo-badge">
+            <img src="images/logo.png" alt="Operation GO" class="brand-logo-img">
+          </span>
+        </a>
+
+        <!-- Menu Links -->
+        <nav class="charido-nav-links">
+          <a href="index.html" class="charido-nav-link">Home</a>
+          <a href="about.html" class="charido-nav-link">About</a>
+          <a href="programs.html" class="charido-nav-link">Programs</a>
+          <a href="gallery.html" class="charido-nav-link">Gallery</a>
+          <a href="careers.html" class="charido-nav-link active-page">Careers</a>
+          <a href="get-involved.html" class="charido-nav-link">Get Involved</a>
+          <a href="contact.html" class="charido-nav-link">Contact</a>
+        </nav>
+
+        <!-- Right Action Button -->
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <button class="donatia-btn-dark" data-open-modal="donateModal" style="padding: 6px 8px 6px 18px; font-size: 0.88rem;">
+            <span>Donate</span>
+            <span class="btn-arrow-icon" style="width: 30px; height: 30px; font-size: 0.9rem;">→</span>
+          </button>
+          <button class="mobile-toggle-btn" id="charidoMobileToggle" aria-label="Toggle navigation" style="color: #0F172A;">☰</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       JOBGIO-INSPIRED CAREER HERO SECTION
+       Pixel-perfect match to user reference
+       ========================================================================== -->
+  <section class="jobgio-hero-section">
+    <div class="jobgio-hero-container">
+      
+      <!-- Left Column: Copy & Floating Multi-Segment Search Bar -->
+      <div class="jobgio-hero-content">
+        <h1 class="jobgio-hero-title">
+          Get <strong>Hired</strong> Faster<br>and Smarter
+        </h1>
+        <p class="jobgio-hero-sub">
+          Browse, search and apply for jobs easily.
+        </p>
+
+        <!-- Floating Multi-segment Search Bar -->
+        <div class="jobgio-search-bar" id="heroSearchBar">
+          
+          <!-- Segment 1: Search -->
+          <div class="jobgio-search-segment">
+            <div class="jobgio-segment-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+            </div>
+            <div class="jobgio-segment-fields">
+              <label for="jobTitleSearch" class="jobgio-segment-label">Search</label>
+              <input type="text" id="jobTitleSearch" class="jobgio-segment-input" placeholder="Job title or keyword" autocomplete="off">
+            </div>
+          </div>
+
+          <div class="jobgio-search-divider"></div>
+
+          <!-- Segment 2: Location -->
+          <div class="jobgio-search-segment">
+            <div class="jobgio-segment-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <div class="jobgio-segment-fields">
+              <label for="jobLocationFilter" class="jobgio-segment-label">Location</label>
+              <div class="jobgio-select-wrap">
+                <select id="jobLocationFilter" class="jobgio-segment-select">
+                  <option value="">Select Location</option>
+                  <option value="rochester">Rochester, NY</option>
+                  <option value="foundry">Rochester Foundry</option>
+                  <option value="innovation">Innovation Studio</option>
+                  <option value="production">Production Stage</option>
+                  <option value="barber">Barber Training Studio</option>
+                </select>
+                <span class="jobgio-select-chevron">▾</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Action Search Button -->
+          <button type="button" id="jobSearchActionBtn" class="jobgio-search-btn" aria-label="Search open roles">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+
+        </div>
+
+        <!-- Secondary Floating Pill & How It Works Link -->
+        <div class="jobgio-subcard-wrap">
+          <div class="jobgio-floating-pill">
+            <div class="jobgio-floating-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+              </svg>
+            </div>
+            <div class="jobgio-floating-text">
+              <span class="jobgio-floating-title">Start Your</span>
+              <span class="jobgio-floating-sub">Career</span>
+            </div>
+          </div>
+
+          <a href="#open-positions" class="jobgio-how-it-works-link">
+            <span>How it works</span> <span class="jobgio-arrow-caret">↓</span>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Right Column: Visual Portrait with Floating Elements and Stats -->
+      <div class="jobgio-hero-visual-col">
+        
+        <!-- Concentric Orbital Rings Background -->
+        <div class="jobgio-orbital-rings" aria-hidden="true">
+          <div class="jobgio-ring ring-1"></div>
+          <div class="jobgio-ring ring-2"></div>
+          <div class="jobgio-ring ring-3"></div>
+        </div>
+
+        <!-- Floating Badge: Calendar (Top-Left of Person) -->
+        <div class="jobgio-floating-badge badge-calendar" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+            <circle cx="8" cy="14" r="1" fill="currentColor"></circle>
+            <circle cx="12" cy="14" r="1" fill="currentColor"></circle>
+            <circle cx="16" cy="14" r="1" fill="currentColor"></circle>
+          </svg>
+        </div>
+
+        <!-- Floating Badge: Google / Verified Partner Logo (Right of Person) -->
+        <div class="jobgio-floating-badge badge-partner" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24">
+            <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/>
+            <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z"/>
+            <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 9.97 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/>
+            <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.94 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
+          </svg>
+        </div>
+
+        <!-- Main Portrait Frame -->
+        <div class="jobgio-portrait-frame">
+          <img src="images/gdrive/carpentry-photo-2021.jpg" alt="Operation GO Trade Apprentice on commercial build site" class="jobgio-portrait-img">
+        </div>
+
+        <!-- Bottom Stats Metric Ruler Strip -->
+        <div class="jobgio-stats-ruler-wrap">
+          <!-- The architectural ruler line with tick marks -->
+          <div class="jobgio-ruler-line">
+            <div class="jobgio-ruler-tick tick-left"></div>
+            <div class="jobgio-ruler-bracket"></div>
+            <div class="jobgio-ruler-tick tick-center"></div>
+            <div class="jobgio-ruler-tick tick-right"></div>
+          </div>
+
+          <!-- The Metrics Row -->
+          <div class="jobgio-metrics-row">
+            <div class="jobgio-metric-col">
+              <span class="jobgio-metric-num">50K+</span>
+              <span class="jobgio-metric-lbl">Active job seekers</span>
+            </div>
+            <div class="jobgio-metric-col">
+              <span class="jobgio-metric-num">20K+</span>
+              <span class="jobgio-metric-lbl">Verified companies</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       ACTIVE JOB OPENINGS LIST (CHARIDO JOB CARDS)
+       ========================================================================== -->
+  <section style="padding: 100px 0; background-color: var(--color-canvas);" id="open-positions">
+    <div class="container">
+      <div class="causes-section-header">
+        <h2>
+          Current mentor &amp; <span class="highlight-orange">contractor</span> opportunities
+        </h2>
+      </div>
+
+            <div class="careers-layout-grid">
+        
+        <!-- Left-Hand Filter Sidebar -->
+        <aside class="careers-filter-sidebar">
+          <div class="careers-filter-card">
+            <div class="careers-filter-header">
+              <h4 class="careers-filter-title">Filter Roles</h4>
+              <button class="careers-filter-reset" id="careerFilterReset" type="button">Reset</button>
+            </div>
+            
+            <div class="careers-filter-group">
+              <span class="careers-filter-group-label">Discipline</span>
+              <ul class="careers-filter-list">
+                <li>
+                  <button class="career-filter-btn active" data-filter="all" type="button">
+                    <span>All Disciplines</span>
+                    <span class="filter-count">5</span>
+                  </button>
+                </li>
+                <li>
+                  <button class="career-filter-btn" data-filter="trades" type="button">
+                    <span>Carpentry &amp; Trades</span>
+                    <span class="filter-count">2</span>
+                  </button>
+                </li>
+                <li>
+                  <button class="career-filter-btn" data-filter="apparel" type="button">
+                    <span>Footwear &amp; Apparel</span>
+                    <span class="filter-count">1</span>
+                  </button>
+                </li>
+                <li>
+                  <button class="career-filter-btn" data-filter="media" type="button">
+                    <span>4K Cinema &amp; Media</span>
+                    <span class="filter-count">1</span>
+                  </button>
+                </li>
+                <li>
+                  <button class="career-filter-btn" data-filter="barber" type="button">
+                    <span>Barbering &amp; Hair</span>
+                    <span class="filter-count">1</span>
+                  </button>
+                </li>
+              </ul>
+            </div>
+
+            <div class="careers-filter-divider"></div>
+
+            <div class="careers-filter-group">
+              <span class="careers-filter-group-label">Priority Status</span>
+              <ul class="careers-filter-list">
+                <li>
+                  <button class="career-filter-btn" data-filter="urgent" type="button">
+                    <span>Urgent Contracts</span>
+                    <span class="filter-count urgent-badge">1</span>
+                  </button>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Contractor Callout Note -->
+            <div class="contractor-sidebar-callout">
+              <div class="callout-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#12577f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  <path d="m9 12 2 2 4-4"></path>
+                </svg>
+              </div>
+              <div class="callout-text">
+                <strong>No Teaching License Needed</strong>
+                <p>Master artisans &amp; licensed trade pros train youth in real workshop labs.</p>
+              </div>
+            </div>
+
+          </div>
+        </aside>
+
+        <!-- Right-Hand Job Listings -->
+        <div class="jobs-list-charido">
+        
+        <!-- Job 1: Urgent Construction Teacher -->
+        <div class="job-card-charido urgent-featured" id="contract-100" data-category="trades" data-urgent="true">
+          <div class="job-info-left">
+            <h3 class="job-title">Lead Construction Trades Teacher (Urgent Contract)</h3>
+            <div class="job-meta-row">
+              <div><strong>Location:</strong> 100 Carlson Rd, Rochester, NY</div>
+              <div>⏱️ <strong>Schedule:</strong> 40 Hours Total (Flexible)</div>
+              <div><strong>Class Size:</strong> 6–8 Youth</div>
+            </div>
+            <p class="job-excerpt">
+              Lead an intensive structural framing cohort for Rochester youth. Train students in timber wall framing, speed square layout, and OSHA-10 compliance. Full workshop and tool budget provided. Perfect for independent contractors seeking high-impact, immediate earnings.
+            </p>
+          </div>
+          <div class="job-action-right">
+            <div class="job-rate-display">$100.00 <span>/ hr</span></div>
+            <button class="btn-charido-orange" data-open-modal="contractorApplyModal">
+              <span>Apply for $100/hr Role</span>
+              <span class="arrow-box">→</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Job 2: Permanent Carpentry Mentor -->
+        <div class="job-card-charido" data-category="trades">
+          <div class="job-info-left">
+            <h3 class="job-title">Master Carpentry &amp; Timber Mentor</h3>
+            <div class="job-meta-row">
+              <div><strong>Location:</strong> Rochester Foundry</div>
+              <div>⏱️ <strong>Hours:</strong> 12–20 hrs/week (Evenings/Weekends)</div>
+            </div>
+            <p class="job-excerpt">
+              Mentor youth in structural framing, blueprint estimation, and power tool operation. Collaborate with Justin Ortiz and partner contractor firms to prepare youth for union apprenticeships.
+            </p>
+          </div>
+          <div class="job-action-right">
+            <div class="job-rate-display">$55.00 – $65.00 <span>/ hr</span></div>
+            <button class="btn-charido-forest" data-open-modal="contractorApplyModal">
+              <span>Apply for Position</span>
+              <span class="arrow-box-green">→</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Job 3: Sneaker Lab Specialist -->
+        <div class="job-card-charido" data-category="apparel">
+          <div class="job-info-left">
+            <h3 class="job-title">Footwear &amp; Sneaker Customization Specialist</h3>
+            <div class="job-meta-row">
+              <div><strong>Location:</strong> Innovation Studio</div>
+              <div>⏱️ <strong>Hours:</strong> 8–15 hrs/week</div>
+            </div>
+            <p class="job-excerpt">
+              Instruct youth in airbrush blending, leather stitching, outsole prep, and CAD stencil design. Guide students in developing their own independent streetwear collections.
+            </p>
+          </div>
+          <div class="job-action-right">
+            <div class="job-rate-display">$45.00 – $55.00 <span>/ hr</span></div>
+            <button class="btn-charido-forest" data-open-modal="contractorApplyModal">
+              <span>Apply for Position</span>
+              <span class="arrow-box-green">→</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Job 4: Digital Cinema Director -->
+        <div class="job-card-charido" data-category="media">
+          <div class="job-info-left">
+            <h3 class="job-title">4K Digital Cinema &amp; Audio Soundstage Director</h3>
+            <div class="job-meta-row">
+              <div><strong>Location:</strong> Production Stage</div>
+              <div>⏱️ <strong>Hours:</strong> 10–18 hrs/week</div>
+            </div>
+            <p class="job-excerpt">
+              Train youth on Blackmagic 6K cinema rigs, wireless audio booms, three-point lighting, and DaVinci Resolve editing. Direct real community documentary projects with youth crews.
+            </p>
+          </div>
+          <div class="job-action-right">
+            <div class="job-rate-display">$50.00 – $60.00 <span>/ hr</span></div>
+            <button class="btn-charido-forest" data-open-modal="contractorApplyModal">
+              <span>Apply for Position</span>
+              <span class="arrow-box-green">→</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Job 5: Barbering Instructor -->
+        <div class="job-card-charido" data-category="barber">
+          <div class="job-info-left">
+            <h3 class="job-title">Master Barbering &amp; Hair Design Instructor</h3>
+            <div class="job-meta-row">
+              <div><strong>Location:</strong> Barber Training Studio</div>
+              <div>⏱️ <strong>Hours:</strong> 12–16 hrs/week</div>
+            </div>
+            <p class="job-excerpt">
+              Must hold a valid NYS Barber license. Teach precision shear techniques, taper fades, sanitation safety, and client consultation in our clean, modern training environment.
+            </p>
+          </div>
+          <div class="job-action-right">
+            <div class="job-rate-display">$45.00 – $55.00 <span>/ hr</span></div>
+            <button class="btn-charido-forest" data-open-modal="contractorApplyModal">
+              <span>Apply for Position</span>
+              <span class="arrow-box-green">→</span>
+            </button>
+          </div>
+        </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION: WHY CONTRACTORS TEACH WITH US
+       ========================================================================== -->
+  <section class="charido-volunteer-section">
+    <div class="container">
+      <div class="volunteer-card-charido">
+        <!-- Autoplaying Background Video (Official Operation GO Channel) -->
+        <div class="volunteer-video-bg">
+          <video autoplay loop muted playsinline webkit-playsinline poster="images/gdrive/workshop-action-dsc0213.jpg">
+            <source src="videos/opgo-expo.mp4" type="video/mp4">
+            <source src="videos/opgo-roc-presentation.mp4" type="video/mp4">
+          </video>
+          <div class="volunteer-video-overlay"></div>
+        </div>
+
+        <div class="volunteer-content">
+          <h2>Why Rochester tradespeople love mentoring with Operation GO</h2>
+          <p>
+            You don't need a formal teaching degree—just mastery of your trade, patience, and a desire to give back. We provide full tool kits, dedicated workshop spaces, and handle all safety insurance.
+          </p>
+          <div class="volunteer-actions">
+            <button class="btn-charido-orange" data-open-modal="contractorApplyModal">
+              <span>Apply in 2 Minutes</span>
+              <span class="arrow-box">→</span>
+            </button>
+            <a href="tel:5854840846" class="btn-charido-ghost">
+              Call Director: (585) 484-0846
+            </a>
+          </div>
+        </div>
+
+        <div class="volunteer-perks-list">
+          <div class="volunteer-perk-item">
+            <span class="check-icon">✓</span>
+            <span>$45 to $100/hr Guaranteed W-2 / 1099 Pay</span>
+          </div>
+          <div class="volunteer-perk-item">
+            <span class="check-icon">✓</span>
+            <span>100% Tool &amp; Material Budget Provided</span>
+          </div>
+          <div class="volunteer-perk-item">
+            <span class="check-icon">✓</span>
+            <span>Small Cohorts of 6–8 Highly Motivated Students</span>
+          </div>
+          <div class="volunteer-perk-item">
+            <span class="check-icon">✓</span>
+            <span>Direct Talent Pipeline to Hire Top Apprentices</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER (EXACT CHARIDO DEEP FOREST GREEN FOOTER)
+       ========================================================================== -->
+  <footer class="site-minimal-footer">
+    <div class="container">
+      
+      <!-- Main Footer Grid -->
+      <div class="footer-grid">
+        
+        <!-- Brand & Mission Column -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="footer-brand" aria-label="Operation GO Home">
+            <img src="images/logo.png" alt="Operation GO" class="footer-logo">
+          </a>
+          <p class="footer-desc">
+            Rochester’s nonprofit workforce foundry. Cultivating debt-free futures and living-wage careers for youth through hands-on mastery in skilled trades, design, and enterprise.
+          </p>
+          <div class="footer-badges">
+            <span class="footer-badge">501(c)(3) Public Charity</span>
+            <span class="footer-badge">Rochester, NY</span>
+          </div>
+        </div>
+
+        <!-- Links Column 1: Navigation -->
+        <div class="footer-nav-col">
+          <h5 class="footer-col-title">Navigation</h5>
+          <ul class="footer-link-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Operation GO</a></li>
+            <li><a href="programs.html">All Vocational Tracks</a></li>
+            <li><a href="index.html#testimonials">Stories &amp; Testimonials</a></li>
+            <li><a href="careers.html">Contractor Mentorship</a></li>
+            <li><a href="get-involved.html">Get Involved</a></li>
+            <li><a href="contact.html">Contact &amp; Visit</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Column 2: Foundry Tracks -->
+        <div class="footer-nav-col">
+          <h5 class="footer-col-title">Foundry Tracks</h5>
+          <ul class="footer-link-list">
+            <li><a href="programs.html#trades">The Career Ladder</a></li>
+            <li><a href="programs.html#sneaker">Sneaker Lab &amp; Apparel</a></li>
+            <li><a href="programs.html#media">Academic &amp; Media Studio</a></li>
+            <li><a href="programs.html#biz">Biz Brain Enterprise</a></li>
+            <li><a href="programs.html#reprogram">Reprogram Mindset</a></li>
+            <li><a href="programs.html#realestate">I Own Real Estate</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Column 3: Contact & Connect -->
+        <div class="footer-nav-col">
+          <h5 class="footer-col-title">Foundry &amp; Connect</h5>
+          <ul class="footer-link-list">
+            <li><span class="footer-meta-label">Location:</span> 100 Carlson Rd, Rochester, NY 14610</li>
+            <li><span class="footer-meta-label">Phone:</span> <a href="tel:5854840846">(585) 484-0846</a></li>
+            <li><span class="footer-meta-label">Email:</span> <a href="mailto:info@operationgo.org">info@operationgo.org</a></li>
+          </ul>
+          
+          <div class="footer-social-minimal">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor"></polygon>
+              </svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          © 2026 Operation GO™. All rights reserved.
+        </div>
+        <div class="footer-legal-links">
+          <a href="#">Privacy Policy</a>
+          <span class="sep">•</span>
+          <a href="#">Terms of Use</a>
+          <span class="sep">•</span>
+          <a href="#">501(c)(3) Disclosure</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MODAL: CONTRACTOR MENTOR APPLICATION
+       ========================================================================== -->
+  <div class="charido-modal-overlay" id="contractorApplyModal">
+    <div class="charido-modal-card">
+      <button class="modal-close-btn" aria-label="Close modal">✕</button>
+      <div class="modal-header">
+        <h3>Teach Your Trade at Operation GO™</h3>
+        <p>Earn $45–$100/hr mentoring motivated youth. No teaching license required.</p>
+      </div>
+
+      <form id="contractorForm" onsubmit="event.preventDefault(); alert('Application submitted! Founder Justin Ortiz will contact you within 24 hours.'); document.getElementById('contractorApplyModal').classList.remove('active');">
+        <div class="form-group-charido">
+          <label for="contractorName">Your Full Name</label>
+          <input type="text" id="contractorName" placeholder="David Henderson" required>
+        </div>
+
+        <div class="form-group-charido">
+          <label for="contractorPhone">Direct Phone Number</label>
+          <input type="tel" id="contractorPhone" placeholder="(585) 555-0144" required>
+        </div>
+
+        <div class="form-group-charido">
+          <label for="contractorTrade">Primary Trade / Specialty</label>
+          <select id="contractorTrade" required>
+            <option value="carpentry">Carpentry &amp; Structural Framing ($100/hr contract)</option>
+            <option value="electrical">Electrical &amp; Low Voltage</option>
+            <option value="sneaker">Sneaker Customization &amp; Leather Design</option>
+            <option value="cinema">4K Cinema &amp; Audio Production</option>
+            <option value="barber">Barbering &amp; Hair Design</option>
+            <option value="general">General Construction / OSHA-10</option>
+          </select>
+        </div>
+
+        <div class="form-group-charido">
+          <label for="contractorExperience">Years of Trade Experience</label>
+          <input type="text" id="contractorExperience" placeholder="e.g. 10 years commercial carpentry" required>
+        </div>
+
+        <button type="submit" class="btn-charido-orange" style="width: 100%; justify-content: center; margin-top: 10px;">
+          <span>Submit Mentor Application</span>
+          <span class="arrow-box">→</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Donation Modal -->
+  <div class="charido-modal-overlay" id="donateModal">
+    <div class="charido-modal-card">
+      <button class="modal-close-btn" aria-label="Close modal">✕</button>
+      <div class="modal-header">
+        <h3>Support Rochester Youth Trades</h3>
+        <p>100% of your donation directly funds student toolboxes, OSHA-10 safety gear, and paid youth stipends.</p>
+      </div>
+
+      <form id="charidoDonationForm">
+        <div class="donation-preset-row">
+          <button type="button" class="preset-amount-btn active" data-amount="50">$50</button>
+          <button type="button" class="preset-amount-btn" data-amount="100">$100</button>
+          <button type="button" class="preset-amount-btn" data-amount="250">$250</button>
+          <button type="button" class="preset-amount-btn" data-amount="500">$500</button>
+        </div>
+
+        <div class="form-group-charido">
+          <label for="customAmountInput">Amount ($ USD)</label>
+          <input type="number" id="customAmountInput" value="50" min="5" required>
+        </div>
+
+        <div class="form-group-charido">
+          <label for="donorName">Your Full Name</label>
+          <input type="text" id="donorName" placeholder="Justin Ortiz" required>
+        </div>
+
+        <div class="form-group-charido">
+          <label for="donorEmail">Your Email (for 501(c)(3) Receipt)</label>
+          <input type="email" id="donorEmail" placeholder="justin@example.com" required>
+        </div>
+
+        <button type="submit" class="btn-charido-orange" style="width: 100%; justify-content: center; margin-top: 10px;">
+          <span>Complete Secure Donation</span>
+          <span class="arrow-box">→</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Live Job Search & Filter Controller
+    document.addEventListener('DOMContentLoaded', () => {
+      const searchInput = document.getElementById('jobTitleSearch');
+      const locationSelect = document.getElementById('jobLocationFilter');
+      const searchBtn = document.getElementById('jobSearchActionBtn');
+      const jobCards = document.querySelectorAll('.job-card-charido');
+
+      function filterJobs(shouldScroll = false) {
+        const query = (searchInput ? searchInput.value : '').toLowerCase().trim();
+        const locationVal = (locationSelect ? locationSelect.value : '').toLowerCase().trim();
+
+        let visibleCount = 0;
+        jobCards.forEach((card) => {
+          const cardText = card.innerText.toLowerCase();
+          const matchesQuery = !query || cardText.includes(query);
+          const matchesLocation = !locationVal || cardText.includes(locationVal) || (locationVal === 'rochester' && cardText.includes('rochester'));
+
+          if (matchesQuery && matchesLocation) {
+            card.style.display = 'grid';
+            visibleCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        if (shouldScroll) {
+          const targetSection = document.getElementById('open-positions');
+          if (targetSection) {
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      }
+
+      if (searchInput) {
+        searchInput.addEventListener('input', () => filterJobs(false));
+        searchInput.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter') {
+            e.preventDefault();
+            filterJobs(true);
+          }
+        });
+      }
+
+      if (locationSelect) {
+        locationSelect.addEventListener('change', () => filterJobs(true));
+      }
+
+      if (searchBtn) {
+        searchBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          filterJobs(true);
+        });
+      }
+    });
+  </script>
+</body>
+</html>

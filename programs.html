@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vocational Programs &amp; Career Pathways | Operation GO™</title>
+  <meta name="description" content="Explore Operation GO's 100% free vocational tracks for youth ages 12–18 in Rochester, NY: Carpentry, Sneaker Design, 4K Cinema, Barbering, and paid Summer Youth Employment.">
+  
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=20261031_deckpopfront1">
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body class="programs-page-donatia">
+
+  <!-- ==========================================================================
+       FLOATING FROSTED NAVBAR (LIGHT THEME)
+       ========================================================================== -->
+  <header class="charido-nav-wrapper">
+    <div class="container donatia-container">
+      <div class="charido-nav-inner">
+        <!-- Brand Logo -->
+        <a href="index.html" class="charido-brand" aria-label="Operation GO Home">
+          <span class="brand-logo-badge">
+            <img src="images/logo.png" alt="Operation GO" class="brand-logo-img">
+          </span>
+        </a>
+
+        <!-- Navigation Menu Links -->
+        <nav class="charido-nav-links">
+          <a href="index.html" class="charido-nav-link">Home</a>
+          <a href="about.html" class="charido-nav-link">About</a>
+          <a href="programs.html" class="charido-nav-link active-page">Programs</a>
+          <a href="gallery.html" class="charido-nav-link">Gallery</a>
+          <a href="updates.html" class="charido-nav-link">Updates</a>
+          <a href="careers.html" class="charido-nav-link">Careers</a>
+          <a href="get-involved.html" class="charido-nav-link">Get Involved</a>
+          <a href="contact.html" class="charido-nav-link">Contact</a>
+        </nav>
+
+        <!-- Right Action Button -->
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <button class="donatia-btn-dark" data-open-modal="donateModal" style="padding: 6px 8px 6px 18px; font-size: 0.88rem;">
+            <span>Donate</span>
+            <span class="btn-arrow-icon" style="width: 30px; height: 30px; font-size: 0.9rem;">→</span>
+          </button>
+          <button class="mobile-toggle-btn" id="charidoMobileToggle" aria-label="Toggle navigation" style="color: #0F172A;">☰</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       1. HERO SECTION (White Background + Fanned Deck + Lavender Stats Bar)
+       "Together, we build a brighter future"
+       ========================================================================== -->
+  <section class="donatia-hero-section">
+    <div class="donatia-container">
+      
+      <!-- Intro Headline & Subtitle -->
+      <div class="donatia-hero-intro">
+        <!-- Playful Doodle Squiggle Left -->
+        <svg class="donatia-doodle-left" viewBox="0 0 100 100" fill="none">
+          <path d="M70 20 C50 40, 20 50, 40 80 M35 70 L40 80 L52 75" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+
+        <h1 class="donatia-hero-title">
+          Together, we build a brighter future
+        </h1>
+
+        <p class="donatia-hero-desc">
+          Empowering Rochester’s next generation through master trades, creative entrepreneurship, and debt-free generational careers.
+        </p>
+
+        <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+          <a href="#all-programs" class="donatia-btn-dark">
+            <span>Explore All 8 Tracks</span>
+            <span class="btn-arrow-icon">→</span>
+          </a>
+          <button class="donatia-btn-outline" data-open-modal="applyModal">
+            <span>Apply for Admission</span>
+          </button>
+        </div>
+
+        <!-- Playful Doodle Squiggle Right -->
+        <svg class="donatia-doodle-right" viewBox="0 0 100 100" fill="none">
+          <path d="M30 20 C50 35, 75 55, 60 85 M50 78 L60 85 L68 74" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+
+      <!-- 3-Card Fanned Hero Deck with 3 Interactive Cards (Center Cohort + Left & Right Live Videos) -->
+      <div class="donatia-deck-wrap" id="donatiaDeckWrap" aria-label="Operation GO Interactive Video & Cohort Deck">
+        <!-- Left Card (Tilted -12deg) -->
+        <div class="donatia-deck-card deck-card-left" data-card="left" tabindex="0" role="button" aria-label="Youth Expo & Trades Video">
+          <video autoplay loop muted playsinline webkit-playsinline poster="images/gdrive/carpentry-workshop.jpg">
+            <source src="videos/opgo-expo.mp4" type="video/mp4">
+            <source src="videos/welding-craft.webm" type="video/webm">
+          </video>
+        </div>
+
+        <!-- Right Card (Tilted +12deg) -->
+        <div class="donatia-deck-card deck-card-right" data-card="right" tabindex="0" role="button" aria-label="Youth Vision & Trades Video">
+          <video autoplay loop muted playsinline webkit-playsinline poster="images/gdrive/workshop-action-dsc0170.jpg">
+            <source src="videos/opgo-vision.mp4" type="video/mp4">
+            <source src="videos/3d-printing-craft.webm" type="video/webm">
+          </video>
+        </div>
+
+        <!-- Center Card (Elevated in Front - High-Res Operation GO Cohort Showcase) -->
+        <div class="donatia-deck-card deck-card-center" data-card="center" tabindex="0" role="button" aria-label="Operation GO Youth Cohort Showcase">
+          <img src="images/operation-go-cohort-highres.jpg" alt="Operation GO Youth Cohort Showcase" class="deck-card-image">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       2. FEATURE & VIDEO SPOTLIGHT ("One organization, many battles")
+       ========================================================================== -->
+  <section class="donatia-feature-section">
+    <div class="donatia-container">
+      <div class="donatia-feature-grid">
+        
+        <!-- Left Column -->
+        <div class="donatia-feature-body">
+          <h2 class="donatia-heading-lg">
+            One foundry, eight career pathways
+          </h2>
+          <p>
+            We reject the stigma that skilled trades are a fallback. At Operation GO, youth master commercial timber framing, custom sneaker fabrication, 4K cinema soundstages, and contractor enterprise—graduating directly into living wages without college debt.
+          </p>
+          <a href="#all-programs" class="donatia-btn-dark">
+            <span>Explore More</span>
+            <span class="btn-arrow-icon">→</span>
+          </a>
+        </div>
+
+        <!-- Right Column: Video Spotlight Card -->
+        <div class="donatia-video-card">
+          <img src="images/gdrive/workshop-team-dsc0041.jpg" alt="Master contractor mentoring student on carpentry build" style="object-position: center 20%;">
+          <button class="donatia-play-btn-circle" data-open-modal="donateModal" aria-label="Play spotlight video">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+              <polygon points="6 3 20 12 6 21 6 3"></polygon>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       3. ALL PROGRAMS & ADMISSIONS SHOWCASE
+       Detailed Track Curricula, Specs, and Direct Application CTAs
+       ========================================================================== -->
+  <section class="donatia-details-section" id="all-programs">
+    <div class="donatia-container">
+      
+      <!-- Section Header -->
+      <div class="donatia-details-header">
+        <h2 class="donatia-heading-lg" style="margin-top: 14px;">Complete Program Tracks &amp; Admissions</h2>
+        <p>Eight intensive vocational labs designed to move Rochester youth from zero experience to licensed mastery, paid apprenticeships, and independent generational wealth.</p>
+      </div>
+
+      <!-- Layout: Left Column Filter + Right Column Tracks -->
+      <div class="donatia-tracks-layout">
+
+        <!-- Left Filter Sidebar -->
+        <aside class="donatia-filter-sidebar">
+          <div class="donatia-filter-sticky">
+            <div class="donatia-filter-card">
+              <div class="donatia-filter-header">
+                <span class="filter-eyebrow">CHOOSE PATHWAY</span>
+                <h3 class="filter-headline">Filter by Field</h3>
+              </div>
+              <div class="donatia-filter-nav">
+                <button class="donatia-filter-pill active" data-filter="all">
+                  <span class="pill-name">All Pathways</span>
+                  <span class="pill-badge">8</span>
+                </button>
+                <button class="donatia-filter-pill" data-filter="trades">
+                  <span class="pill-name">Skilled Trades</span>
+                  <span class="pill-badge">2</span>
+                </button>
+                <button class="donatia-filter-pill" data-filter="summer">
+                  <span class="pill-name">Paid Summer (SYEP)</span>
+                  <span class="pill-badge">1</span>
+                </button>
+                <button class="donatia-filter-pill" data-filter="creative">
+                  <span class="pill-name">Creative &amp; Media</span>
+                  <span class="pill-badge">2</span>
+                </button>
+                <button class="donatia-filter-pill" data-filter="business">
+                  <span class="pill-name">Enterprise &amp; Wealth</span>
+                  <span class="pill-badge">3</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Advisor Guidance Card -->
+            <div class="donatia-advisor-card">
+              <h4 class="advisor-title">Need guidance choosing a track?</h4>
+              <p class="advisor-desc">Speak directly with an Operation GO vocational mentor to match your goals with paid apprenticeships.</p>
+              <button class="donatia-btn-advisor" data-open-modal="applyModal">
+                <span>Talk to Advisor</span>
+                <span class="btn-arrow-icon">→</span>
+              </button>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Right Column: Detailed Tracks List -->
+        <div class="donatia-tracks-list">
+
+        <!-- Track 1: Construction & Trades -->
+        <article class="donatia-track-card-detailed" data-category="trades" id="track-construction">
+          <div id="trades" class="track-anchor"></div>
+          <div id="career-ladder" class="track-anchor"></div>
+          <div class="donatia-track-grid-split">
+            <div class="donatia-track-photo-frame">
+              <img src="images/gdrive/workshop-youth-dsc0111.jpg" alt="Operation GO apprentice wood framing with power tools in shop" style="object-position: center center;">
+            </div>
+
+            <div class="donatia-track-body">
+              <h3 class="donatia-track-title">Construction &amp; Commercial Carpentry</h3>
+              <p class="donatia-track-desc">
+                Where carpentry becomes a living-wage career. Students master wood framing, power tools, safety protocols, and structural craftsmanship under licensed master contractors.
+              </p>
+
+              <div class="donatia-track-bullets">
+                <div class="donatia-bullet-item">
+                  <span class="donatia-bullet-icon">✓</span>
+                  <div><strong>Curriculum:</strong> 2x4 and 2x6 timber framing, roof trusses, miter and circular saws, levels, laser measuring, and blueprint geometry.</div>
+                </div>
+                <div class="donatia-bullet-item">
+                  <span class="donatia-bullet-icon">✓</span>
+                  <div><strong>Facility Scope:</strong> Delivered at our main Rochester vocational workshop, community park build sites, and secure juvenile justice facility partnerships.</div>
+                </div>
+                <div class="donatia-bullet-item">
+                  <span class="donatia-bullet-icon">✓</span>
+                  <div><strong>Union Placement:</strong> Direct pipeline into Carpenters Local 276 paying $25–$45/hr starting scale with full pension and medical benefits.</div>
+                </div>
+              </div>
+
+              <div class="donatia-track-actions">
+                <button class="donatia-btn-dark" data-open-modal="applyModal" data-track-select="construction">
+                  <span>Apply for Track</span>
+                  <span class="btn-arrow-icon">→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Track 2: Summer Youth Employment -->
+        <article class="donatia-track-card-detailed" data-category="summer" id="track-summer">
+          <div id="summer" class="track-anchor"></div>
+          <div id="syep" class="track-anchor"></div>
+          <div class="donatia-track-grid-split">
+            <div class="donatia-track-photo-frame">
+              <img src="images/gdrive/workshop-team-dsc0080.jpg" alt="Student smiling while building timber pavilion">
+            </div>
+
+            <div class="donatia-track-body">
+              <h3 class="donatia-track-title">Summer Youth Employment Program (SYEP)</h3>
+              <p class="donatia-track-desc">
+                A 6–8 week paid summer intensive where youth build real community architecture and earn hourly wages, culminating in an acclaimed public showcase covered by WHAM13 and WXXI.
+              </p>
+
+              <div class="donatia-track-bullets">
+                <div class="donatia-bullet-item">
+                  <span class="donatia-bullet-icon">✓</span>
+                  <div><strong>Curriculum:</strong> 6–8 week intensive field timber framing, community gazebo &amp; pavilion builds, power tool safety, and public architectural engineering.</div>
+                </div>
+                <div class="donatia-bullet-item">
+                  <span class="donatia-bullet-icon">✓</span>
+                  <div><strong>Facility Scope:</strong> Delivered across Rochester municipal parks, urban garden sites, and public neighborhood pavilions.</div>
+                </div>
+                <div class="donatia-bullet-item">
+                  <span class="donatia-bullet-icon">✓</span>
+                  <div><strong>Union Placement:</strong> Direct pipeline into pre-apprenticeship union training and private commercial framing contractors.</div>
+                </div>
+              </div>
+
+              <div class="donatia-track-actions">
+                <button class="donatia-btn-dark" data-open-modal="applyModal" data-track-select="summer">
+                  <span>Apply for Track</span>
+                  <span class="btn-arrow-icon">→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Track 3: Apparel & Sneaker Lab -->
+        <article class="donatia-track-card-detailed" data-category="creative" id="track-sneaker">
+          <div id="sneaker" class="track-anchor"></div>
+          <div id="apparel" class="track-anchor"></div>
+          <div class="donatia-track-grid-split">
+            <div class="donatia-track-photo-frame">
+              <img src="images/gdrive/custom-sneakers-display.jpg" alt="Student deconstructing sneaker and leatherwork in design lab">
+            </div>
+
+            <div class="donatia-track-body">
+              <h3 class="donatia-track-title">Apparel &amp; Sneaker Reconstruction Lab</h3>
+              <p class="donatia-track-desc">
+                Students learn industrial footwear deconstruction, pattern drafting, leatherworking, heavy sewing machine operation, and independent streetwear brand creation.
+              </p>
+
+              <div class="donatia-track-bullets">
+                <div class="donatia-bullet-item">
+                  <span class="donatia-bullet-icon">✓</span>
+                  <div><strong>Curriculum:</strong> Complete footwear teardown, lasting boards, outsole unbonding, skiving, leatherwork, and specialized contact adhesive chemistry.</div>
+                </div>
+                <div class="donatia-bullet-item">
+                  <span class="donatia-bullet-icon">✓</span>
+                  <div><strong>Facility Scope:</strong> Hands-on industrial design studio equipped with heavy walking-foot sewing machines, heat presses, and professional airbrush systems.</div>
+                </div>
+                <div class="donatia-bullet-item">
+                  <span class="donatia-bullet-icon">✓</span>
+                  <div><strong>Career Placement:</strong> Direct pipeline into industrial prototyping, retail footwear pop-ups, and bespoke brand incubators.</div>
+                </div>
+              </div>
+
+              <div class="donatia-track-actions">
+                <button class="donatia-btn-dark" data-open-modal="applyModal" data-track-select="sneaker">
+                  <span>Apply for Track</span>
+                  <span class="btn-arrow-icon">→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Track 4: 4K Cinema Video Production -->
+        <article class="donatia-track-card-detailed" data-category="creative" id="track-media">
+          <div id="media" class="track-anchor"></div>
+          <div id="cinema" class="track-anchor"></div>
+          <div class="donatia-track-grid-split">
+            <div class="donatia-track-photo-frame">
+              <img src="images/gdrive/video-photo-girl-catalog.jpg" alt="Student operating commercial 4K video cinema camera on set" style="object-position: center center;">
+            </div>
+
+            <div class="donatia-track-body">
+              <h3 class="donatia-track-title">4K Cinema Video Production &amp; Media</h3>
+              <p class="donatia-track-desc">
+                Equipping youth with commercial cinema cameras, 3-point studio lighting, boom audio capture, and Hollywood-grade DaVinci Resolve editing and color grading.
+              </p>
+
+              <div class="donatia-track-bullets">
+                <div class="donatia-bullet-item">
+                  <span class="donatia-bullet-icon">✓</span>
+                  <div><strong>Curriculum:</strong> Camera sensor operation, optics, 3-point studio lighting, Foley boom audio, DaVinci Resolve color grading, and video editing.</div>
+                </div>
+                <div class="donatia-bullet-item">
+                  <span class="donatia-bullet-icon">✓</span>
+                  <div><strong>Facility Scope:</strong> Delivered in our Rochester production soundstage, audio recording booth, and live community field documentary shoots.</div>
+                </div>
+                <div class="donatia-bullet-item">
+                  <span class="donatia-bullet-icon">✓</span>
+                  <div><strong>Industry Placement:</strong> Advanced students shoot paid commercial video reels for local businesses and build verified portfolios for creative agencies.</div>
+                </div>
+              </div>
+
+              <div class="donatia-track-actions">
+                <button class="donatia-btn-dark" data-open-modal="applyModal" data-track-select="media">
+                  <span>Apply for Track</span>
+                  <span class="btn-arrow-icon">→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Track 5: Real Estate & Financial Literacy -->
+        <article class="donatia-track-card-detailed" data-category="business" id="track-realestate">
+          <div id="realestate" class="track-anchor"></div>
+          <div id="real-estate" class="track-anchor"></div>
+          <div class="donatia-track-grid-split">
+            <div class="donatia-track-photo-frame">
+              <img src="images/gdrive/home-renovation.jpg" alt="Operation GO youth learning residential property restoration and structural renovation walkthrough" style="object-position: center center;">
+            </div>
+
+            <div class="donatia-track-body">
+              <h3 class="donatia-track-title">Real Estate &amp; Financial Literacy</h3>
+              <p class="donatia-track-desc">
+                Demystifying property acquisition, credit building, mortgage math, and structural property underwriting so Rochester youth can build long-term generational wealth.
+              </p>
+
+              <div class="donatia-track-bullets">
+                <div class="donatia-bullet-item">
+                  <span class="donatia-bullet-icon">✓</span>
+                  <div><strong>Curriculum:</strong> Banking mechanics, compound interest math, credit defense, opening custodial accounts, and avoiding predatory loans.</div>
+                </div>
+                <div class="donatia-bullet-item">
+                  <span class="donatia-bullet-icon">✓</span>
+                  <div><strong>Facility Scope:</strong> Hands-on site walkthroughs assessing structural rehab scopes, electrical safety, plumbing, and estimating renovation budgets.</div>
+                </div>
+                <div class="donatia-bullet-item">
+                  <span class="donatia-bullet-icon">✓</span>
+                  <div><strong>Generational Placement:</strong> Direct pathways to purchase, restore, and retain equity in Rochester multi-family homes through municipal grant programs.</div>
+                </div>
+              </div>
+
+              <div class="donatia-track-actions">
+                <button class="donatia-btn-dark" data-open-modal="applyModal" data-track-select="realestate">
+                  <span>Apply for Track</span>
+                  <span class="btn-arrow-icon">→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Track 6: Biz Brain Entrepreneurship & Pitch Lab -->
+        <article class="donatia-track-card-detailed" data-category="business" id="track-entrepreneurship">
+          <div id="biz" class="track-anchor"></div>
+          <div id="entrepreneurship" class="track-anchor"></div>
+          <div class="donatia-track-grid-split">
+            <div class="donatia-track-photo-frame">
+              <img src="images/gdrive/marketing-agency.jpg" alt="Youth entrepreneurs analyzing business strategy, digital marketing, and venture economics" style="object-position: center center;">
+            </div>
+
+            <div class="donatia-track-body">
+              <h3 class="donatia-track-title">Biz Brain Youth Entrepreneurship &amp; Pitch Lab</h3>
+              <p class="donatia-track-desc">
+                Teens draft executable business plans, calculate unit margins, master customer discovery, and compete in live pitch events for micro-grant seed capital.
+              </p>
+
+              <div class="donatia-track-bullets">
+                <div class="donatia-bullet-item">
+                  <span class="donatia-bullet-icon">✓</span>
+                  <div><strong>Curriculum:</strong> Unit cost economics, pricing strategy, break-even calculations, pitch deck design, and margin protection for student ventures.</div>
+                </div>
+                <div class="donatia-bullet-item">
+                  <span class="donatia-bullet-icon">✓</span>
+                  <div><strong>Facility Scope:</strong> Weekly incubator lab with authentic Rochester angel investors, banking executives, and civic founders.</div>
+                </div>
+                <div class="donatia-bullet-item">
+                  <span class="donatia-bullet-icon">✓</span>
+                  <div><strong>Commercial Placement:</strong> Practical business formation filing for DBAs, EINs, commercial banking accounts, and local contractor licensing.</div>
+                </div>
+              </div>
+
+              <div class="donatia-track-actions">
+                <button class="donatia-btn-dark" data-open-modal="applyModal" data-track-select="business">
+                  <span>Apply for Track</span>
+                  <span class="btn-arrow-icon">→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Track 7: Reprogram Mindset & Civics -->
+        <article class="donatia-track-card-detailed" data-category="business" id="track-leadership">
+          <div id="reprogram" class="track-anchor"></div>
+          <div id="leadership" class="track-anchor"></div>
+          <div class="donatia-track-grid-split">
+            <div class="donatia-track-photo-frame">
+              <img src="images/gdrive/network-etiquette-2021.jpg" alt="Operation GO students participating in professional network etiquette, executive communication, and leadership workshop" style="object-position: center center;">
+            </div>
+
+            <div class="donatia-track-body">
+              <h3 class="donatia-track-title">Reprogram Mindset, Public Speaking &amp; Civics</h3>
+              <p class="donatia-track-desc">
+                Overcoming trauma barriers, instilling personal discipline, mastering executive communication, and speaking powerfully in municipal boardrooms.
+              </p>
+
+              <div class="donatia-track-bullets">
+                <div class="donatia-bullet-item">
+                  <span class="donatia-bullet-icon">✓</span>
+                  <div><strong>Curriculum:</strong> Conquering stage fright, mastering vocal modulation, emotional regulation, and crafting compelling keynote presentations.</div>
+                </div>
+                <div class="donatia-bullet-item">
+                  <span class="donatia-bullet-icon">✓</span>
+                  <div><strong>Facility Scope:</strong> Small-group mentor circles delivering personal accountability, active listening, and executive workplace etiquette.</div>
+                </div>
+                <div class="donatia-bullet-item">
+                  <span class="donatia-bullet-icon">✓</span>
+                  <div><strong>Civic Placement:</strong> Direct interface with Rochester City Council, Monroe County committees, and community leadership boards.</div>
+                </div>
+              </div>
+
+              <div class="donatia-track-actions">
+                <button class="donatia-btn-dark" data-open-modal="applyModal" data-track-select="leadership">
+                  <span>Apply for Track</span>
+                  <span class="btn-arrow-icon">→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Track 8: Academic Support & Credit Recovery -->
+        <article class="donatia-track-card-detailed" data-category="trades" id="track-academic">
+          <div id="academic" class="track-anchor"></div>
+          <div class="donatia-track-grid-split">
+            <div class="donatia-track-photo-frame">
+              <img src="images/gdrive/web-development.jpg" alt="Student working on computer lab coding and contextualized vocational technology" style="object-position: center center;">
+            </div>
+
+            <div class="donatia-track-body">
+              <h3 class="donatia-track-title">Academic Support &amp; Trades Credit Recovery</h3>
+              <p class="donatia-track-desc">
+                Partnered with Rochester City School District to provide contextualized trades math, Regents exam coaching, and academic recovery to guarantee graduation.
+              </p>
+
+              <div class="donatia-track-bullets">
+                <div class="donatia-bullet-item">
+                  <span class="donatia-bullet-icon">✓</span>
+                  <div><strong>Curriculum:</strong> Pythagorean theorem, layout angles, board-footage formulas, and Regents exam coaching learned through practical carpentry.</div>
+                </div>
+                <div class="donatia-bullet-item">
+                  <span class="donatia-bullet-icon">✓</span>
+                  <div><strong>Facility Scope:</strong> Certified educators provide 1-on-1 tutoring at our Rochester learning lab integrated with vocational shop classes.</div>
+                </div>
+                <div class="donatia-bullet-item">
+                  <span class="donatia-bullet-icon">✓</span>
+                  <div><strong>Diploma Placement:</strong> Earn credited elective and vocational units recognized toward high school diplomas and guaranteed graduation.</div>
+                </div>
+              </div>
+
+              <div class="donatia-track-actions">
+                <button class="donatia-btn-dark" data-open-modal="applyModal" data-track-select="academic">
+                  <span>Apply for Track</span>
+                  <span class="btn-arrow-icon">→</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div><!-- /.donatia-tracks-list -->
+
+      </div><!-- /.donatia-tracks-layout -->
+
+    </div>
+  </section>
+
+
+
+  <!-- ==========================================================================
+       5. TESTIMONIALS & QUOTE ("What they say about us?")
+       Powder Sky Blue Background #E0F2FE
+       ========================================================================== -->
+  <section class="donatia-testimonial-section">
+    <div class="donatia-container">
+      <div class="donatia-testimonial-grid">
+        
+        <!-- Left Column -->
+        <div class="donatia-testimonial-content">
+          <h2 class="donatia-heading-lg">What they say about us?</h2>
+          <p>
+            Hear directly from youth apprentices, union contractors, and Rochester families whose trajectories were transformed through hands-on mastery.
+          </p>
+
+          <div class="donatia-rating-badge">
+            <div class="donatia-avatar-stack">
+              <img src="images/gdrive/studio-portrait-481A9163.jpg" alt="Student Apprentice">
+              <img src="images/gdrive/studio-portrait-481A9180.jpg" alt="Student Apprentice">
+              <img src="images/gdrive/studio-portrait-481A9170.jpg" alt="Student Apprentice">
+            </div>
+            <div class="donatia-rating-meta">
+              <strong>★★★★★ 5.0 Rating</strong>
+              <span>From 500+ Rochester Youth &amp; Families</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Cohort Photo + Quote Card -->
+        <div class="donatia-quote-composite">
+          <div class="donatia-quote-photo">
+            <img src="images/gdrive/generation-go-cohort.jpg" alt="Operation GO Youth Cohort in Rochester">
+          </div>
+
+          <div class="donatia-quote-card">
+            <div class="donatia-quote-mark">“</div>
+            <blockquote>
+              The organization transformed my mindset and gave me a direct ticket into union carpentry at 18 with zero college debt.
+            </blockquote>
+            <cite>— Marcus J., Journeyman Apprentice (Carpenters Local 276)</cite>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       6. PROJECTS IN ACTION ("Our latest projects in action")
+       ========================================================================== -->
+  <section class="donatia-projects-section">
+    <div class="donatia-container">
+      
+      <div class="donatia-section-nav-row">
+        <div>
+          <h2 class="donatia-heading-lg">Our latest projects in action</h2>
+          <p class="donatia-lead-text" style="margin-top: 8px;">Real-world builds and creative launches from our Rochester workshops</p>
+        </div>
+        <a href="impact.html" class="donatia-btn-dark">
+          <span>View all</span>
+          <span class="btn-arrow-icon">→</span>
+        </a>
+      </div>
+
+      <!-- Asymmetric Grid: 1 Large on Left, 2 Stacked on Right -->
+      <div class="donatia-projects-grid">
+        <!-- Big Featured Card -->
+        <div class="donatia-project-card-lg">
+          <div class="donatia-project-img-lg">
+            <img src="images/editorial-celebration.jpg" alt="Youth apprentices celebrate project completion">
+          </div>
+          <div class="donatia-project-body-lg">
+            <h3>The 2026 Commercial Timber Framing Capstone Build</h3>
+            <p>
+              Youth apprentices designed and framed a commercial outdoor timber pavilion, mastering pneumatic nailers, structural laser leveling, and OSHA fall protection standards.
+            </p>
+            <a href="impact.html" class="donatia-project-link">Read story →</a>
+          </div>
+        </div>
+
+        <!-- Stacked Cards on Right -->
+        <div class="donatia-projects-stack">
+          <!-- Card 1 -->
+          <div class="donatia-project-card-sm">
+            <div class="donatia-project-img-sm">
+              <img src="images/gdrive/custom-sneakers-craft.jpg" alt="Bespoke custom sneaker craftsmanship in design lab">
+            </div>
+            <div class="donatia-project-body-sm">
+              <span style="font-size: 0.75rem; font-weight: 700; color: #BE185D; margin-bottom: 4px;">SNEAKER LAB</span>
+              <h4>Bespoke Footwear Lab Launch</h4>
+              <p>Handcrafted leather sneakers designed by high school apprentices.</p>
+              <a href="programs.html#sneaker" class="donatia-project-link">Read story →</a>
+            </div>
+          </div>
+
+          <!-- Card 2 with Doodle Squiggle -->
+          <div class="donatia-project-card-sm">
+            <!-- Doodle Squiggle SVG -->
+            <svg class="donatia-doodle-squiggle" viewBox="0 0 100 100" fill="none">
+              <path d="M20 50 Q35 20, 50 50 T80 50" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+
+            <div class="donatia-project-img-sm">
+              <img src="images/gdrive/carpentry-photo-2021.jpg" alt="Safety credentials class">
+            </div>
+            <div class="donatia-project-body-sm">
+              <span style="font-size: 0.75rem; font-weight: 700; color: #1D4ED8; margin-bottom: 4px;">CREDENTIALS</span>
+              <h4>35 Youth Complete OSHA-10</h4>
+              <p>Certified job-site safety turns students into trusted union candidates.</p>
+              <a href="about.html" class="donatia-project-link">Read story →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       8. MINIMALIST OBSIDIAN-PINE FOOTER (STANDARDIZED)
+       ========================================================================== -->
+  <footer class="site-minimal-footer">
+    <div class="donatia-container">
+      
+      <!-- Main Footer Grid -->
+      <div class="footer-grid">
+        
+        <!-- Brand & Mission Column -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="footer-brand" aria-label="Operation GO Home">
+            <img src="images/logo.png" alt="Operation GO" class="footer-logo">
+          </a>
+          <p class="footer-desc">
+            Rochester’s nonprofit workforce foundry. Cultivating debt-free futures and living-wage careers for youth through hands-on mastery in skilled trades, design, and enterprise.
+          </p>
+          <div class="footer-badges">
+            <span class="footer-badge">501(c)(3) Public Charity</span>
+            <span class="footer-badge">Rochester, NY</span>
+          </div>
+        </div>
+
+        <!-- Links Column 1: Navigation -->
+        <div class="footer-nav-col">
+          <h5 class="footer-col-title">Navigation</h5>
+          <ul class="footer-link-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Operation GO</a></li>
+            <li><a href="programs.html">All Vocational Tracks</a></li>
+            <li><a href="index.html#testimonials">Stories &amp; Testimonials</a></li>
+            <li><a href="careers.html">Contractor Mentorship</a></li>
+            <li><a href="get-involved.html">Get Involved</a></li>
+            <li><a href="contact.html">Contact &amp; Visit</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Column 2: Foundry Tracks -->
+        <div class="footer-nav-col">
+          <h5 class="footer-col-title">Foundry Tracks</h5>
+          <ul class="footer-link-list">
+            <li><a href="programs.html#trades">The Career Ladder</a></li>
+            <li><a href="programs.html#sneaker">Sneaker Lab &amp; Apparel</a></li>
+            <li><a href="programs.html#media">Academic &amp; Media Studio</a></li>
+            <li><a href="programs.html#biz">Biz Brain Enterprise</a></li>
+            <li><a href="programs.html#reprogram">Reprogram Mindset</a></li>
+            <li><a href="programs.html#realestate">I Own Real Estate</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Column 3: Contact & Connect -->
+        <div class="footer-nav-col">
+          <h5 class="footer-col-title">Foundry &amp; Connect</h5>
+          <ul class="footer-link-list">
+            <li><span class="footer-meta-label">Location:</span> 100 Carlson Rd, Rochester, NY 14610</li>
+            <li><span class="footer-meta-label">Phone:</span> <a href="tel:5854840846">(585) 484-0846</a></li>
+            <li><span class="footer-meta-label">Email:</span> <a href="mailto:info@operationgo.org">info@operationgo.org</a></li>
+          </ul>
+          
+          <div class="footer-social-minimal">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor"></polygon>
+              </svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          © 2026 Operation GO™. All rights reserved.
+        </div>
+        <div class="footer-legal-links">
+          <a href="#">Privacy Policy</a>
+          <span class="sep">•</span>
+          <a href="#">Terms of Use</a>
+          <span class="sep">•</span>
+          <a href="#">501(c)(3) Disclosure</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Donation Modal -->
+  <div class="charido-modal-overlay" id="donateModal">
+    <div class="charido-modal-card">
+      <button class="modal-close-btn" aria-label="Close modal">✕</button>
+      <div class="modal-header">
+        <span class="section-kicker" style="margin-bottom: 8px;">TAX-DEDUCTIBLE 501(C)(3)</span>
+        <h3>Support Rochester Youth Trades</h3>
+        <p>100% of your donation directly funds student toolboxes, OSHA-10 safety gear, and paid youth stipends.</p>
+      </div>
+
+      <form id="charidoDonationForm">
+        <div class="donation-preset-row">
+          <button type="button" class="preset-amount-btn" data-amount="50">$50</button>
+          <button type="button" class="preset-amount-btn" data-amount="100">$100</button>
+          <button type="button" class="preset-amount-btn" data-amount="250">$250</button>
+          <button type="button" class="preset-amount-btn active" data-amount="500">$500</button>
+        </div>
+
+        <div class="form-group-charido">
+          <label for="customAmountInput">Amount ($ USD)</label>
+          <input type="number" id="customAmountInput" value="500" min="5" required>
+        </div>
+
+        <div class="form-group-charido">
+          <label for="donorName">Your Full Name</label>
+          <input type="text" id="donorName" placeholder="Justin Ortiz" required>
+        </div>
+
+        <div class="form-group-charido">
+          <label for="donorEmail">Your Email (for 501(c)(3) Receipt)</label>
+          <input type="email" id="donorEmail" placeholder="justin@example.com" required>
+        </div>
+
+        <button type="submit" class="donatia-btn-dark" style="width: 100%; justify-content: center; margin-top: 10px; padding: 12px 24px;">
+          <span>Complete Secure Donation</span>
+          <span class="btn-arrow-icon">→</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Student Application Modal (Donatia Style) -->
+  <div class="charido-modal-overlay" id="applyModal">
+    <div class="charido-modal-card" style="max-width: 600px;">
+      <button class="modal-close-btn" aria-label="Close modal">✕</button>
+      <div class="modal-header">
+        <span class="section-kicker" style="margin-bottom: 8px;">FREE YOUTH ENROLLMENT &bull; AGES 12–18</span>
+        <h3>Apply for Operation GO Training</h3>
+        <p>Zero-cost vocational enrollment, provided safety gear, master mentorship, and paid summer opportunities for Rochester youth.</p>
+      </div>
+
+      <form id="studentApplicationForm">
+        <div class="donatia-form-row">
+          <div class="donatia-form-group">
+            <label for="studentFirstName">Student First Name *</label>
+            <input type="text" id="studentFirstName" class="donatia-form-control" required placeholder="Marcus">
+          </div>
+          <div class="donatia-form-group">
+            <label for="studentLastName">Student Last Name *</label>
+            <input type="text" id="studentLastName" class="donatia-form-control" required placeholder="Taylor">
+          </div>
+        </div>
+
+        <div class="donatia-form-row">
+          <div class="donatia-form-group">
+            <label for="studentAge">Age (Must be 12–18) *</label>
+            <input type="number" id="studentAge" class="donatia-form-control" min="12" max="18" required placeholder="16">
+          </div>
+          <div class="donatia-form-group">
+            <label for="studentSchool">Current School / District *</label>
+            <input type="text" id="studentSchool" class="donatia-form-control" required placeholder="East High School, RCSD">
+          </div>
+        </div>
+
+        <div class="donatia-form-group">
+          <label for="applyModalTrackSelect">Primary Career Track of Interest *</label>
+          <select id="applyModalTrackSelect" class="donatia-form-control" required>
+            <option value="construction">Construction &amp; Commercial Carpentry (Track 01)</option>
+            <option value="summer">Summer Youth Employment Program - Paid $16/hr (Track 02)</option>
+            <option value="sneaker">Sneaker Reconstruction &amp; Apparel Lab (Track 03)</option>
+            <option value="media">4K Cinema Video Production &amp; Soundstage (Track 04)</option>
+            <option value="realestate">Real Estate Acquisition &amp; Wealth (Track 05)</option>
+            <option value="business">Biz Brain Youth Entrepreneurship &amp; Pitch (Track 06)</option>
+            <option value="leadership">Reprogram Mindset, Voice &amp; Civics (Track 07)</option>
+            <option value="academic">Academic Support &amp; Credit Recovery (Track 08)</option>
+          </select>
+        </div>
+
+        <div class="donatia-form-row">
+          <div class="donatia-form-group">
+            <label for="parentName">Parent / Guardian Name *</label>
+            <input type="text" id="parentName" class="donatia-form-control" required placeholder="Parent or Guardian">
+          </div>
+          <div class="donatia-form-group">
+            <label for="parentPhone">Contact Phone Number *</label>
+            <input type="tel" id="parentPhone" class="donatia-form-control" required placeholder="(585) 555-0199">
+          </div>
+        </div>
+
+        <div class="donatia-form-group">
+          <label for="parentEmail">Parent / Student Email *</label>
+          <input type="email" id="parentEmail" class="donatia-form-control" required placeholder="family@example.com">
+        </div>
+
+        <button type="submit" class="donatia-btn-dark" style="width: 100%; justify-content: center; margin-top: 10px; padding: 14px 28px;">
+          <span>Submit Student Application</span>
+          <span class="btn-arrow-icon">→</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/main.js?v=20261031_deckpopfront1"></script>
+</body>
+</html>

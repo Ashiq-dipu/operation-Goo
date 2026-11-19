@@ -1,0 +1,3681 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Operation GO™ — Nonprofit Skilled Trades &amp; Youth Workforce Foundry</title>
+  <meta name="description"
+    content="Rochester's premier 501(c)(3) youth workforce foundry equipping youth ages 12–18 with paid vocational apprenticeships, OSHA-10 credentials, and debt-free careers in skilled trades.">
+
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <!-- High-Speed Video CDN Preconnect -->
+  <link rel="preconnect" href="https://www.youtube-nocookie.com">
+  <link rel="preconnect" href="https://i.ytimg.com">
+  <link rel="dns-prefetch" href="https://www.youtube-nocookie.com">
+  <link rel="dns-prefetch" href="https://i.ytimg.com">
+
+  <!-- High-Performance Typography: DM Sans, Newsreader Serif, Barlow Condensed, Montserrat, Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;0,900;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400;1,9..40,600&family=Fragment+Mono&family=Inter:wght@300;400;500;600;700;800&family=Inter+Tight:wght@400;500;600;700&family=Montserrat:wght@500;600;700;800;900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,600&family=Playfair+Display:ital,wght@0,500;1,400;1,500&family=Space+Grotesk:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css?v=20261119_blue155e89_all">
+
+  <!-- ==========================================================================
+       HOMEPAGE COMPONENT & DESIGN SYSTEM STYLES (DIRECT EMBED)
+       Restores full styling for Optimo About, Pathways Grid, Reels, Process,
+       Cinematic Video Slider, Foundry Updates, Testimonials Arch & Modals
+       ========================================================================== -->
+  <style>
+    /* --- SHARED FRAMER / EDITORIAL SYSTEM --- */
+    .editorial-serif {
+      font-family: 'Newsreader', Georgia, serif;
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    .framer-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .framer-section-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 32px;
+      margin-bottom: 48px;
+      flex-wrap: wrap;
+    }
+
+    .framer-header-text {
+      max-width: 760px;
+    }
+
+    .framer-section-title {
+      font-family: 'DM Sans', var(--font-nike-heading, sans-serif);
+      font-size: clamp(2.2rem, 3.8vw, 3.4rem);
+      font-weight: 800;
+      color: #0F172A;
+      line-height: 1.14;
+      letter-spacing: -0.03em;
+      margin: 0 0 16px 0;
+    }
+
+    .framer-section-title.text-white {
+      color: #FFFFFF;
+    }
+
+    .framer-section-sub {
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(1rem, 1.25vw, 1.12rem);
+      line-height: 1.65;
+      color: #64748B;
+      margin: 0;
+    }
+
+    .framer-section-sub.text-white-dim {
+      color: rgba(255, 255, 255, 0.72);
+    }
+
+    /* --- SECTION 2: OPTIMONKS EDITORIAL ABOUT --- */
+    .optimo-about-section {
+      background-color: #F7F7F4;
+      padding: 110px 0 100px;
+      position: relative;
+      width: 100%;
+      color: #03030F;
+      border-top: 1px solid rgba(15, 23, 42, 0.06);
+    }
+
+    .optimo-about-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    .optimo-about-header {
+      margin-bottom: 56px;
+    }
+
+    .optimo-about-title {
+      font-family: "Inter Tight", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: clamp(32px, 4.2vw, 52px);
+      font-weight: 500;
+      line-height: 1.18;
+      letter-spacing: -0.025em;
+      color: #03030F;
+      max-width: 980px;
+      margin: 0;
+    }
+
+    .optimo-serif-italic {
+      font-family: "Playfair Display", "Newsreader", Georgia, serif;
+      font-style: italic;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+    }
+
+    .optimo-about-content {
+      display: grid;
+      grid-template-columns: 285px 1fr 240px;
+      gap: 48px;
+      align-items: stretch;
+    }
+
+    .optimo-about-col-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 36px;
+    }
+
+    .optimo-about-desc {
+      font-family: "Inter", sans-serif;
+      font-size: 15px;
+      line-height: 1.65;
+      color: rgba(3, 3, 15, 0.65);
+      margin: 0;
+      max-width: 285px;
+    }
+
+    .optimo-stat-box {
+      border-left: 2px solid #155e89;
+      padding-left: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .optimo-stat-number {
+      font-family: "Inter", sans-serif;
+      font-size: clamp(52px, 5vw, 68px);
+      font-weight: 700;
+      letter-spacing: -2px;
+      line-height: 1;
+      color: #0A0A0A;
+    }
+
+    .optimo-stat-label {
+      font-size: 14.5px;
+      font-weight: 600;
+      color: #03030F;
+      line-height: 1.35;
+    }
+
+    .optimo-about-col-center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .optimo-image-wrapper {
+      width: 100%;
+      height: 100%;
+      min-height: 410px;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 10px 32px rgba(0, 0, 0, 0.05);
+      background: #EAE8E2;
+    }
+
+    .optimo-center-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 20%;
+      display: block;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .optimo-image-wrapper:hover .optimo-center-img {
+      transform: scale(1.025);
+    }
+
+    .optimo-about-col-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 28px;
+    }
+
+    .optimo-feature-card {
+      background: #FFFFFF;
+      border-radius: 14px;
+      padding: 24px 22px;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      border: 1px solid rgba(0, 0, 0, 0.04);
+    }
+
+    .optimo-card-pin {
+      display: inline-flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .optimo-feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .optimo-feature-list li {
+      font-family: "Inter", sans-serif;
+      font-size: 14.5px;
+      font-weight: 500;
+      color: #03030F;
+      line-height: 1.4;
+      letter-spacing: -0.01em;
+    }
+
+    .optimo-pill-btn {
+      background-color: #155e89;
+      color: #FFFFFF !important;
+      border-radius: 50px;
+      padding: 6px 6px 6px 24px;
+      height: 52px;
+      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      box-shadow: 0 4px 16px rgba(21, 94, 137, 0.22);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.2s ease;
+    }
+
+    .optimo-pill-btn:hover {
+      background-color: #0e4464;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(21, 94, 137, 0.32);
+      color: #FFFFFF !important;
+    }
+
+    .optimo-pill-arrow-wrap {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: transform 0.25s ease;
+    }
+
+    .optimo-pill-btn:hover .optimo-pill-arrow-wrap {
+      transform: rotate(45deg);
+    }
+
+    @media (max-width: 1024px) {
+      .optimo-about-content {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+      .optimo-about-desc {
+        max-width: 100%;
+      }
+      .optimo-image-wrapper {
+        min-height: 340px;
+        max-height: 440px;
+      }
+      .optimo-about-col-right {
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+      }
+      .optimo-feature-card,
+      .optimo-pill-btn {
+        flex: 1;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .optimo-about-section {
+        padding: 60px 0;
+      }
+      .optimo-about-container {
+        padding: 0 20px;
+      }
+      .optimo-about-col-right {
+        flex-direction: column;
+        align-items: stretch;
+      }
+    }
+
+    /* --- SECTION 3: NEXT-LEVEL PATHWAYS --- */
+    .framer-pathways-section {
+      background: #FFFFFF;
+      padding: 100px 0;
+      position: relative;
+      width: 100%;
+    }
+
+    .framer-pathways-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .framer-pathway-card {
+      background: #FAF7F4;
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      border-radius: 20px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.03);
+    }
+
+    .framer-pathway-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.09);
+      border-color: rgba(255, 87, 34, 0.35);
+      background: #FFFFFF;
+    }
+
+    .framer-pathway-img-wrap {
+      position: relative;
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+      background: #0F172A;
+    }
+
+    .framer-pathway-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+      display: block;
+    }
+
+    .framer-pathway-card:hover .framer-pathway-img-wrap img {
+      transform: scale(1.05);
+    }
+
+    .framer-pathway-body {
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .framer-pathway-title {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: #0F172A;
+      line-height: 1.25;
+      margin: 0 0 10px 0;
+    }
+
+    .framer-pathway-desc {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.92rem;
+      line-height: 1.6;
+      color: #64748B;
+      margin: 0 0 20px 0;
+      flex: 1;
+    }
+
+    .framer-pathway-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 16px;
+      border-top: 1px solid rgba(15, 23, 42, 0.08);
+    }
+
+    .framer-pathway-footer-tag {
+      font-family: 'Fragment Mono', monospace;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #FF5722;
+      letter-spacing: 0.04em;
+    }
+
+    .framer-circle-arrow {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #02333A;
+      color: #FFFFFF;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: all 0.25s ease;
+    }
+
+    .framer-pathway-card:hover .framer-circle-arrow {
+      background: #FF5722;
+      transform: translateX(3px);
+    }
+
+    @media (max-width: 1100px) {
+      .framer-pathways-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 680px) {
+      .framer-pathways-grid {
+        grid-template-columns: 1fr;
+      }
+      .framer-pathways-section {
+        padding: 60px 0;
+      }
+    }
+
+    /* --- SECTION 4: REAL MOMENTS REELS --- */
+    .framer-reels-section {
+      background: #081418;
+      color: #FFFFFF;
+      padding: 100px 0 110px;
+      position: relative;
+      overflow: hidden;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .framer-reels-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 32px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+
+    .framer-reels-nav {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .framer-reels-ig-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 999px;
+      padding: 10px 20px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.84rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+
+    .framer-reels-ig-btn:hover {
+      background: #FF5722;
+      border-color: #FF5722;
+      transform: translateY(-2px);
+    }
+
+    .framer-reels-arrows {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .framer-reels-arrow-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.06);
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      font-size: 1.2rem;
+    }
+
+    .framer-reels-arrow-btn:hover {
+      background: #FF5722;
+      border-color: #FF5722;
+      transform: scale(1.06);
+    }
+
+    /* --- SECTION 5: PROVEN 3-STEP PROCESS --- */
+    .framer-process-section {
+      background: #FAF7F4;
+      padding: 100px 0;
+      border-top: 1px solid rgba(15, 23, 42, 0.08);
+    }
+
+    .framer-process-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .framer-process-card {
+      background: #FFFFFF;
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      border-radius: 20px;
+      padding: 38px 30px;
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .framer-process-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+      border-color: rgba(255, 87, 34, 0.35);
+    }
+
+    .framer-step-number {
+      font-family: 'Fragment Mono', monospace;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #FF5722;
+      background: rgba(255, 87, 34, 0.1);
+      padding: 5px 12px;
+      border-radius: 999px;
+      display: inline-block;
+      margin-bottom: 20px;
+      width: fit-content;
+      letter-spacing: 0.04em;
+    }
+
+    .framer-process-title {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.32rem;
+      font-weight: 800;
+      color: #0F172A;
+      line-height: 1.25;
+      margin: 0 0 12px 0;
+    }
+
+    .framer-process-desc {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.94rem;
+      line-height: 1.6;
+      color: #64748B;
+      margin: 0 0 22px 0;
+      flex: 1;
+    }
+
+    .framer-process-meta {
+      padding-top: 18px;
+      border-top: 1px solid rgba(15, 23, 42, 0.08);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: #02333A;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    @media (max-width: 992px) {
+      .framer-process-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* --- SECTION 4.5: FULL-WIDTH CINEMATIC VIDEO SHOWCASE SLIDER --- */
+    .video-showcase-slider-section {
+      position: relative;
+      width: 100%;
+      background: #050508;
+      color: #FFFFFF;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      overflow: hidden;
+    }
+
+    .video-showcase-slider-section .vss-slider {
+      position: relative;
+      width: 100%;
+      height: 85vh;
+      min-height: 540px;
+      max-height: 840px;
+      overflow: hidden;
+      background: #000000;
+    }
+
+    .video-showcase-slider-section .vss-brand {
+      display: none !important;
+    }
+
+    .video-showcase-slider-section .vss-slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transform: scale(1.06);
+      transition: opacity 1s ease, transform 1.4s cubic-bezier(.2, .8, .2, 1);
+      pointer-events: none;
+    }
+
+    .video-showcase-slider-section .vss-slide.active {
+      opacity: 1;
+      transform: scale(1);
+      pointer-events: auto;
+    }
+
+    .video-showcase-slider-section .vss-yt-wrap {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+
+    .video-showcase-slider-section .vss-yt-wrap iframe {
+      width: 100%;
+      height: 100%;
+      display: block;
+      border: 0;
+    }
+
+    .video-showcase-slider-section .vss-overlay {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(to top, rgba(0, 0, 0, 0.92) 0%, rgba(0, 0, 0, 0.35) 45%, transparent 70%),
+        linear-gradient(to right, rgba(0, 0, 0, 0.55) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .video-showcase-slider-section .vss-caption {
+      position: absolute;
+      left: 48px;
+      bottom: 110px;
+      right: 48px;
+      max-width: 680px;
+      z-index: 4;
+    }
+
+    .video-showcase-slider-section .vss-caption .vss-tag {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      font-size: 11.5px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+      color: #FFFFFF;
+    }
+
+    .video-showcase-slider-section .vss-caption h2 {
+      font-size: clamp(28px, 4.5vw, 56px);
+      font-weight: 800;
+      line-height: 1.08;
+      letter-spacing: -1.5px;
+      margin-bottom: 12px;
+      color: #FFFFFF;
+    }
+
+    .video-showcase-slider-section .vss-caption p {
+      color: #D1D5DB;
+      font-weight: 300;
+      font-size: clamp(14px, 1.25vw, 17px);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .video-showcase-slider-section .vss-caption .vss-tag,
+    .video-showcase-slider-section .vss-caption h2,
+    .video-showcase-slider-section .vss-caption p {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: all 0.9s cubic-bezier(.2, .8, .2, 1);
+    }
+
+    .video-showcase-slider-section .vss-slide.active .vss-caption .vss-tag {
+      opacity: 1;
+      transform: none;
+      transition-delay: .35s;
+    }
+
+    .video-showcase-slider-section .vss-slide.active .vss-caption h2 {
+      opacity: 1;
+      transform: none;
+      transition-delay: .5s;
+    }
+
+    .video-showcase-slider-section .vss-slide.active .vss-caption p {
+      opacity: 1;
+      transform: none;
+      transition-delay: .65s;
+    }
+
+    .video-showcase-slider-section .vss-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all .3s;
+      z-index: 6;
+      padding: 0;
+    }
+
+    .video-showcase-slider-section .vss-nav:hover {
+      background: rgba(255, 255, 255, 0.22);
+      transform: translateY(-50%) scale(1.08);
+    }
+
+    .video-showcase-slider-section .vss-nav.vss-prev {
+      left: 28px;
+    }
+
+    .video-showcase-slider-section .vss-nav.vss-next {
+      right: 28px;
+    }
+
+    .video-showcase-slider-section .vss-nav svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    .video-showcase-slider-section .vss-controls {
+      position: absolute;
+      bottom: 32px;
+      left: 48px;
+      right: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 6;
+    }
+
+    .video-showcase-slider-section .vss-dots {
+      display: flex;
+      gap: 10px;
+    }
+
+    .video-showcase-slider-section .vss-dot {
+      width: 44px;
+      height: 4px;
+      border-radius: 2px;
+      background: rgba(255, 255, 255, 0.25);
+      cursor: pointer;
+      overflow: hidden;
+      position: relative;
+      padding: 0;
+      border: none;
+    }
+
+    .video-showcase-slider-section .vss-dot .vss-fill {
+      position: absolute;
+      inset: 0;
+      background: #FFFFFF;
+      transform-origin: left;
+      transform: scaleX(0);
+    }
+
+    .video-showcase-slider-section .vss-dot.active .vss-fill {
+      animation: vssFill var(--dur) linear forwards;
+    }
+
+    @keyframes vssFill {
+      to {
+        transform: scaleX(1);
+      }
+    }
+
+    .video-showcase-slider-section .vss-right {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .video-showcase-slider-section .vss-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all .3s;
+      padding: 0;
+    }
+
+    .video-showcase-slider-section .vss-btn:hover {
+      background: rgba(255, 255, 255, 0.22);
+    }
+
+    .video-showcase-slider-section .vss-btn svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .video-showcase-slider-section .vss-counter {
+      font-size: 13px;
+      color: #9CA3AF;
+      letter-spacing: 1px;
+      margin-right: 8px;
+    }
+
+    .video-showcase-slider-section .vss-counter b {
+      color: #FFFFFF;
+      font-size: 18px;
+    }
+
+    .video-showcase-slider-section .vss-thumbs {
+      display: flex;
+      gap: 16px;
+      width: 100%;
+      overflow-x: auto;
+      padding: 24px 48px 32px;
+      scrollbar-width: none;
+      background: linear-gradient(to bottom, #050508, #0B0B14);
+      justify-content: flex-start;
+    }
+
+    .video-showcase-slider-section .vss-thumbs::-webkit-scrollbar {
+      display: none;
+    }
+
+    .video-showcase-slider-section .vss-thumb {
+      flex: 0 0 200px;
+      aspect-ratio: 16 / 9;
+      border-radius: 12px;
+      overflow: hidden;
+      cursor: pointer;
+      position: relative;
+      opacity: .45;
+      border: 2px solid transparent;
+      transition: all .4s cubic-bezier(.2, .8, .2, 1);
+      background: #111;
+    }
+
+    .video-showcase-slider-section .vss-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .video-showcase-slider-section .vss-thumb span {
+      position: absolute;
+      left: 10px;
+      bottom: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #FFFFFF;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, .8);
+    }
+
+    .video-showcase-slider-section .vss-thumb:hover {
+      opacity: .85;
+      transform: translateY(-3px);
+    }
+
+    .video-showcase-slider-section .vss-thumb.active {
+      opacity: 1;
+      border-color: #A5B4FC;
+      box-shadow: 0 10px 28px rgba(99, 102, 241, .45);
+      transform: translateY(-3px);
+    }
+
+    @media (max-width: 768px) {
+      .video-showcase-slider-section .vss-slider {
+        height: 65vh;
+        min-height: 440px;
+      }
+      .video-showcase-slider-section .vss-caption {
+        left: 20px;
+        right: 20px;
+        bottom: 90px;
+      }
+      .video-showcase-slider-section .vss-caption h2 {
+        letter-spacing: -1px;
+      }
+      .video-showcase-slider-section .vss-controls {
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+      }
+      .video-showcase-slider-section .vss-nav {
+        width: 40px;
+        height: 40px;
+      }
+      .video-showcase-slider-section .vss-nav.vss-prev { left: 10px; }
+      .video-showcase-slider-section .vss-nav.vss-next { right: 10px; }
+      .video-showcase-slider-section .vss-thumbs {
+        padding: 16px 20px;
+        gap: 12px;
+      }
+      .video-showcase-slider-section .vss-thumb {
+        flex: 0 0 140px;
+      }
+      .video-showcase-slider-section .vss-dot {
+        width: 24px;
+      }
+    }
+
+    /* --- SECTION 6.5: LATEST FOUNDRY UPDATES & COMMUNITY DISPATCHES --- */
+    .framer-updates-section {
+      background: #FAF9F6;
+      padding: 95px 0 105px;
+      position: relative;
+      border-top: 1px solid rgba(15, 23, 42, 0.06);
+    }
+
+    .updates-header-split {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 32px;
+      margin-bottom: 44px;
+      flex-wrap: wrap;
+    }
+
+    .updates-header-left {
+      max-width: 680px;
+    }
+
+    .framer-blog-section-title {
+      font-family: 'DM Sans', sans-serif;
+      font-size: clamp(2.2rem, 3.8vw, 3.2rem);
+      font-weight: 750;
+      color: #0F172A;
+      line-height: 1.15;
+      letter-spacing: -0.025em;
+      margin: 0;
+    }
+
+    .framer-blog-pill-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: #155e89;
+      color: #FFFFFF;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.92rem;
+      font-weight: 700;
+      padding: 8px 10px 8px 22px;
+      border-radius: 999px;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(21, 94, 137, 0.25);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      flex-shrink: 0;
+    }
+
+    .framer-blog-pill-btn:hover {
+      background: #0e4464;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 22px rgba(21, 94, 137, 0.35);
+      color: #FFFFFF;
+    }
+
+    .framer-blog-pill-circle {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #FFFFFF;
+      color: #155e89;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      font-weight: 700;
+      transition: transform 0.25s ease;
+    }
+
+    .framer-blog-pill-btn:hover .framer-blog-pill-circle {
+      transform: translate(2px, -2px);
+    }
+
+    .framer-updates-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    @media (max-width: 1080px) {
+      .framer-updates-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 28px 20px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .framer-updates-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+    }
+
+    .framer-dispatch-card {
+      background: transparent;
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .framer-dispatch-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .framer-dispatch-card.is-hidden {
+      display: none !important;
+    }
+
+    .framer-dispatch-media {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 12;
+      border-radius: 16px;
+      overflow: hidden;
+      background: #E2E8F0;
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
+    }
+
+    .framer-dispatch-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .framer-dispatch-card:hover .framer-dispatch-media img {
+      transform: scale(1.05);
+    }
+
+    .framer-dispatch-body {
+      padding: 16px 0 0;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .framer-dispatch-title {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.08rem;
+      font-weight: 750;
+      color: #0F172A;
+      line-height: 1.35;
+      margin: 0 0 8px 0;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      min-height: calc(1.08rem * 1.35 * 2);
+      transition: color 0.2s ease;
+    }
+
+    .framer-dispatch-card:hover .framer-dispatch-title {
+      color: #155e89;
+    }
+
+    .framer-dispatch-excerpt {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.86rem;
+      line-height: 1.5;
+      color: #64748B;
+      margin: 0 0 16px 0;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      min-height: calc(0.86rem * 1.5 * 2);
+    }
+
+    .framer-dispatch-footer {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 8px;
+      padding-top: 0;
+      border-top: none;
+      margin-top: auto;
+    }
+
+    .framer-dispatch-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #0F172A;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .framer-dispatch-arrow-circle {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: #155e89;
+      color: #FFFFFF;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 700;
+      line-height: 1;
+      transition: transform 0.25s ease, background 0.25s ease;
+    }
+
+    .framer-dispatch-card:hover .framer-dispatch-cta {
+      color: #155e89;
+    }
+
+    .framer-dispatch-card:hover .framer-dispatch-arrow-circle {
+      transform: translate(2px, -2px);
+      background: #0e4464;
+    }
+
+    .framer-newsletter-card {
+      margin-top: 52px;
+      width: 100%;
+      padding: 36px 44px;
+      background: #FFFFFF;
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(15, 23, 42, 0.03);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+
+    .framer-newsletter-content {
+      max-width: 540px;
+    }
+
+    .framer-newsletter-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: #155e89;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .framer-newsletter-title {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.35rem;
+      font-weight: 750;
+      color: #0F172A;
+      margin: 0 0 6px 0;
+    }
+
+    .framer-newsletter-desc {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      color: #64748B;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    .framer-newsletter-form {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex: 1;
+      max-width: 460px;
+      min-width: 280px;
+    }
+
+    .framer-newsletter-input {
+      flex: 1;
+      padding: 13px 20px;
+      border-radius: 999px;
+      border: 1px solid rgba(15, 23, 42, 0.15);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      outline: none;
+      background: #FAF9F6;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .framer-newsletter-input:focus {
+      border-color: #155e89;
+      box-shadow: 0 0 0 3px rgba(21, 94, 137, 0.15);
+      background: #FFFFFF;
+    }
+
+    .framer-newsletter-submit-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #155e89;
+      color: #FFFFFF;
+      border: none;
+      border-radius: 999px;
+      padding: 13px 26px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.92rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      white-space: nowrap;
+    }
+
+    .framer-newsletter-submit-btn:hover {
+      background: #0e4464;
+      transform: translateY(-2px);
+    }
+
+    /* --- SECTION: TESTIMONIALS ARCH MOSAIC & REVIEWS --- */
+    .ref-lead-section {
+      background: #FFFFFF;
+      padding: 100px 0 110px;
+      position: relative;
+      overflow: hidden;
+      border-top: 1px solid #F1F5F9;
+    }
+
+    .ref-lead-container {
+      max-width: 1380px;
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    .ref-lead-mosaic {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      grid-template-rows: auto auto;
+      column-gap: 14px;
+      row-gap: 24px;
+      align-items: start;
+      position: relative;
+    }
+
+    .mosaic-col {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .mosaic-col.col-1 { grid-column: 1; grid-row: 1 / 3; gap: 14px; }
+    .mosaic-col.col-2 { grid-column: 2; grid-row: 1 / 3; gap: 10px; }
+    .mosaic-col.col-3 { grid-column: 3; grid-row: 1; }
+    .mosaic-col.col-4 { grid-column: 4; grid-row: 1; }
+    .mosaic-col.col-5 { grid-column: 5; grid-row: 1; }
+    .mosaic-col.col-6 { grid-column: 6; grid-row: 1; }
+    .mosaic-col.col-7 { grid-column: 7; grid-row: 1 / 3; gap: 10px; }
+    .mosaic-col.col-8 { grid-column: 8; grid-row: 1 / 3; gap: 14px; }
+
+    .m-card {
+      border-radius: 18px;
+      overflow: hidden;
+      position: relative;
+      background: #E2E8F0;
+      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05);
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+      width: 100%;
+    }
+
+    .m-card:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 14px 30px rgba(15, 23, 42, 0.12);
+      z-index: 2;
+    }
+
+    .m-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .m-card.h-145 { height: 145px; }
+    .m-card.h-140 { height: 140px; }
+    .m-card.h-88  { height: 88px; }
+    .m-card.h-98  { height: 98px; }
+    .m-card.h-250 { height: 250px; }
+    .m-card.h-210 { height: 210px; }
+
+    .mosaic-header {
+      grid-column: 3 / 7;
+      grid-row: 2;
+      text-align: center;
+      align-self: center;
+      padding: 10px 20px 0;
+      z-index: 3;
+    }
+
+    .mosaic-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.3rem;
+      font-weight: 800;
+      color: #0F172A;
+      line-height: 1.2;
+      letter-spacing: -0.025em;
+      margin: 0 0 6px 0;
+    }
+
+    .mosaic-subtitle {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.85rem;
+      font-weight: 700;
+      color: #94A3B8;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+      margin: 0;
+    }
+
+    .ref-carousel-section {
+      margin-top: 68px;
+      position: relative;
+    }
+
+    .ref-carousel-viewport {
+      overflow: hidden;
+      width: 100%;
+      position: relative;
+      cursor: grab;
+    }
+
+    .ref-carousel-viewport:active {
+      cursor: grabbing;
+    }
+
+    .ref-carousel-track {
+      display: flex;
+      gap: 40px;
+      will-change: transform;
+    }
+
+    .ref-review-item {
+      flex: 0 0 calc((100% - 80px) / 3);
+      background: transparent;
+      border: none;
+      border-radius: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: none;
+      user-select: none;
+      transition: opacity 0.25s ease;
+    }
+
+    .ref-quote-mark {
+      color: #155e89;
+      margin-bottom: 14px;
+      opacity: 0.8;
+      transition: opacity 0.25s ease;
+    }
+
+    .ref-review-item:hover .ref-quote-mark {
+      opacity: 1;
+    }
+
+    .ref-review-quote {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.94rem;
+      line-height: 1.65;
+      color: #334155;
+      margin: 0 0 20px 0;
+      flex: 1;
+      font-style: italic;
+    }
+
+    .ref-review-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .ref-review-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+      border: 2px solid #E2E8F0;
+    }
+
+    .ref-review-name {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #0F172A;
+      margin: 0 0 2px 0;
+    }
+
+    .ref-review-role {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.82rem;
+      color: #64748B;
+      font-weight: 500;
+      display: block;
+    }
+
+    .ref-carousel-controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 40px;
+    }
+
+    .ref-nav-arrow {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid #E2E8F0;
+      background: #FFFFFF;
+      color: #475569;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .ref-nav-arrow:hover {
+      background: #155e89;
+      color: #FFFFFF;
+      border-color: #155e89;
+    }
+
+    .ref-carousel-dots {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .ref-carousel-dots .ref-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #CBD5E1;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      transition: all 0.25s ease;
+    }
+
+    .ref-carousel-dots .ref-dot.active {
+      width: 24px;
+      border-radius: 999px;
+      background: #155e89;
+    }
+
+    @media (max-width: 1040px) {
+      .ref-lead-mosaic {
+        grid-template-columns: repeat(6, 1fr);
+      }
+      .mosaic-col.col-1, .mosaic-col.col-8 {
+        display: none;
+      }
+      .mosaic-col.col-2 { grid-column: 1; grid-row: 1 / 3; }
+      .mosaic-col.col-3 { grid-column: 2; grid-row: 1; }
+      .mosaic-col.col-4 { grid-column: 3; grid-row: 1; }
+      .mosaic-col.col-5 { grid-column: 4; grid-row: 1; }
+      .mosaic-col.col-6 { grid-column: 5; grid-row: 1; }
+      .mosaic-col.col-7 { grid-column: 6; grid-row: 1 / 3; }
+      .mosaic-header {
+        grid-column: 2 / 6;
+        grid-row: 2;
+      }
+      .ref-review-item {
+        flex: 0 0 calc((100% - 40px) / 2);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .ref-lead-section {
+        padding: 60px 0 70px;
+      }
+      .ref-lead-mosaic {
+        display: none;
+      }
+      .ref-carousel-section {
+        margin-top: 0;
+      }
+      .ref-review-item {
+        flex: 0 0 100%;
+      }
+    }
+
+    /* --- SECTION 7: CLOSING FRAMER CTA --- */
+    .framer-cta-section {
+      background: linear-gradient(135deg, #02333A 0%, #061A1E 100%);
+      padding: 100px 0;
+      text-align: center;
+      color: #FFFFFF;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .framer-cta-inner {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .framer-cta-title {
+      font-family: 'DM Sans', sans-serif;
+      font-size: clamp(2.3rem, 4vw, 3.6rem);
+      font-weight: 900;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      margin: 0 0 20px 0;
+      color: #FFFFFF;
+    }
+
+    .framer-cta-sub {
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(1.02rem, 1.25vw, 1.18rem);
+      line-height: 1.65;
+      color: rgba(255, 255, 255, 0.82);
+      margin: 0 auto 36px;
+      max-width: 700px;
+    }
+
+    .framer-cta-buttons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    /* --- DISPATCH READER MODAL --- */
+    .framer-dispatch-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 99999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .framer-dispatch-modal.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .framer-modal-backdrop {
+      position: absolute;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.7);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    .framer-modal-dialog {
+      position: relative;
+      background: #FFFFFF;
+      border-radius: 24px;
+      max-width: 720px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 36px 32px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+      transform: translateY(20px) scale(0.96);
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 2;
+    }
+
+    .framer-dispatch-modal.active .framer-modal-dialog {
+      transform: translateY(0) scale(1);
+    }
+
+    .framer-modal-close-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1px solid rgba(15, 23, 42, 0.1);
+      background: #F8FAFC;
+      color: #0F172A;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .framer-modal-close-btn:hover {
+      background: #0F172A;
+      color: #FFFFFF;
+    }
+
+    .framer-modal-header {
+      margin-bottom: 20px;
+    }
+
+    .framer-modal-tags {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .framer-modal-cat {
+      background: rgba(21, 94, 137, 0.1);
+      color: #155e89;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 6px;
+      letter-spacing: 0.05em;
+    }
+
+    .framer-modal-date {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      color: #64748B;
+    }
+
+    .framer-modal-title {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1.55rem;
+      font-weight: 800;
+      color: #0F172A;
+      line-height: 1.25;
+      margin: 0 0 14px 0;
+    }
+
+    .framer-modal-author-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .framer-modal-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #155e89;
+      color: #FFFFFF;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 0.75rem;
+    }
+
+    .framer-modal-author-row strong {
+      display: block;
+      font-size: 0.88rem;
+      color: #0F172A;
+    }
+
+    .framer-modal-author-row span {
+      font-size: 0.78rem;
+      color: #64748B;
+    }
+
+    .framer-modal-image-wrap {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 14px;
+      overflow: hidden;
+      margin-bottom: 22px;
+      background: #0F172A;
+    }
+
+    .framer-modal-image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .framer-modal-body {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #334155;
+      margin-bottom: 26px;
+    }
+
+    .framer-modal-body p {
+      margin: 0 0 16px 0;
+    }
+
+    .framer-modal-quote {
+      border-left: 3px solid #155e89;
+      padding: 12px 18px;
+      background: #F8FAFC;
+      border-radius: 0 10px 10px 0;
+      font-style: italic;
+      margin: 20px 0;
+      color: #0F172A;
+    }
+
+    .framer-modal-quote cite {
+      display: block;
+      font-style: normal;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #155e89;
+      margin-top: 6px;
+    }
+
+    .framer-modal-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 20px;
+      border-top: 1px solid rgba(15, 23, 42, 0.08);
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .framer-modal-dismiss-btn {
+      background: transparent;
+      border: 1px solid rgba(15, 23, 42, 0.15);
+      border-radius: 999px;
+      padding: 10px 22px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #64748B;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .framer-modal-dismiss-btn:hover {
+      background: rgba(15, 23, 42, 0.05);
+      color: #0F172A;
+    }
+  </style>
+  <link rel="stylesheet" href="css/redesign_components.css?v=20261119_all_redesign">
+
+  <!-- GSAP 3 Modern Animation Engine -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Flip.min.js"></script>
+</head>
+
+<body>
+
+  <!-- ==========================================================================
+       FLOATING FROSTED NAVBAR (EXACT CHARIDO DESIGN)
+       ========================================================================== -->
+  <header class="charido-nav-wrapper">
+    <div class="container">
+      <div class="charido-nav-inner">
+        <!-- Brand Logo -->
+        <a href="index.html" class="charido-brand" aria-label="Operation GO Home">
+          <span class="brand-logo-badge">
+            <img src="images/logo.png" alt="Operation GO" class="brand-logo-img">
+          </span>
+        </a>
+
+        <!-- Menu Links -->
+        <nav class="charido-nav-links">
+          <a href="index.html" class="charido-nav-link active-page">Home</a>
+          <a href="about.html" class="charido-nav-link">About</a>
+          <a href="programs.html" class="charido-nav-link">Programs</a>
+          <a href="gallery.html" class="charido-nav-link">Gallery</a>
+          <a href="updates.html" class="charido-nav-link">Updates</a>
+          <a href="careers.html" class="charido-nav-link">Careers</a>
+          <a href="get-involved.html" class="charido-nav-link">Get Involved</a>
+          <a href="contact.html" class="charido-nav-link">Contact</a>
+        </nav>
+
+        <!-- Right Action Button -->
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <button class="btn-charido-orange" data-open-modal="donateModal">
+            <span>Donate Now</span>
+            <span class="arrow-box">→</span>
+          </button>
+          <button class="mobile-toggle-btn" id="charidoMobileToggle" aria-label="Toggle navigation">☰</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       HERO SECTION: VIDMO STACKED CARD SLIDE-UP ANIMATION TIED TO SCROLL (EXACT IMN)
+       ========================================================================== -->
+  <section class="video-hero-slider vidmo-hero-wrapper" id="videoHeroSlider">
+    <!-- Pinned Sticky 100vh Viewport -->
+    <div class="vidmo-sticky-viewport">
+
+      <!-- Hardware-Accelerated Stacked Video Panels -->
+      <div class="video-slides-container">
+        <!-- Panel 0: Base Slide (Stationary at bottom of stack) -->
+        <div class="video-slide-item" data-index="0">
+          <video class="video-slide-media" autoplay muted loop playsinline webkit-playsinline preload="auto"
+            poster="images/opgo-expo-poster.jpg">
+            <source src="videos/opgo-expo.mp4" type="video/mp4">
+          </video>
+          <div class="vidmo-slide-overlay"></div>
+        </div>
+
+        <!-- Panel 1: Second Slide (Rises smoothly over Panel 0 on scroll down) -->
+        <div class="video-slide-item" data-index="1">
+          <video class="video-slide-media" autoplay muted loop playsinline webkit-playsinline preload="auto"
+            poster="images/opgo-apparel-poster.jpg">
+            <source src="videos/opgo-apparel.mp4" type="video/mp4">
+          </video>
+          <div class="vidmo-slide-overlay"></div>
+        </div>
+
+        <!-- Panel 2: Third Slide (Rises smoothly over Panel 1 on scroll down) -->
+        <div class="video-slide-item" data-index="2">
+          <video class="video-slide-media" autoplay muted loop playsinline webkit-playsinline preload="auto"
+            poster="images/opgo-vision-poster.jpg">
+            <source src="videos/opgo-vision.mp4" type="video/mp4">
+          </video>
+          <div class="vidmo-slide-overlay"></div>
+        </div>
+      </div>
+
+      <!-- Vidmo Hero Content Overlay (Minimal: Button Left, Heading in the Middle, Dots Right) -->
+      <div class="vidmo-content-overlay vidmo-overlay-minimal">
+        <div class="vidmo-bottom-clean-row">
+
+          <!-- Left: Action Button -->
+          <div class="vidmo-action-buttons">
+            <a href="programs.html" class="vidmo-btn-explore vidmo-btn-slide active" data-index="0">
+              <span>Explore Pathways</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </a>
+            <a href="programs.html" class="vidmo-btn-explore vidmo-btn-slide" data-index="1">
+              <span>Explore Pathways</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </a>
+            <a href="get-involved.html" class="vidmo-btn-explore vidmo-btn-slide" data-index="2">
+              <span>Get Involved</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Middle: Headline in here in the middle! -->
+          <div class="vidmo-middle-headline-block">
+            <div class="vidmo-text-slides">
+              <!-- Slide 0 -->
+              <div class="vidmo-text-slide active" data-index="0">
+                <h1 class="vidmo-hero-title">BUILD THE FUTURE.</h1>
+              </div>
+
+              <!-- Slide 1 -->
+              <div class="vidmo-text-slide" data-index="1">
+                <h1 class="vidmo-hero-title">IGNITE YOUR CRAFT.</h1>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="vidmo-text-slide" data-index="2">
+                <h1 class="vidmo-hero-title">EARN WHILE YOU LEARN.</h1>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Minimal Slide Navigation Dots -->
+          <div class="vidmo-dots" role="tablist" aria-label="Video Slide Dots">
+            <button class="vidmo-dot active" data-slide-index="0" aria-label="Slide 1"></button>
+            <button class="vidmo-dot" data-slide-index="1" aria-label="Slide 2"></button>
+            <button class="vidmo-dot" data-slide-index="2" aria-label="Slide 3"></button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 1.5: PARTNER LOGO TEXT CAROUSEL (AFTER HERO)
+       ========================================================================== -->
+  <section class="partner-ticker-section" aria-label="Partner and Union Affiliations">
+    <div class="ticker-header-label">
+      <span>TRUSTED BY INDUSTRY, UNION &amp; COMMUNITY PARTNERS</span>
+    </div>
+    <div class="partner-ticker-viewport">
+      <div class="partner-ticker-track">
+        <!-- Set 1 -->
+        <div class="ticker-group">
+          <!-- 1. Carpenters Local 276 -->
+          <div class="partner-logo-item logo-carpenters" title="Carpenters Union Local 276">
+            <svg class="partner-logo-svg" viewBox="0 0 176 36" fill="currentColor" aria-label="Carpenters Local 276">
+              <g transform="translate(2, 2)">
+                <circle cx="16" cy="16" r="15" fill="none" stroke="currentColor" stroke-width="1.8" />
+                <circle cx="16" cy="16" r="12" fill="none" stroke="currentColor" stroke-width="1"
+                  stroke-dasharray="2 1.5" />
+                <path d="M10 23 L16 9 L22 23" fill="none" stroke="currentColor" stroke-width="1.8"
+                  stroke-linecap="round" />
+                <line x1="11.5" y1="19" x2="20.5" y2="19" stroke="currentColor" stroke-width="1.6" />
+                <rect x="14.5" y="14.5" width="3" height="3" fill="currentColor" />
+              </g>
+              <text x="40" y="17" font-family="'Montserrat', sans-serif" font-weight="800" font-size="11.5"
+                letter-spacing="0.06em" fill="currentColor">CARPENTERS</text>
+              <text x="40" y="28" font-family="'Inter', sans-serif" font-weight="700" font-size="8.2"
+                letter-spacing="0.14em" fill="currentColor">UNION LOCAL 276</text>
+            </svg>
+          </div>
+          <span class="ticker-dot">•</span>
+
+          <!-- 2. Milwaukee Tool -->
+          <div class="partner-logo-item logo-milwaukee" title="Milwaukee Tool">
+            <svg class="partner-logo-svg" viewBox="0 0 158 36" fill="currentColor" aria-label="Milwaukee Tool">
+              <g transform="translate(2, 2)">
+                <polygon points="17,1 7,17 15,17 9,30 25,12 17,12 23,1" class="logo-accent-milwaukee" fill="#DB0020" />
+              </g>
+              <text x="34" y="22" font-family="'Impact', 'Arial Black', sans-serif" font-style="italic"
+                font-weight="900" font-size="19" letter-spacing="0.02em" fill="currentColor">Milwaukee</text>
+              <text x="35" y="31" font-family="'Inter', sans-serif" font-weight="800" font-size="7"
+                letter-spacing="0.28em" fill="currentColor">TOOL &reg;</text>
+            </svg>
+          </div>
+          <span class="ticker-dot">•</span>
+
+          <!-- 3. RochesterWorks! -->
+          <div class="partner-logo-item logo-rochesterworks" title="RochesterWorks!">
+            <svg class="partner-logo-svg" viewBox="0 0 178 36" fill="currentColor" aria-label="RochesterWorks!">
+              <g transform="translate(2, 3)">
+                <path d="M4 22 C10 10, 20 8, 25 12 C18 14, 12 18, 8 26 Z" class="logo-accent-rochester"
+                  fill="#0094EF" />
+                <circle cx="24" cy="9" r="3.2" class="logo-accent-rochester-dot" fill="#10B981" />
+              </g>
+              <text x="34" y="23" font-family="'Montserrat', sans-serif" font-weight="800" font-size="15"
+                letter-spacing="-0.02em" fill="currentColor">Rochester<tspan font-weight="900"
+                  class="logo-accent-works">Works!</tspan></text>
+            </svg>
+          </div>
+          <span class="ticker-dot">•</span>
+
+          <!-- 4. DeWalt Industrial -->
+          <div class="partner-logo-item logo-dewalt" title="DEWALT Industrial Tools">
+            <svg class="partner-logo-svg" viewBox="0 0 148 36" fill="currentColor" aria-label="DeWalt">
+              <g transform="translate(2, 3)">
+                <polygon points="10,2 22,2 28,15 22,28 10,28 4,15" class="logo-accent-dewalt-bg" fill="#F59E0B" />
+                <polygon points="12,6 20,6 24,15 20,24 12,24 8,15" fill="#0A0D14" />
+                <polygon points="16,8 13,16 17,16 14,22 20,13 16,13" fill="#F59E0B" />
+              </g>
+              <text x="36" y="23" font-family="'Montserrat', 'Impact', sans-serif" font-weight="900" font-size="19"
+                letter-spacing="0.05em" fill="currentColor">DEWALT</text>
+            </svg>
+          </div>
+          <span class="ticker-dot">•</span>
+
+          <!-- 5. OSHA Safety -->
+          <div class="partner-logo-item logo-osha" title="OSHA Safety Institute">
+            <svg class="partner-logo-svg" viewBox="0 0 148 36" fill="currentColor" aria-label="OSHA Safety">
+              <g transform="translate(2, 2)">
+                <path d="M6 7 L17 3 L28 7 C28 18, 17 26, 17 29 C17 26, 6 18, 6 7 Z" fill="none" stroke="currentColor"
+                  stroke-width="1.8" />
+                <path d="M13 15 L16 18 L22 11" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </g>
+              <text x="36" y="19" font-family="'Montserrat', sans-serif" font-weight="900" font-size="15"
+                letter-spacing="0.08em" fill="currentColor">OSHA</text>
+              <text x="37" y="29" font-family="'Inter', sans-serif" font-weight="700" font-size="7.5"
+                letter-spacing="0.2em" fill="currentColor">CERTIFIED 10/30</text>
+            </svg>
+          </div>
+          <span class="ticker-dot">•</span>
+
+          <!-- 6. Nike -->
+          <div class="partner-logo-item logo-nike" title="Nike">
+            <svg class="partner-logo-svg" viewBox="0 0 128 36" fill="currentColor" aria-label="Nike">
+              <path
+                d="M12 26 C6.5 26 2 23 1 18.5 c-1-4.2.8-8 5-10.5 5-2.8 12.5-2.8 21.5-.2 l4.5 1.3 -4.5 1.3 c-9 2.6-16 6-19.5 9.2 -2 1.9-2.2 3.7-.5 4.6 1.4.7 4 .2 8-1.5 l11.5-5.4 33-15.5 c1.7-.8 3.2-.8 4.2 0 .7.6.5 1.6-.6 2.6 L23.5 24.2 c-4.8 1.2-8.6 1.8-11.5 1.8 z"
+                class="logo-accent-nike" />
+              <text x="70" y="22" font-family="'Montserrat', 'Arial Black', sans-serif" font-weight="900"
+                font-size="18.5" letter-spacing="-0.02em" fill="currentColor">NIKE</text>
+            </svg>
+          </div>
+          <span class="ticker-dot">•</span>
+
+          <!-- 7. City of Rochester NY -->
+          <div class="partner-logo-item logo-rochester" title="City of Rochester">
+            <svg class="partner-logo-svg" viewBox="0 0 178 36" fill="currentColor" aria-label="City of Rochester">
+              <g transform="translate(2, 2)">
+                <circle cx="16" cy="16" r="14" fill="none" stroke="currentColor" stroke-width="1.6" />
+                <circle cx="16" cy="10" r="3.2" fill="currentColor" />
+                <circle cx="21" cy="14" r="3.2" fill="currentColor" />
+                <circle cx="19" cy="20" r="3.2" fill="currentColor" />
+                <circle cx="13" cy="20" r="3.2" fill="currentColor" />
+                <circle cx="11" cy="14" r="3.2" fill="currentColor" />
+                <circle cx="16" cy="16" r="1.8" fill="#FFFFFF" />
+              </g>
+              <text x="38" y="16" font-family="'Montserrat', sans-serif" font-weight="800" font-size="11"
+                letter-spacing="0.05em" fill="currentColor">CITY OF ROCHESTER</text>
+              <text x="38" y="27" font-family="'Inter', sans-serif" font-weight="600" font-size="8.2"
+                letter-spacing="0.14em" fill="currentColor">FLOWER CITY NY</text>
+            </svg>
+          </div>
+          <span class="ticker-dot">•</span>
+
+          <!-- 8. Monroe County Youth Services -->
+          <div class="partner-logo-item logo-monroe" title="Monroe County Youth Services">
+            <svg class="partner-logo-svg" viewBox="0 0 175 36" fill="currentColor" aria-label="Monroe County Youth">
+              <g transform="translate(2, 2)">
+                <polygon points="16,4 19,12 27,12 21,17 23,25 16,20 9,25 11,17 5,12 13,12" fill="currentColor" />
+              </g>
+              <text x="35" y="16" font-family="'Montserrat', sans-serif" font-weight="800" font-size="11"
+                letter-spacing="0.04em" fill="currentColor">MONROE COUNTY</text>
+              <text x="35" y="27" font-family="'Inter', sans-serif" font-weight="700" font-size="8.2"
+                letter-spacing="0.14em" fill="currentColor">YOUTH SERVICES</text>
+            </svg>
+          </div>
+          <span class="ticker-dot">•</span>
+
+          <!-- 9. Habitat for Humanity -->
+          <div class="partner-logo-item logo-habitat" title="Habitat for Humanity">
+            <svg class="partner-logo-svg" viewBox="0 0 185 36" fill="currentColor" aria-label="Habitat for Humanity">
+              <g transform="translate(2, 2)">
+                <path d="M16 4 L5 14 L9 14 L16 7.5 L23 14 L27 14 Z" fill="currentColor" />
+                <path d="M9 22 C12 26, 20 26, 23 22 C20 20, 12 20, 9 22 Z" fill="currentColor" />
+                <circle cx="16" cy="13" r="2.2" fill="currentColor" />
+              </g>
+              <text x="36" y="17" font-family="'Montserrat', sans-serif" font-weight="800" font-size="11.5"
+                letter-spacing="0.01em" fill="currentColor">Habitat for Humanity</text>
+              <text x="36" y="27" font-family="'Inter', sans-serif" font-weight="600" font-size="7.8"
+                letter-spacing="0.12em" fill="currentColor">ROCHESTER &amp; MONROE</text>
+            </svg>
+          </div>
+          <span class="ticker-dot">•</span>
+
+          <!-- 10. Timber Guild -->
+          <div class="partner-logo-item logo-timber" title="Timber Framers Guild">
+            <svg class="partner-logo-svg" viewBox="0 0 170 36" fill="currentColor" aria-label="Timber Framers Guild">
+              <g transform="translate(2, 2)">
+                <rect x="13" y="6" width="6" height="20" rx="1" fill="currentColor" />
+                <line x1="7" y1="10" x2="25" y2="22" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
+                <line x1="7" y1="22" x2="25" y2="10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
+              </g>
+              <text x="34" y="16" font-family="'Montserrat', sans-serif" font-weight="800" font-size="11.5"
+                letter-spacing="0.04em" fill="currentColor">TIMBER GUILD</text>
+              <text x="34" y="27" font-family="'Inter', sans-serif" font-weight="600" font-size="8"
+                letter-spacing="0.14em" fill="currentColor">NORTH AMERICA</text>
+            </svg>
+          </div>
+          <span class="ticker-dot">•</span>
+        </div>
+        <!-- Set 2 (Duplicate for seamless infinite marquee loop) -->
+        <div class="ticker-group" aria-hidden="true">
+          <!-- 1. Carpenters Local 276 -->
+          <div class="partner-logo-item logo-carpenters" title="Carpenters Union Local 276">
+            <svg class="partner-logo-svg" viewBox="0 0 176 36" fill="currentColor" aria-label="Carpenters Local 276">
+              <g transform="translate(2, 2)">
+                <circle cx="16" cy="16" r="15" fill="none" stroke="currentColor" stroke-width="1.8" />
+                <circle cx="16" cy="16" r="12" fill="none" stroke="currentColor" stroke-width="1"
+                  stroke-dasharray="2 1.5" />
+                <path d="M10 23 L16 9 L22 23" fill="none" stroke="currentColor" stroke-width="1.8"
+                  stroke-linecap="round" />
+                <line x1="11.5" y1="19" x2="20.5" y2="19" stroke="currentColor" stroke-width="1.6" />
+                <rect x="14.5" y="14.5" width="3" height="3" fill="currentColor" />
+              </g>
+              <text x="40" y="17" font-family="'Montserrat', sans-serif" font-weight="800" font-size="11.5"
+                letter-spacing="0.06em" fill="currentColor">CARPENTERS</text>
+              <text x="40" y="28" font-family="'Inter', sans-serif" font-weight="700" font-size="8.2"
+                letter-spacing="0.14em" fill="currentColor">UNION LOCAL 276</text>
+            </svg>
+          </div>
+          <span class="ticker-dot">•</span>
+
+          <!-- 2. Milwaukee Tool -->
+          <div class="partner-logo-item logo-milwaukee" title="Milwaukee Tool">
+            <svg class="partner-logo-svg" viewBox="0 0 158 36" fill="currentColor" aria-label="Milwaukee Tool">
+              <g transform="translate(2, 2)">
+                <polygon points="17,1 7,17 15,17 9,30 25,12 17,12 23,1" class="logo-accent-milwaukee" fill="#DB0020" />
+              </g>
+              <text x="34" y="22" font-family="'Impact', 'Arial Black', sans-serif" font-style="italic"
+                font-weight="900" font-size="19" letter-spacing="0.02em" fill="currentColor">Milwaukee</text>
+              <text x="35" y="31" font-family="'Inter', sans-serif" font-weight="800" font-size="7"
+                letter-spacing="0.28em" fill="currentColor">TOOL &reg;</text>
+            </svg>
+          </div>
+          <span class="ticker-dot">•</span>
+
+          <!-- 3. RochesterWorks! -->
+          <div class="partner-logo-item logo-rochesterworks" title="RochesterWorks!">
+            <svg class="partner-logo-svg" viewBox="0 0 178 36" fill="currentColor" aria-label="RochesterWorks!">
+              <g transform="translate(2, 3)">
+                <path d="M4 22 C10 10, 20 8, 25 12 C18 14, 12 18, 8 26 Z" class="logo-accent-rochester"
+                  fill="#0094EF" />
+                <circle cx="24" cy="9" r="3.2" class="logo-accent-rochester-dot" fill="#10B981" />
+              </g>
+              <text x="34" y="23" font-family="'Montserrat', sans-serif" font-weight="800" font-size="15"
+                letter-spacing="-0.02em" fill="currentColor">Rochester<tspan font-weight="900"
+                  class="logo-accent-works">Works!</tspan></text>
+            </svg>
+          </div>
+          <span class="ticker-dot">•</span>
+
+          <!-- 4. DeWalt Industrial -->
+          <div class="partner-logo-item logo-dewalt" title="DEWALT Industrial Tools">
+            <svg class="partner-logo-svg" viewBox="0 0 148 36" fill="currentColor" aria-label="DeWalt">
+              <g transform="translate(2, 3)">
+                <polygon points="10,2 22,2 28,15 22,28 10,28 4,15" class="logo-accent-dewalt-bg" fill="#F59E0B" />
+                <polygon points="12,6 20,6 24,15 20,24 12,24 8,15" fill="#0A0D14" />
+                <polygon points="16,8 13,16 17,16 14,22 20,13 16,13" fill="#F59E0B" />
+              </g>
+              <text x="36" y="23" font-family="'Montserrat', 'Impact', sans-serif" font-weight="900" font-size="19"
+                letter-spacing="0.05em" fill="currentColor">DEWALT</text>
+            </svg>
+          </div>
+          <span class="ticker-dot">•</span>
+
+          <!-- 5. OSHA Safety -->
+          <div class="partner-logo-item logo-osha" title="OSHA Safety Institute">
+            <svg class="partner-logo-svg" viewBox="0 0 148 36" fill="currentColor" aria-label="OSHA Safety">
+              <g transform="translate(2, 2)">
+                <path d="M6 7 L17 3 L28 7 C28 18, 17 26, 17 29 C17 26, 6 18, 6 7 Z" fill="none" stroke="currentColor"
+                  stroke-width="1.8" />
+                <path d="M13 15 L16 18 L22 11" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </g>
+              <text x="36" y="19" font-family="'Montserrat', sans-serif" font-weight="900" font-size="15"
+                letter-spacing="0.08em" fill="currentColor">OSHA</text>
+              <text x="37" y="29" font-family="'Inter', sans-serif" font-weight="700" font-size="7.5"
+                letter-spacing="0.2em" fill="currentColor">CERTIFIED 10/30</text>
+            </svg>
+          </div>
+          <span class="ticker-dot">•</span>
+
+          <!-- 6. Nike -->
+          <div class="partner-logo-item logo-nike" title="Nike">
+            <svg class="partner-logo-svg" viewBox="0 0 128 36" fill="currentColor" aria-label="Nike">
+              <path
+                d="M12 26 C6.5 26 2 23 1 18.5 c-1-4.2.8-8 5-10.5 5-2.8 12.5-2.8 21.5-.2 l4.5 1.3 -4.5 1.3 c-9 2.6-16 6-19.5 9.2 -2 1.9-2.2 3.7-.5 4.6 1.4.7 4 .2 8-1.5 l11.5-5.4 33-15.5 c1.7-.8 3.2-.8 4.2 0 .7.6.5 1.6-.6 2.6 L23.5 24.2 c-4.8 1.2-8.6 1.8-11.5 1.8 z"
+                class="logo-accent-nike" />
+              <text x="70" y="22" font-family="'Montserrat', 'Arial Black', sans-serif" font-weight="900"
+                font-size="18.5" letter-spacing="-0.02em" fill="currentColor">NIKE</text>
+            </svg>
+          </div>
+          <span class="ticker-dot">•</span>
+
+          <!-- 7. City of Rochester NY -->
+          <div class="partner-logo-item logo-rochester" title="City of Rochester">
+            <svg class="partner-logo-svg" viewBox="0 0 178 36" fill="currentColor" aria-label="City of Rochester">
+              <g transform="translate(2, 2)">
+                <circle cx="16" cy="16" r="14" fill="none" stroke="currentColor" stroke-width="1.6" />
+                <circle cx="16" cy="10" r="3.2" fill="currentColor" />
+                <circle cx="21" cy="14" r="3.2" fill="currentColor" />
+                <circle cx="19" cy="20" r="3.2" fill="currentColor" />
+                <circle cx="13" cy="20" r="3.2" fill="currentColor" />
+                <circle cx="11" cy="14" r="3.2" fill="currentColor" />
+                <circle cx="16" cy="16" r="1.8" fill="#FFFFFF" />
+              </g>
+              <text x="38" y="16" font-family="'Montserrat', sans-serif" font-weight="800" font-size="11"
+                letter-spacing="0.05em" fill="currentColor">CITY OF ROCHESTER</text>
+              <text x="38" y="27" font-family="'Inter', sans-serif" font-weight="600" font-size="8.2"
+                letter-spacing="0.14em" fill="currentColor">FLOWER CITY NY</text>
+            </svg>
+          </div>
+          <span class="ticker-dot">•</span>
+
+          <!-- 8. Monroe County Youth Services -->
+          <div class="partner-logo-item logo-monroe" title="Monroe County Youth Services">
+            <svg class="partner-logo-svg" viewBox="0 0 175 36" fill="currentColor" aria-label="Monroe County Youth">
+              <g transform="translate(2, 2)">
+                <polygon points="16,4 19,12 27,12 21,17 23,25 16,20 9,25 11,17 5,12 13,12" fill="currentColor" />
+              </g>
+              <text x="35" y="16" font-family="'Montserrat', sans-serif" font-weight="800" font-size="11"
+                letter-spacing="0.04em" fill="currentColor">MONROE COUNTY</text>
+              <text x="35" y="27" font-family="'Inter', sans-serif" font-weight="700" font-size="8.2"
+                letter-spacing="0.14em" fill="currentColor">YOUTH SERVICES</text>
+            </svg>
+          </div>
+          <span class="ticker-dot">•</span>
+
+          <!-- 9. Habitat for Humanity -->
+          <div class="partner-logo-item logo-habitat" title="Habitat for Humanity">
+            <svg class="partner-logo-svg" viewBox="0 0 185 36" fill="currentColor" aria-label="Habitat for Humanity">
+              <g transform="translate(2, 2)">
+                <path d="M16 4 L5 14 L9 14 L16 7.5 L23 14 L27 14 Z" fill="currentColor" />
+                <path d="M9 22 C12 26, 20 26, 23 22 C20 20, 12 20, 9 22 Z" fill="currentColor" />
+                <circle cx="16" cy="13" r="2.2" fill="currentColor" />
+              </g>
+              <text x="36" y="17" font-family="'Montserrat', sans-serif" font-weight="800" font-size="11.5"
+                letter-spacing="0.01em" fill="currentColor">Habitat for Humanity</text>
+              <text x="36" y="27" font-family="'Inter', sans-serif" font-weight="600" font-size="7.8"
+                letter-spacing="0.12em" fill="currentColor">ROCHESTER &amp; MONROE</text>
+            </svg>
+          </div>
+          <span class="ticker-dot">•</span>
+
+          <!-- 10. Timber Guild -->
+          <div class="partner-logo-item logo-timber" title="Timber Framers Guild">
+            <svg class="partner-logo-svg" viewBox="0 0 170 36" fill="currentColor" aria-label="Timber Framers Guild">
+              <g transform="translate(2, 2)">
+                <rect x="13" y="6" width="6" height="20" rx="1" fill="currentColor" />
+                <line x1="7" y1="10" x2="25" y2="22" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
+                <line x1="7" y1="22" x2="25" y2="10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
+              </g>
+              <text x="34" y="16" font-family="'Montserrat', sans-serif" font-weight="800" font-size="11.5"
+                letter-spacing="0.04em" fill="currentColor">TIMBER GUILD</text>
+              <text x="34" y="27" font-family="'Inter', sans-serif" font-weight="600" font-size="8"
+                letter-spacing="0.14em" fill="currentColor">NORTH AMERICA</text>
+            </svg>
+          </div>
+          <span class="ticker-dot">•</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 2: ABOUT / EXPERIENCED CRAFTSMEN (OPTIMONKS EDITORIAL SHOWCASE)
+       Clean asymmetric layout: Top headline with serif italic accent, 
+       editorial intro & 150+ metrics bar, centerpiece cohort photo, 
+       and floating feature card with blue pushpin & Book A Free Call CTA pill.
+       ========================================================================== -->
+  <section class="optimo-about-section" id="about" aria-label="About Operation GO">
+    <div class="optimo-about-container">
+
+      <!-- Editorial Headline Header (Exact Reference Typography & Line Break) -->
+      <div class="optimo-about-header">
+        <h2 class="optimo-about-title">
+          Building Rochester's youth through<br>
+          <span class="optimo-serif-italic">certified</span> trade mastery and<br>
+          debt-free careers.
+        </h2>
+      </div>
+
+      <!-- 3-Column Content Showcase (Exact 414px Baseline Alignment) -->
+      <div class="optimo-about-content">
+
+        <!-- Left Column: Mission Description & Metric Callout -->
+        <div class="optimo-about-col-left">
+          <p class="optimo-about-desc">
+            At Operation GO, we bridge public education with real-world craftsmanship. Founded in Rochester by master
+            contractor Justin Ortiz, our tuition-free foundry equips youth ages 12–18 with commercial tools, OSHA
+            credentials, and direct union career placement.
+          </p>
+
+          <div class="optimo-stat-box">
+            <div class="optimo-stat-number">600+</div>
+            <div class="optimo-stat-label">Rochester Youth Mentored &amp; Certified</div>
+          </div>
+        </div>
+
+        <!-- Center Column: 550x414px Team Portrait with 16px Corners -->
+        <div class="optimo-about-col-center">
+          <div class="optimo-image-wrapper">
+            <img src="images/gdrive/generation-go-cohort.jpg" alt="Operation GO Youth Apprenticeship Cohort"
+              loading="lazy" class="optimo-center-img">
+          </div>
+        </div>
+
+        <!-- Right Column: Pinned Capabilities Card & Action Button -->
+        <div class="optimo-about-col-right">
+
+          <!-- Pinned White Feature Card -->
+          <div class="optimo-feature-card">
+            <div class="optimo-card-pin" aria-hidden="true">
+              <svg viewBox="0 0 20 20" width="18" height="18" fill="none">
+                <path
+                  d="M13.427 0.141C13.805 0.006 14.147 -0.03 14.509 0.024C14.815 0.07 15.163 0.197 15.459 0.304C17.206 0.935 18.564 2.293 19.196 4.041C19.303 4.336 19.43 4.685 19.476 4.991C19.53 5.353 19.494 5.695 19.358 6.073C19.067 6.884 18.414 7.246 17.695 7.645L16.277 8.436C15.765 8.722 15.426 8.911 15.184 9.078C14.95 9.24 14.883 9.332 14.855 9.386C14.841 9.414 14.796 9.553 14.807 10.001C14.819 10.424 14.873 10.999 14.952 11.816C15.079 13.134 14.861 14.441 14.1 15.657C13.972 15.863 13.81 16.121 13.63 16.313C13.417 16.54 13.171 16.701 12.855 16.829C12.534 16.959 12.241 17.012 11.925 16.998C11.656 16.986 11.347 16.916 11.09 16.857C9.425 16.479 7.826 15.604 6.469 14.444L1.707 19.207C1.316 19.597 0.683 19.597 0.293 19.207C-0.098 18.816-0.098 18.183 0.293 17.793L5.054 13.031C3.894 11.674 3.02 10.074 2.643 8.41C2.584 8.153 2.514 7.844 2.502 7.575C2.488 7.259 2.541 6.966 2.672 6.644C2.8 6.328 2.96 6.083 3.187 5.87C3.38 5.69 3.638 5.528 3.844 5.4C5.043 4.651 6.338 4.419 7.646 4.535C8.482 4.609 9.071 4.661 9.504 4.67C9.718 4.674 9.989 4.692 10.13 4.619C10.182 4.592 10.273 4.525 10.436 4.289C10.603 4.047 10.793 3.707 11.08 3.193L11.854 1.805C12.254 1.085 12.616 0.433 13.427 0.141Z"
+                  fill="#155e89" />
+              </svg>
+            </div>
+
+            <ul class="optimo-feature-list">
+              <li>Commercial Carpentry &amp; Framing</li>
+              <li>Bespoke Sneaker &amp; Apparel Lab</li>
+              <li>4K Cinema &amp; Audio Production</li>
+              <li>Direct Union Career Placement</li>
+            </ul>
+          </div>
+
+          <!-- Blue Pill CTA Button -->
+          <a href="programs.html" class="optimo-pill-btn">
+            <span class="optimo-pill-text">Explore Pathways</span>
+            <span class="optimo-pill-arrow-wrap" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#155e89" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </span>
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 3: NEXT-LEVEL PATHWAYS (ELEVATED OPTIMONKS 6-TRACK GRID)
+       Clean cards with hover zoom, tags, wage markers & explore links
+       ========================================================================== -->
+  <section class="framer-pathways-section" id="programs" aria-label="Our Vocational Pathways">
+    <div class="framer-container">
+
+      <!-- Section Header -->
+      <div class="framer-section-header">
+        <div class="framer-header-text">
+          <h2 class="framer-section-title">
+            Next-Level <span class="editorial-serif">Pathways</span> Built for the Real World.
+          </h2>
+          <p class="framer-section-sub">
+            Six comprehensive, hands-on disciplines designed to take Rochester youth from beginner curiosity to
+            certified craftsmanship, union signing, or commercial enterprise.
+          </p>
+        </div>
+        <div>
+          <a href="programs.html" class="btn-charido-orange">
+            <span>Explore All Tracks</span>
+            <span class="arrow-box">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 6 Pathways Grid -->
+      <div class="framer-pathways-grid">
+
+        <!-- Track 1: The Career Ladder & Skilled Trades -->
+        <article class="framer-pathway-card">
+          <div class="framer-pathway-img-wrap">
+            <img src="images/gdrive/home-renovation.jpg" alt="The Career Ladder &amp; Skilled Trades" loading="eager"
+              decoding="async" width="600" height="375">
+          </div>
+          <div class="framer-pathway-body">
+            <h3 class="framer-pathway-title">The Career Ladder</h3>
+            <p class="framer-pathway-desc">
+              Master structural carpentry, rough framing, blueprint reading, and electrical basics on active Rochester
+              residential rebuilds.
+            </p>
+            <div class="framer-pathway-footer">
+              <span class="framer-pathway-footer-tag">Direct Union Pathway</span>
+              <a href="programs.html#trades" class="framer-circle-arrow" aria-label="Explore Track">→</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Track 2: Custom Footwear & Apparel Lab -->
+        <article class="framer-pathway-card">
+          <div class="framer-pathway-img-wrap">
+            <img src="images/gdrive/custom-sneakers-display.jpg" alt="Sneaker Lab &amp; Custom Footwear Lab"
+              loading="eager" decoding="async" width="600" height="375">
+          </div>
+          <div class="framer-pathway-body">
+            <h3 class="framer-pathway-title">Sneaker Lab &amp; Apparel</h3>
+            <p class="framer-pathway-desc">
+              Deconstruct, pattern, stitch, and customize premium footwear and streetwear with industrial leathercraft
+              and digital prototyping.
+            </p>
+            <div class="framer-pathway-footer">
+              <span class="framer-pathway-footer-tag">Design &amp; Prototyping</span>
+              <a href="programs.html#sneaker" class="framer-circle-arrow" aria-label="Explore Lab">→</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Track 3: Academic Focus & Creative Media -->
+        <article class="framer-pathway-card">
+          <div class="framer-pathway-img-wrap">
+            <img src="images/gdrive/go-film-photo.jpg" alt="Academic &amp; Media Studio" loading="eager"
+              decoding="async" width="600" height="375">
+          </div>
+          <div class="framer-pathway-body">
+            <h3 class="framer-pathway-title">Academic &amp; Media Studio</h3>
+            <p class="framer-pathway-desc">
+              Direct, light, shoot, and edit commercial cinema and audio content on industry RED cameras and DaVinci
+              Resolve suites.
+            </p>
+            <div class="framer-pathway-footer">
+              <span class="framer-pathway-footer-tag">4K Cinema &amp; Audio</span>
+              <a href="programs.html#media" class="framer-circle-arrow" aria-label="Explore Studio">→</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Track 4: Biz Brain Youth Enterprise -->
+        <article class="framer-pathway-card">
+          <div class="framer-pathway-img-wrap">
+            <img src="images/gdrive/marketing-agency.jpg" alt="Biz Brain Youth Entrepreneurship" loading="eager"
+              decoding="async" width="600" height="375">
+          </div>
+          <div class="framer-pathway-body">
+            <h3 class="framer-pathway-title">Biz Brain</h3>
+            <p class="framer-pathway-desc">
+              Convert physical craft into registered commercial enterprise, learning client pitching, invoicing, and
+              scalable unit economics.
+            </p>
+            <div class="framer-pathway-footer">
+              <span class="framer-pathway-footer-tag">Business &amp; Sales</span>
+              <a href="programs.html#biz" class="framer-circle-arrow" aria-label="Explore Biz Brain">→</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Track 5: Reprogram Mindset & Leadership -->
+        <article class="framer-pathway-card">
+          <div class="framer-pathway-img-wrap">
+            <img src="images/gdrive/generation-go-team.jpg" alt="Reprogram Mindset &amp; Leadership" loading="eager"
+              decoding="async" width="600" height="375">
+          </div>
+          <div class="framer-pathway-body">
+            <h3 class="framer-pathway-title">Reprogram</h3>
+            <p class="framer-pathway-desc">
+              Transform mindset for self-mastery, breaking self-defeating narratives through mental discipline and
+              executive accountability.
+            </p>
+            <div class="framer-pathway-footer">
+              <span class="framer-pathway-footer-tag">Executive Leadership</span>
+              <a href="programs.html#reprogram" class="framer-circle-arrow" aria-label="Explore Mindset">→</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Track 6: I Own Real Estate & Wealth -->
+        <article class="framer-pathway-card">
+          <div class="framer-pathway-img-wrap">
+            <img src="images/gdrive/studio-481A9231.jpg" alt="I Own Real Estate &amp; Financial Wealth" loading="eager"
+              decoding="async" width="600" height="375">
+          </div>
+          <div class="framer-pathway-body">
+            <h3 class="framer-pathway-title">I Own Real Estate</h3>
+            <p class="framer-pathway-desc">
+              Evaluate distressed properties, calculate equity, understand deed acquisition, and achieve
+              multi-generational wealth.
+            </p>
+            <div class="framer-pathway-footer">
+              <span class="framer-pathway-footer-tag">Wealth &amp; Equity</span>
+              <a href="programs.html#realestate" class="framer-circle-arrow" aria-label="Explore Real Estate">→</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 4: REAL MOMENTS. REAL SKILLS. REAL FUTURES.
+       Elevated Full-Width Dark Theater Reels Showcase (Optimonks Aesthetic)
+       Preserves exact video elements, posters & rAF track bindings
+       ========================================================================== -->
+  <section class="framer-reels-section" id="reels" aria-label="Real Moments Instagram Reels">
+    <div class="framer-container">
+
+      <!-- Reels Section Header -->
+      <div class="framer-reels-header">
+        <div class="framer-header-text">
+          <h2 class="framer-section-title text-white">
+            Real Moments. <span class="editorial-serif">Real Skills.</span> Real Futures.
+          </h2>
+          <p class="framer-section-sub text-white-dim">
+            Raw, unfiltered dispatches straight from our shop floors, job sites, design labs, and student cohorts across
+            Rochester. Follow the journey in real time.
+          </p>
+        </div>
+
+        <div class="framer-reels-nav">
+          <a href="https://www.instagram.com/operationgoroc/reels/" target="_blank" rel="noopener noreferrer"
+            class="framer-reels-ig-btn">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+            <span>@operationgoroc Reels</span>
+          </a>
+          <div class="framer-reels-arrows">
+            <button class="framer-reels-arrow-btn" id="manifestoReelsPrevBtn" aria-label="Previous reels">‹</button>
+            <button class="framer-reels-arrow-btn" id="manifestoReelsNextBtn" aria-label="Next reels">›</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Full-Width Fluid Reels Track Container -->
+    <div class="manifesto-reels-container" style="margin-top: 0; padding: 0;">
+      <div class="manifesto-reels-viewport" id="manifestoReelsViewport">
+        <div class="manifesto-reels-track" id="manifestoReelsTrack">
+
+          <!-- Reel 1: DD8cE1YR3V8 -->
+          <article class="reel-slide-card" data-code="DD8cE1YR3V8">
+            <a href="https://www.instagram.com/reel/DD8cE1YR3V8/" target="_blank" rel="noopener noreferrer"
+              class="reel-card-link" aria-label="Watch Reel: Mind &amp; Wealth">
+              <div class="reel-media-wrapper">
+                <img src="images/reels/reel-DD8cE1YR3V8.jpg" alt="Mind &amp; Wealth" class="reel-thumb-img"
+                  loading="lazy">
+                <div class="reel-overlay-gradient"></div>
+                <div class="reel-top-pill">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                  </svg>
+                  <span>Reel</span>
+                </div>
+                <div class="reel-caption-box">
+                  <h4 class="reel-title">Mind &amp; Wealth</h4>
+                  <span class="reel-watch-cta"><span>Watch Reel</span><span class="reel-arrow">↗</span></span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <!-- Reel 2: DDYebQAx9z3 (Live Motion Video) -->
+          <article class="reel-slide-card" data-code="DDYebQAx9z3">
+            <a href="https://www.instagram.com/reel/DDYebQAx9z3/" target="_blank" rel="noopener noreferrer"
+              class="reel-card-link" aria-label="Watch Reel: Growth Mindset">
+              <div class="reel-media-wrapper">
+                <video autoplay loop muted playsinline webkit-playsinline poster="images/reels/reel-DDYebQAx9z3.jpg"
+                  class="reel-video-element">
+                  <source src="videos/opgo-vision.mp4" type="video/mp4">
+                </video>
+                <div class="reel-overlay-gradient"></div>
+                <div class="reel-top-pill">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                  </svg>
+                  <span>Reel</span>
+                </div>
+                <div class="reel-caption-box">
+                  <h4 class="reel-title">Growth Mindset</h4>
+                  <span class="reel-watch-cta"><span>Watch Reel</span><span class="reel-arrow">↗</span></span>
+                </div>
+                <div class="reel-frame-shield" aria-hidden="true"></div>
+              </div>
+            </a>
+          </article>
+
+          <!-- Reel 3: DDI0SkRxwvW -->
+          <article class="reel-slide-card" data-code="DDI0SkRxwvW">
+            <a href="https://www.instagram.com/reel/DDI0SkRxwvW/" target="_blank" rel="noopener noreferrer"
+              class="reel-card-link" aria-label="Watch Reel: Financial Savvy">
+              <div class="reel-media-wrapper">
+                <img src="images/reels/reel-DDI0SkRxwvW.jpg" alt="Financial Savvy" class="reel-thumb-img"
+                  loading="lazy">
+                <div class="reel-overlay-gradient"></div>
+                <div class="reel-top-pill">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                  </svg>
+                  <span>Reel</span>
+                </div>
+                <div class="reel-caption-box">
+                  <h4 class="reel-title">Financial Savvy</h4>
+                  <span class="reel-watch-cta"><span>Watch Reel</span><span class="reel-arrow">↗</span></span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <!-- Reel 4: DC8CdpDxZDJ (Live Motion Video) -->
+          <article class="reel-slide-card" data-code="DC8CdpDxZDJ">
+            <a href="https://www.instagram.com/reel/DC8CdpDxZDJ/" target="_blank" rel="noopener noreferrer"
+              class="reel-card-link" aria-label="Watch Reel: Real-World Skills">
+              <div class="reel-media-wrapper">
+                <video autoplay loop muted playsinline webkit-playsinline poster="images/reels/reel-DC8CdpDxZDJ.jpg"
+                  class="reel-video-element">
+                  <source src="videos/opgo-expo.mp4" type="video/mp4">
+                </video>
+                <div class="reel-overlay-gradient"></div>
+                <div class="reel-top-pill">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                  </svg>
+                  <span>Reel</span>
+                </div>
+                <div class="reel-caption-box">
+                  <h4 class="reel-title">Real-World Skills</h4>
+                  <span class="reel-watch-cta"><span>Watch Reel</span><span class="reel-arrow">↗</span></span>
+                </div>
+                <div class="reel-frame-shield" aria-hidden="true"></div>
+              </div>
+            </a>
+          </article>
+
+          <!-- Reel 5: DC5TSlaxn5F -->
+          <article class="reel-slide-card" data-code="DC5TSlaxn5F">
+            <a href="https://www.instagram.com/reel/DC5TSlaxn5F/" target="_blank" rel="noopener noreferrer"
+              class="reel-card-link" aria-label="Watch Reel: The Learning Curve">
+              <div class="reel-media-wrapper">
+                <img src="images/reels/reel-DC5TSlaxn5F.jpg" alt="The Learning Curve" class="reel-thumb-img"
+                  loading="lazy">
+                <div class="reel-overlay-gradient"></div>
+                <div class="reel-top-pill">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                  </svg>
+                  <span>Reel</span>
+                </div>
+                <div class="reel-caption-box">
+                  <h4 class="reel-title">The Learning Curve</h4>
+                  <span class="reel-watch-cta"><span>Watch Reel</span><span class="reel-arrow">↗</span></span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <!-- Reel 6: DC2fTaRyyxP (Live Motion Video) -->
+          <article class="reel-slide-card" data-code="DC2fTaRyyxP">
+            <a href="https://www.instagram.com/reel/DC2fTaRyyxP/" target="_blank" rel="noopener noreferrer"
+              class="reel-card-link" aria-label="Watch Reel: Tech &amp; Craft">
+              <div class="reel-media-wrapper">
+                <video autoplay loop muted playsinline webkit-playsinline poster="images/reels/reel-DC2fTaRyyxP.jpg"
+                  class="reel-video-element">
+                  <source src="videos/opgo-apparel.mp4" type="video/mp4">
+                </video>
+                <div class="reel-overlay-gradient"></div>
+                <div class="reel-top-pill">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                  </svg>
+                  <span>Reel</span>
+                </div>
+                <div class="reel-caption-box">
+                  <h4 class="reel-title">Tech &amp; Craft</h4>
+                  <span class="reel-watch-cta"><span>Watch Reel</span><span class="reel-arrow">↗</span></span>
+                </div>
+                <div class="reel-frame-shield" aria-hidden="true"></div>
+              </div>
+            </a>
+          </article>
+
+          <!-- Reel 7: C6cfC73M_TR -->
+          <article class="reel-slide-card" data-code="C6cfC73M_TR">
+            <a href="https://www.instagram.com/reel/C6cfC73M_TR/" target="_blank" rel="noopener noreferrer"
+              class="reel-card-link" aria-label="Watch Reel: Youth Foundry">
+              <div class="reel-media-wrapper">
+                <img src="images/reels/reel-C6cfC73M_TR.jpg" alt="Youth Foundry" class="reel-thumb-img" loading="lazy">
+                <div class="reel-overlay-gradient"></div>
+                <div class="reel-top-pill">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                  </svg>
+                  <span>Reel</span>
+                </div>
+                <div class="reel-caption-box">
+                  <h4 class="reel-title">Youth Foundry</h4>
+                  <span class="reel-watch-cta"><span>Watch Reel</span><span class="reel-arrow">↗</span></span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <!-- Reel 8: C4Kb3qgAAK2 (Live Motion Video) -->
+          <article class="reel-slide-card" data-code="C4Kb3qgAAK2">
+            <a href="https://www.instagram.com/reel/C4Kb3qgAAK2/" target="_blank" rel="noopener noreferrer"
+              class="reel-card-link" aria-label="Watch Reel: Beyond Metrics">
+              <div class="reel-media-wrapper">
+                <video autoplay loop muted playsinline webkit-playsinline poster="images/reels/reel-C4Kb3qgAAK2.jpg"
+                  class="reel-video-element">
+                  <source src="videos/welding-craft.webm" type="video/webm">
+                </video>
+                <div class="reel-overlay-gradient"></div>
+                <div class="reel-top-pill">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                  </svg>
+                  <span>Reel</span>
+                </div>
+                <div class="reel-caption-box">
+                  <h4 class="reel-title">Beyond Metrics</h4>
+                  <span class="reel-watch-cta"><span>Watch Reel</span><span class="reel-arrow">↗</span></span>
+                </div>
+                <div class="reel-frame-shield" aria-hidden="true"></div>
+              </div>
+            </a>
+          </article>
+
+          <!-- CLONES FOR INFINITE LOOP -->
+          <article class="reel-slide-card clone" data-code="DD8cE1YR3V8" aria-hidden="true">
+            <a href="https://www.instagram.com/reel/DD8cE1YR3V8/" target="_blank" rel="noopener noreferrer"
+              class="reel-card-link" tabindex="-1">
+              <div class="reel-media-wrapper">
+                <img src="images/reels/reel-DD8cE1YR3V8.jpg" alt="Mind &amp; Wealth" class="reel-thumb-img"
+                  loading="lazy">
+                <div class="reel-overlay-gradient"></div>
+                <div class="reel-top-pill">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                  </svg>
+                  <span>Reel</span>
+                </div>
+                <div class="reel-caption-box">
+                  <h4 class="reel-title">Mind &amp; Wealth</h4>
+                  <span class="reel-watch-cta"><span>Watch Reel</span><span class="reel-arrow">↗</span></span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <article class="reel-slide-card clone" data-code="DDYebQAx9z3" aria-hidden="true">
+            <a href="https://www.instagram.com/reel/DDYebQAx9z3/" target="_blank" rel="noopener noreferrer"
+              class="reel-card-link" tabindex="-1">
+              <div class="reel-media-wrapper">
+                <video autoplay loop muted playsinline webkit-playsinline poster="images/reels/reel-DDYebQAx9z3.jpg"
+                  class="reel-video-element">
+                  <source src="videos/opgo-vision.mp4" type="video/mp4">
+                </video>
+                <div class="reel-overlay-gradient"></div>
+                <div class="reel-top-pill">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                  </svg>
+                  <span>Reel</span>
+                </div>
+                <div class="reel-caption-box">
+                  <h4 class="reel-title">Growth Mindset</h4>
+                  <span class="reel-watch-cta"><span>Watch Reel</span><span class="reel-arrow">↗</span></span>
+                </div>
+                <div class="reel-frame-shield" aria-hidden="true"></div>
+              </div>
+            </a>
+          </article>
+
+          <article class="reel-slide-card clone" data-code="DDI0SkRxwvW" aria-hidden="true">
+            <a href="https://www.instagram.com/reel/DDI0SkRxwvW/" target="_blank" rel="noopener noreferrer"
+              class="reel-card-link" tabindex="-1">
+              <div class="reel-media-wrapper">
+                <img src="images/reels/reel-DDI0SkRxwvW.jpg" alt="Financial Savvy" class="reel-thumb-img"
+                  loading="lazy">
+                <div class="reel-overlay-gradient"></div>
+                <div class="reel-top-pill">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                  </svg>
+                  <span>Reel</span>
+                </div>
+                <div class="reel-caption-box">
+                  <h4 class="reel-title">Financial Savvy</h4>
+                  <span class="reel-watch-cta"><span>Watch Reel</span><span class="reel-arrow">↗</span></span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <article class="reel-slide-card clone" data-code="DC8CdpDxZDJ" aria-hidden="true">
+            <a href="https://www.instagram.com/reel/DC8CdpDxZDJ/" target="_blank" rel="noopener noreferrer"
+              class="reel-card-link" tabindex="-1">
+              <div class="reel-media-wrapper">
+                <video autoplay loop muted playsinline webkit-playsinline poster="images/reels/reel-DC8CdpDxZDJ.jpg"
+                  class="reel-video-element">
+                  <source src="videos/opgo-expo.mp4" type="video/mp4">
+                </video>
+                <div class="reel-overlay-gradient"></div>
+                <div class="reel-top-pill">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                  </svg>
+                  <span>Reel</span>
+                </div>
+                <div class="reel-caption-box">
+                  <h4 class="reel-title">Real-World Skills</h4>
+                  <span class="reel-watch-cta"><span>Watch Reel</span><span class="reel-arrow">↗</span></span>
+                </div>
+                <div class="reel-frame-shield" aria-hidden="true"></div>
+              </div>
+            </a>
+          </article>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 5: OUR PROVEN 3-STEP PROCESS (THE BLUEPRINT)
+       Optimonks Framer-style numbered roadmap from zero to high earner
+       ========================================================================== -->
+  <section class="framer-process-section" id="process" aria-label="How Operation GO Works">
+    <div class="framer-container">
+
+      <!-- Section Header -->
+      <div class="framer-section-header">
+        <div class="framer-header-text">
+          <h2 class="framer-section-title">
+            How We Take You from <span class="editorial-serif">Zero Experience</span> to Living-Wage Mastery.
+          </h2>
+          <p class="framer-section-sub">
+            A proven, structured curriculum engineered to ensure financial independence without carrying a single dollar
+            of student debt.
+          </p>
+        </div>
+      </div>
+
+      <!-- 3-Step Process Grid -->
+      <div class="framer-process-grid">
+
+        <!-- Step 1 -->
+        <article class="framer-process-card">
+          <span class="framer-step-number">01 • DAY 1 TO 30</span>
+          <h3 class="framer-process-title">Discovery &amp; Pro Toolset Induction</h3>
+          <p class="framer-process-desc">
+            Complete your aptitude assessment, select your vocational guild, and receive your brand-new Milwaukee pro
+            toolset, personal safety PPE, and cohort uniform at zero cost.
+          </p>
+          <div class="framer-process-meta">
+            <span style="color: #FF5722; font-weight: 800;">✓</span>
+            <span>Zero Out-of-Pocket Cost • Complete Tool Kit</span>
+          </div>
+        </article>
+
+        <!-- Step 2 -->
+        <article class="framer-process-card">
+          <span class="framer-step-number">02 • MONTHS 2 TO 6</span>
+          <h3 class="framer-process-title">Hands-On Guild Apprenticeship</h3>
+          <p class="framer-process-desc">
+            Clock active build hours on residential jobs, obtain OSHA-10 safety certifications, design custom sneakers
+            or media campaigns, and earn $16/hr during paid build shifts.
+          </p>
+          <div class="framer-process-meta">
+            <span style="color: #FF5722; font-weight: 800;">✓</span>
+            <span>Earn While You Learn • Real Client Projects</span>
+          </div>
+        </article>
+
+        <!-- Step 3 -->
+        <article class="framer-process-card">
+          <span class="framer-step-number">03 • GRADUATION &amp; BEYOND</span>
+          <h3 class="framer-process-title">Direct Union Signing &amp; Career Launch</h3>
+          <p class="framer-process-desc">
+            Direct transition into Local 276 Carpenters, electrical unions, or enterprise incubation. Start earning
+            $28–$45/hr with full health, pension, and lifetime brotherhood.
+          </p>
+          <div class="framer-process-meta">
+            <span style="color: #FF5722; font-weight: 800;">✓</span>
+            <span>Guaranteed Signing Pathways • $28–$45/hr</span>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       SECTION 4.5: FULL-WIDTH CINEMATIC VIDEO SHOWCASE SLIDER
+       Based on Video Showcase Slider (YouTube, Full Width)
+       Features: Full-width YouTube Iframe cover playback, Ken Burns active zoom,
+       frosted glass caption cards, animated progress dot fill bars, prev/next arrows,
+       sound mute/unmute toggle, play/pause controls, and horizontal thumbnail carousel.
+       ========================================================================== -->
+  <section class="video-showcase-slider-section" id="workshopVideos" aria-label="Cinematic Video Showcase">
+    <div class="vss-slider" id="vssSlider">
+      <button class="vss-nav vss-prev" id="vssPrev" aria-label="Previous video">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M15 18l-6-6 6-6" />
+        </svg>
+      </button>
+      <button class="vss-nav vss-next" id="vssNext" aria-label="Next video">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M9 18l6-6-6-6" />
+        </svg>
+      </button>
+
+      <div class="vss-controls">
+        <div class="vss-dots" id="vssDots"></div>
+        <div class="vss-right">
+          <div class="vss-counter"><b id="vssCur">01</b> / <span id="vssTotal">06</span></div>
+          <button class="vss-btn" id="vssMute" aria-label="Toggle sound"></button>
+          <button class="vss-btn" id="vssPlay" aria-label="Pause / Play"></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Thumbnail Carousel Strip -->
+    <div class="vss-thumbs" id="vssThumbs"></div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 6: MINIMAL EDITORIAL MENTOR STRIP
+       ========================================================================== -->
+  <section class="editorial-mentor-strip">
+    <div class="container">
+      <div class="mentor-strip-inner">
+        <div class="mentor-strip-content">
+          <h3 class="mentor-strip-heading">MENTOR THE NEXT GENERATION OF BUILDERS</h3>
+          <p class="mentor-strip-sub">Master contractors &amp; artisans: earn $45–$65/hr training small cohorts in
+            Rochester.</p>
+        </div>
+        <div class="mentor-strip-action">
+          <a href="careers.html" class="btn-charido-orange">
+            <span>Become a Mentor</span>
+            <span class="arrow-box">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 6.5: LATEST FOUNDRY UPDATES & COMMUNITY DISPATCHES
+       Editorial 3-column + featured card magazine layout with category tags,
+       dates, high-resolution photography, and modal / link triggers
+       ========================================================================== -->
+  <section class="framer-updates-section" id="updates" aria-label="Strategic Insights and Dispatches">
+    <div class="framer-container">
+
+      <!-- Section Header Matching Screenshot -->
+      <div class="updates-header-split">
+        <div class="updates-header-left">
+          <h2 class="framer-blog-section-title">
+            Strategic Insights That<br>Drive Business <span class="editorial-serif">Success</span>
+          </h2>
+        </div>
+
+        <div class="updates-header-right">
+          <a href="updates.html" class="framer-blog-pill-btn">
+            <span>View More Updates</span>
+            <span class="framer-blog-pill-circle">↗</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 4-Column Card Grid Matching Reference -->
+      <div class="framer-updates-grid" id="framerUpdatesGrid">
+
+        <!-- Blog 1 -->
+        <a href="update-debt-free-apprentice.html" class="framer-dispatch-card" data-category="admissions"
+          data-dispatch-id="1" style="text-decoration: none; color: inherit;">
+          <div class="framer-dispatch-media">
+            <img src="images/optimo-blog-exact-1.png" alt="The Strategic Edge Insights an Hub Consultation"
+              loading="lazy">
+          </div>
+          <div class="framer-dispatch-body">
+            <h3 class="framer-dispatch-title">
+              The Strategic Edge Insights an Hub Consultation for You
+            </h3>
+            <p class="framer-dispatch-excerpt">
+              A hub designed to sharpen decision-making with actionable insights.
+            </p>
+            <div class="framer-dispatch-footer">
+              <span class="framer-dispatch-cta">
+                <span>Read More</span>
+                <span class="framer-dispatch-arrow-circle">↗</span>
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Blog 2 -->
+        <a href="update-general-contractor-roadmap.html" class="framer-dispatch-card" data-category="labs"
+          data-dispatch-id="2" style="text-decoration: none; color: inherit;">
+          <div class="framer-dispatch-media">
+            <img src="images/optimo-blog-exact-2.png" alt="The Growth Blueprint" loading="lazy">
+          </div>
+          <div class="framer-dispatch-body">
+            <h3 class="framer-dispatch-title">
+              The Growth Blueprint — Strategies and Solutions Hub for You
+            </h3>
+            <p class="framer-dispatch-excerpt">
+              Focused on turning ambition into measurable outcomes.
+            </p>
+            <div class="framer-dispatch-footer">
+              <span class="framer-dispatch-cta">
+                <span>Read More</span>
+                <span class="framer-dispatch-arrow-circle">↗</span>
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Blog 3 -->
+        <a href="update-timber-framing.html" class="framer-dispatch-card" data-category="trades" data-dispatch-id="3"
+          style="text-decoration: none; color: inherit;">
+          <div class="framer-dispatch-media">
+            <img src="images/optimo-blog-exact-3.png" alt="Your Hub for Forward-Thinking Strategies" loading="lazy">
+          </div>
+          <div class="framer-dispatch-body">
+            <h3 class="framer-dispatch-title">
+              Your Hub for Forward-Thinking Strategies
+            </h3>
+            <p class="framer-dispatch-excerpt">
+              A guide to navigating disruption and sparking creativity, offering leaders evidence.
+            </p>
+            <div class="framer-dispatch-footer">
+              <span class="framer-dispatch-cta">
+                <span>Read More</span>
+                <span class="framer-dispatch-arrow-circle">↗</span>
+              </span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Blog 4 -->
+        <a href="update-justin-ortiz-letter.html" class="framer-dispatch-card" data-category="labs" data-dispatch-id="4"
+          style="text-decoration: none; color: inherit;">
+          <div class="framer-dispatch-media">
+            <img src="images/optimo-blog-exact-4.png" alt="The Leadership Forum" loading="lazy">
+          </div>
+          <div class="framer-dispatch-body">
+            <h3 class="framer-dispatch-title">
+              The Leadership Forum — Insights and Guidance Hub for You
+            </h3>
+            <p class="framer-dispatch-excerpt">
+              A resource for executives and decision-makers, highlighting leadership principles.
+            </p>
+            <div class="framer-dispatch-footer">
+              <span class="framer-dispatch-cta">
+                <span>Read More</span>
+                <span class="framer-dispatch-arrow-circle">↗</span>
+              </span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+
+      <!-- Clean Minimalist Newsletter Strip -->
+      <div class="framer-newsletter-card">
+        <div class="framer-newsletter-content">
+          <div class="framer-newsletter-badge">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <span>FOUNDRY DISPATCHES</span>
+          </div>
+          <h4 class="framer-newsletter-title">Subscribe to Cohort Openings &amp; Community News</h4>
+          <p class="framer-newsletter-desc">Receive quarterly updates on student milestones, union signings, and
+            upcoming free enrollments.</p>
+        </div>
+        <form class="framer-newsletter-form"
+          onsubmit="event.preventDefault(); alert('Thank you for subscribing to Operation GO Foundry Dispatches!'); this.reset();">
+          <input type="email" class="framer-newsletter-input" placeholder="Enter your email address..." required
+            aria-label="Email address for updates">
+          <button type="submit" class="framer-newsletter-submit-btn">
+            <span>Subscribe</span>
+            <span class="arrow">→</span>
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION: TESTIMONIALS LEADERBOARD & REVIEWS CAROUSEL
+       Arched photo gallery montage leaderboard + interactive review carousel
+       ========================================================================== -->
+  <section class="ref-lead-section" id="testimonials" aria-label="Testimonials and Community Voices">
+    <div class="ref-lead-container">
+
+      <!-- TOP PHOTO LEADERBOARD MOSAIC (ARCHED CANOPY) -->
+      <div class="ref-lead-mosaic">
+        <!-- Col 1 (Leftmost 2 cards) -->
+        <div class="mosaic-col col-1">
+          <div class="m-card h-145">
+            <img src="images/gdrive/workshop-action-dsc0170.jpg" alt="Youth trade apprentices collaborating"
+              loading="lazy">
+          </div>
+          <div class="m-card h-140">
+            <img src="images/carpentry-student.jpg" alt="Student woodworking drafting plans" loading="lazy">
+          </div>
+        </div>
+
+        <!-- Col 2 (3 stacked cards) -->
+        <div class="mosaic-col col-2">
+          <div class="m-card h-88">
+            <img src="images/gdrive/carpentry-workshop.jpg" alt="Modern trade workshop bay" loading="lazy">
+          </div>
+          <div class="m-card h-98">
+            <img src="images/gdrive/carpentry-trades-drill.jpg" alt="Precision cordless drill woodworking"
+              loading="lazy">
+          </div>
+          <div class="m-card h-88">
+            <img src="images/bento-classroom.jpg" alt="Design thinking studio session" loading="lazy">
+          </div>
+        </div>
+
+        <!-- Col 3 (Tall card) -->
+        <div class="mosaic-col col-3">
+          <div class="m-card h-250">
+            <img src="images/instructor-mentoring.jpg" alt="Master contractor mentoring student" loading="lazy">
+          </div>
+        </div>
+
+        <!-- Col 4 (Center-Left tall card) -->
+        <div class="mosaic-col col-4">
+          <div class="m-card h-210">
+            <img src="images/youth-creative-lab.jpg" alt="Creative technology lab session" loading="lazy">
+          </div>
+        </div>
+
+        <!-- Col 5 (Center-Right tall card) -->
+        <div class="mosaic-col col-5">
+          <div class="m-card h-210">
+            <img src="images/gdrive/sneaker-design-laptop.jpg" alt="Youth designer working on laptop" loading="lazy">
+          </div>
+        </div>
+
+        <!-- Col 6 (Tall card) -->
+        <div class="mosaic-col col-6">
+          <div class="m-card h-250">
+            <img src="images/editorial-footwear.jpg" alt="Custom sneaker fabrication and craft" loading="lazy">
+          </div>
+        </div>
+
+        <!-- Col 7 (3 stacked cards) -->
+        <div class="mosaic-col col-7">
+          <div class="m-card h-88">
+            <img src="images/gdrive/music-audio-production.jpg" alt="Sound recording audio studio" loading="lazy">
+          </div>
+          <div class="m-card h-98">
+            <img src="images/media-studio.jpg" alt="Cinematic video production cameras" loading="lazy">
+          </div>
+          <div class="m-card h-88">
+            <img src="images/cohort-three-students.jpg" alt="Pre-apprentices working as a team" loading="lazy">
+          </div>
+        </div>
+
+        <!-- Col 8 (Rightmost 2 cards) -->
+        <div class="mosaic-col col-8">
+          <div class="m-card h-145">
+            <img src="images/gdrive/network-etiquette-2021.jpg"
+              alt="Operation GO students in professional leadership session" loading="lazy">
+          </div>
+          <div class="m-card h-140">
+            <img src="images/showcase-event.jpg" alt="Annual trade expo showcase" loading="lazy">
+          </div>
+        </div>
+
+        <!-- CENTER HEADER: TITLE + SUBTITLE -->
+        <div class="mosaic-header">
+          <h2 class="mosaic-title">Trusted by creatives and leaders</h2>
+          <p class="mosaic-subtitle">from various industries</p>
+        </div>
+      </div>
+
+      <!-- BOTTOM REVIEWS CAROUSEL -->
+      <div class="ref-carousel-section">
+        <!-- Carousel Viewport & Track -->
+        <div class="ref-carousel-viewport" id="refCarouselViewport">
+          <div class="ref-carousel-track" id="refCarouselTrack">
+
+            <!-- Review 1 -->
+            <article class="ref-review-item">
+              <div class="ref-quote-mark" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                </svg>
+              </div>
+              <blockquote class="ref-review-quote">
+                "Operation GO gave me commercial Milwaukee power tools, safety credentials, and direct mentorship. In
+                six months I earned my OSHA-10 and placed directly into union carpentry."
+              </blockquote>
+              <div class="ref-review-author">
+                <img src="images/gdrive/studio-portrait-481A9170.jpg" alt="James Brown" class="ref-review-avatar"
+                  loading="lazy">
+                <div class="ref-review-author-info">
+                  <h4 class="ref-review-name">James Brown</h4>
+                  <span class="ref-review-role">Union Apprentice &bull; Local 276</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Review 2 -->
+            <article class="ref-review-item">
+              <div class="ref-quote-mark" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                </svg>
+              </div>
+              <blockquote class="ref-review-quote">
+                "Our commercial job sites actively hire Operation GO graduates. They don't just know theory—they arrive
+                punctual, safety-certified, and ready to frame commercial builds on day one."
+              </blockquote>
+              <div class="ref-review-author">
+                <img src="images/gdrive/workshop-team-dsc0041.jpg" alt="Wilcox Brewster" class="ref-review-avatar"
+                  loading="lazy">
+                <div class="ref-review-author-info">
+                  <h4 class="ref-review-name">Wilcox Brewster</h4>
+                  <span class="ref-review-role">Framing Superintendent &bull; Brewster Framing</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Review 3 -->
+            <article class="ref-review-item">
+              <div class="ref-quote-mark" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                </svg>
+              </div>
+              <blockquote class="ref-review-quote">
+                "The hands-on contractor mentorship my son received gave him true purpose, discipline, and a debt-free
+                living-wage career. He wakes up every morning excited to build."
+              </blockquote>
+              <div class="ref-review-author">
+                <img src="images/gdrive/studio-portrait-481A9180.jpg" alt="Victoria Walton" class="ref-review-avatar"
+                  loading="lazy">
+                <div class="ref-review-author-info">
+                  <h4 class="ref-review-name">Victoria Walton</h4>
+                  <span class="ref-review-role">Apprentice Parent &bull; Community Liaison</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Review 4 -->
+            <article class="ref-review-item">
+              <div class="ref-quote-mark" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                </svg>
+              </div>
+              <blockquote class="ref-review-quote">
+                "The Sneaker &amp; Creative Lab taught me 3D prototyping, industrial sewing, and laser fabrication. I
+                designed and launched my custom footwear collection before high school graduation!"
+              </blockquote>
+              <div class="ref-review-author">
+                <img src="images/gdrive/studio-481A9343.jpg" alt="Hindley Earnshaw" class="ref-review-avatar"
+                  loading="lazy">
+                <div class="ref-review-author-info">
+                  <h4 class="ref-review-name">Hindley Earnshaw</h4>
+                  <span class="ref-review-role">Footwear Designer &bull; Sneaker Lab Alum</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Review 5 -->
+            <article class="ref-review-item">
+              <div class="ref-quote-mark" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                </svg>
+              </div>
+              <blockquote class="ref-review-quote">
+                "As a young woman entering the mechanical and electrical trades, the instructors made me feel empowered
+                from day one. I'm now debt-free and earning union wages with full benefits."
+              </blockquote>
+              <div class="ref-review-author">
+                <img src="images/gdrive/studio-481A9357.jpg" alt="Elena Rostova" class="ref-review-avatar"
+                  loading="lazy">
+                <div class="ref-review-author-info">
+                  <h4 class="ref-review-name">Elena Rostova</h4>
+                  <span class="ref-review-role">Pre-Apprentice &bull; IBEW Electrical Track</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Review 6 -->
+            <article class="ref-review-item">
+              <div class="ref-quote-mark" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                </svg>
+              </div>
+              <blockquote class="ref-review-quote">
+                "Every dollar invested into Operation GO goes directly into youth toolsets, OSHA safety gear, and
+                living-wage student stipends. It's the most effective workforce model in Rochester."
+              </blockquote>
+              <div class="ref-review-author">
+                <img src="images/gdrive/studio-portrait-481A9163.jpg" alt="David Sterling" class="ref-review-avatar"
+                  loading="lazy">
+                <div class="ref-review-author-info">
+                  <h4 class="ref-review-name">David Sterling</h4>
+                  <span class="ref-review-role">General Contractor &bull; Foundation Partner</span>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- Subtle Navigation Controls Below -->
+        <div class="ref-carousel-controls">
+          <button class="ref-nav-arrow" id="refPrevBtn" aria-label="Previous testimonials" type="button">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="19" y1="12" x2="5" y2="12"></line>
+              <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+          </button>
+          <div class="ref-carousel-dots" id="refCarouselDots" aria-label="Review slider pagination"></div>
+          <button class="ref-nav-arrow" id="refNextBtn" aria-label="Next testimonials" type="button">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 7: CLOSING HIGH-CONVERTING FRAMER CTA BANNER
+       ========================================================================== -->
+  <section class="framer-cta-section" id="cta" aria-label="Join Operation GO">
+    <div class="framer-cta-inner">
+      <h2 class="framer-cta-title">
+        Ready to Build Your Future With <span class="editorial-serif">Zero Student Debt?</span>
+      </h2>
+      <p class="framer-cta-sub">
+        Whether you are a student ready to master high-paying trade skills, or a community supporter passionate about
+        funding tools and living wages for youth — your journey starts right here.
+      </p>
+      <div class="framer-cta-buttons">
+        <a href="#applyModal" class="btn-charido-orange" style="font-size: 1.05rem; padding: 16px 36px;">
+          <span>Apply For Free Cohort (Ages 12–24)</span>
+          <span class="arrow-box">→</span>
+        </a>
+        <a href="#donateModal" class="btn-charido-outline-white"
+          style="font-size: 1.05rem; padding: 16px 32px; border-color: rgba(255,255,255,0.4); color: #FFFFFF;">
+          <span>Donate Toolset Fund</span>
+          <span class="arrow-box">♥</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-minimal-footer">
+    <div class="container">
+
+      <!-- Main Footer Grid -->
+      <div class="footer-grid">
+
+        <!-- Brand & Mission Column -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="footer-brand" aria-label="Operation GO Home">
+            <img src="images/logo.png" alt="Operation GO" class="footer-logo">
+          </a>
+          <p class="footer-desc">
+            Rochester’s nonprofit workforce foundry. Cultivating debt-free futures and living-wage careers for youth
+            through hands-on mastery in skilled trades, design, and enterprise.
+          </p>
+          <div class="footer-badges">
+            <span class="footer-badge">501(c)(3) Public Charity</span>
+            <span class="footer-badge">Rochester, NY</span>
+          </div>
+        </div>
+
+        <!-- Links Column 1: Explore -->
+        <div class="footer-nav-col">
+          <h5 class="footer-col-title">Navigation</h5>
+          <ul class="footer-link-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Operation GO</a></li>
+            <li><a href="programs.html">All Vocational Tracks</a></li>
+            <li><a href="#testimonials">Stories &amp; Testimonials</a></li>
+            <li><a href="careers.html">Contractor Mentorship</a></li>
+            <li><a href="get-involved.html">Get Involved</a></li>
+            <li><a href="contact.html">Contact &amp; Visit</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Column 2: Foundry Tracks -->
+        <div class="footer-nav-col">
+          <h5 class="footer-col-title">Foundry Tracks</h5>
+          <ul class="footer-link-list">
+            <li><a href="programs.html#trades">The Career Ladder</a></li>
+            <li><a href="programs.html#sneaker">Sneaker Lab &amp; Apparel</a></li>
+            <li><a href="programs.html#media">Academic &amp; Media Studio</a></li>
+            <li><a href="programs.html#biz">Biz Brain Enterprise</a></li>
+            <li><a href="programs.html#reprogram">Reprogram Mindset</a></li>
+            <li><a href="programs.html#realestate">I Own Real Estate</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Column 3: Contact & Connect -->
+        <div class="footer-nav-col">
+          <h5 class="footer-col-title">Foundry &amp; Connect</h5>
+          <ul class="footer-link-list">
+            <li><span class="footer-meta-label">Location:</span> 100 Carlson Rd, Rochester, NY 14610</li>
+            <li><span class="footer-meta-label">Phone:</span> <a href="tel:5854840846">(585) 484-0846</a></li>
+            <li><span class="footer-meta-label">Email:</span> <a
+                href="mailto:info@operationgo.org">info@operationgo.org</a></li>
+          </ul>
+
+          <div class="footer-social-minimal">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-link"
+              aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="footer-social-link"
+              aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+                </path>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor"></polygon>
+              </svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="footer-social-link"
+              aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="footer-social-link"
+              aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          © 2026 Operation GO™. All rights reserved.
+        </div>
+        <div class="footer-legal-links">
+          <a href="#">Privacy Policy</a>
+          <span class="sep">•</span>
+          <a href="#">Terms of Use</a>
+          <span class="sep">•</span>
+          <a href="#">501(c)(3) Disclosure</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MODAL 1: DONATION MODAL (EXACT CHARIDO FLOW)
+       ========================================================================== -->
+  <div class="charido-modal-overlay" id="donateModal">
+    <div class="charido-modal-card">
+      <button class="modal-close-btn" aria-label="Close modal">✕</button>
+      <div class="modal-header">
+        <h3>Support Rochester Youth Trades</h3>
+        <p>100% of your donation directly funds student toolboxes, OSHA-10 safety gear, and paid youth stipends.</p>
+      </div>
+
+      <form id="charidoDonationForm">
+        <label style="font-size: 0.88rem; font-weight: 700; color: #1B4D3E; margin-bottom: 8px; display: block;">Select
+          Amount</label>
+        <div class="donation-preset-row">
+          <button type="button" class="preset-amount-btn active" data-amount="50">$50</button>
+          <button type="button" class="preset-amount-btn" data-amount="100">$100</button>
+          <button type="button" class="preset-amount-btn" data-amount="250">$250</button>
+          <button type="button" class="preset-amount-btn" data-amount="500">$500</button>
+        </div>
+
+        <div class="form-group-charido">
+          <label for="customAmountInput">Or Enter Custom Amount ($ USD)</label>
+          <input type="number" id="customAmountInput" value="50" min="5" required>
+        </div>
+
+        <div class="form-group-charido">
+          <label for="donationCauseSelect">Designate to Specific Cause</label>
+          <select id="donationCauseSelect">
+            <option value="general">General Youth Foundry Fund (Where Most Needed)</option>
+            <option value="carpentry">Carpentry &amp; Structural Framing Track</option>
+            <option value="sneaker">Sneaker Customization &amp; Design Lab</option>
+            <option value="cinema">4K Cinema &amp; Audio Production Studio</option>
+            <option value="stipends">Summer Youth Stipends ($16/hr Direct Wages)</option>
+          </select>
+        </div>
+
+        <div class="form-group-charido">
+          <label for="donorName">Your Full Name</label>
+          <input type="text" id="donorName" placeholder="Justin Ortiz" required>
+        </div>
+
+        <div class="form-group-charido">
+          <label for="donorEmail">Your Email (for 501(c)(3) Tax Receipt)</label>
+          <input type="email" id="donorEmail" placeholder="justin@example.com" required>
+        </div>
+
+        <button type="submit" class="btn-charido-orange"
+          style="width: 100%; justify-content: center; margin-top: 10px;">
+          <span>Complete Secure Donation</span>
+          <span class="arrow-box">→</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL 2: STUDENT FREE ENROLLMENT MODAL
+       ========================================================================== -->
+  <div class="charido-modal-overlay" id="applyModal">
+    <div class="charido-modal-card">
+      <button class="modal-close-btn" aria-label="Close modal">✕</button>
+      <div class="modal-header">
+        <h3>Enroll in Operation GO™ Cohort</h3>
+        <p>Ages 12–18. Free equipment, OSHA-10 safety certification, and paid build wages.</p>
+      </div>
+
+      <form id="charidoStudentForm">
+        <div class="form-group-charido">
+          <label for="studentName">Student Full Name</label>
+          <input type="text" id="studentName" placeholder="Marcus Jenkins" required>
+        </div>
+
+        <div class="form-group-charido">
+          <label for="studentAge">Age &amp; Grade</label>
+          <input type="text" id="studentAge" placeholder="16 years old / 11th Grade" required>
+        </div>
+
+        <div class="form-group-charido">
+          <label for="trackSelect">Preferred Vocational Track</label>
+          <select id="trackSelect" required>
+            <option value="carpentry">Carpentry &amp; Structural Framing</option>
+            <option value="sneaker">Sneaker Customization &amp; Apparel Lab</option>
+            <option value="cinema">4K Cinema Production &amp; Soundstage</option>
+            <option value="barber">Barber Academy &amp; Hair Design</option>
+            <option value="summer">Summer Youth Employment Program ($16/hr)</option>
+          </select>
+        </div>
+
+        <div class="form-group-charido">
+          <label for="guardianPhone">Parent / Guardian Phone</label>
+          <input type="tel" id="guardianPhone" placeholder="(585) 555-0199" required>
+        </div>
+
+        <button type="submit" class="btn-charido-orange"
+          style="width: 100%; justify-content: center; margin-top: 10px;">
+          <span>Submit Free Application</span>
+          <span class="arrow-box">→</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Video Lightbox Modal (For Full HD Watch Experience with Sound) -->
+  <div class="video-lightbox-modal" id="videoLightboxModal" role="dialog" aria-modal="true"
+    aria-label="Operation GO Video Showcase">
+    <button class="video-lightbox-close" id="videoLightboxClose" aria-label="Close video">✕</button>
+    <div class="video-lightbox-inner">
+      <iframe id="lightboxIframe" src="" title="Operation GO Video Player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       DISPATCH READER MODAL (INTERACTIVE CLEAN MODAL DIALOG)
+       ========================================================================== -->
+  <div class="framer-dispatch-modal" id="dispatchModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="framer-modal-backdrop" id="dispatchModalBackdrop"></div>
+    <div class="framer-modal-dialog">
+      <button class="framer-modal-close-btn" id="dispatchModalClose" aria-label="Close dispatch">✕</button>
+      <div class="framer-modal-header">
+        <div class="framer-modal-tags">
+          <span class="framer-modal-cat" id="modalDispatchCat">ADMISSIONS</span>
+          <span class="framer-modal-date" id="modalDispatchDate">November 2026</span>
+        </div>
+        <h2 class="framer-modal-title" id="modalDispatchTitle">Spring 2027 Cohort Open: Paid Youth Apprenticeships
+          ($16/hr) &amp; Milwaukee Toolsets</h2>
+        <div class="framer-modal-author-row">
+          <span class="framer-modal-avatar">GO</span>
+          <div>
+            <strong id="modalDispatchAuthor">Operation GO Admissions Office</strong>
+            <span id="modalDispatchRead">3 min read • Official Dispatch</span>
+          </div>
+        </div>
+      </div>
+      <div class="framer-modal-image-wrap">
+        <img id="modalDispatchImg" src="images/editorial-hero-cohort.jpg" alt="Dispatch cover image">
+      </div>
+      <div class="framer-modal-body" id="modalDispatchBody">
+        <!-- Injected via JavaScript -->
+      </div>
+      <div class="framer-modal-footer">
+        <a href="programs.html" class="btn-charido-orange" id="modalDispatchCta">
+          <span>Apply For This Track</span>
+          <span class="arrow-box">→</span>
+        </a>
+        <button type="button" class="framer-modal-dismiss-btn" id="modalDismissBtn">Done Reading</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Progress Ring Back to Top Button -->
+  <button class="back-to-top-btn" id="backToTopBtn" aria-label="Back to top" title="Back to top">
+    <svg class="btt-progress-svg" viewBox="0 0 48 48">
+      <circle class="btt-progress-bg" cx="24" cy="24" r="21"></circle>
+      <circle class="btt-progress-bar" id="bttProgressBar" cx="24" cy="24" r="21"></circle>
+    </svg>
+    <span class="btt-arrow" aria-hidden="true">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="12" y1="19" x2="12" y2="5"></line>
+        <polyline points="5 12 12 5 19 12"></polyline>
+      </svg>
+    </span>
+  </button>
+
+  <!-- Application Scripts -->
+  <script src="js/main.js?v=20261119_backtotop"></script>
+
+</body>
+
+</html>

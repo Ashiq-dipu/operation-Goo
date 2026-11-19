@@ -1,0 +1,1830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Operation GO™ — Nonprofit Skilled Trades &amp; Youth Workforce Foundry</title>
+  <meta name="description" content="Rochester's premier 501(c)(3) youth workforce foundry equipping youth ages 12–18 with paid vocational apprenticeships, OSHA-10 credentials, and debt-free careers in skilled trades.">
+  
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  
+  <!-- High-Speed Video CDN Preconnect -->
+  <link rel="preconnect" href="https://www.youtube-nocookie.com">
+  <link rel="preconnect" href="https://i.ytimg.com">
+  <link rel="dns-prefetch" href="https://www.youtube-nocookie.com">
+  <link rel="dns-prefetch" href="https://i.ytimg.com">
+  
+  <!-- Nike Typography System Fonts & Barlow Condensed (Vidmo Hero) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;0,900;1,700&family=Caveat:wght@600;700&family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@500;600;700;800;900&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css?v=20261111_avatar_framing2">
+  
+  <!-- GSAP 3 Modern Animation Engine -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Flip.min.js"></script>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       FLOATING FROSTED NAVBAR (EXACT CHARIDO DESIGN)
+       ========================================================================== -->
+  <header class="charido-nav-wrapper">
+    <div class="container">
+      <div class="charido-nav-inner">
+        <!-- Brand Logo -->
+        <a href="index.html" class="charido-brand" aria-label="Operation GO Home">
+          <span class="brand-logo-badge">
+            <img src="images/logo.png" alt="Operation GO" class="brand-logo-img">
+          </span>
+        </a>
+
+        <!-- Menu Links -->
+        <nav class="charido-nav-links">
+          <a href="index.html" class="charido-nav-link active-page">Home</a>
+          <a href="about.html" class="charido-nav-link">About</a>
+          <a href="programs.html" class="charido-nav-link">Programs</a>
+          <a href="gallery.html" class="charido-nav-link">Gallery</a>
+          <a href="careers.html" class="charido-nav-link">Careers</a>
+          <a href="get-involved.html" class="charido-nav-link">Get Involved</a>
+          <a href="contact.html" class="charido-nav-link">Contact</a>
+        </nav>
+
+        <!-- Right Action Button -->
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <button class="btn-charido-orange" data-open-modal="donateModal">
+            <span>Donate Now</span>
+            <span class="arrow-box">→</span>
+          </button>
+          <button class="mobile-toggle-btn" id="charidoMobileToggle" aria-label="Toggle navigation">☰</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       HERO SECTION: VIDMO STACKED CARD SLIDE-UP ANIMATION TIED TO SCROLL (EXACT IMN)
+       ========================================================================== -->
+  <section class="video-hero-slider vidmo-hero-wrapper" id="videoHeroSlider">
+    <!-- Pinned Sticky 100vh Viewport -->
+    <div class="vidmo-sticky-viewport">
+      
+      <!-- Hardware-Accelerated Stacked Video Panels -->
+      <div class="video-slides-container">
+        <!-- Panel 0: Base Slide (Stationary at bottom of stack) -->
+        <div class="video-slide-item" data-index="0">
+          <video class="video-slide-media" autoplay muted loop playsinline webkit-playsinline preload="auto" poster="images/opgo-expo-poster.jpg">
+            <source src="videos/opgo-expo.mp4" type="video/mp4">
+          </video>
+          <div class="vidmo-slide-overlay"></div>
+        </div>
+
+        <!-- Panel 1: Second Slide (Rises smoothly over Panel 0 on scroll down) -->
+        <div class="video-slide-item" data-index="1">
+          <video class="video-slide-media" autoplay muted loop playsinline webkit-playsinline preload="auto" poster="images/opgo-apparel-poster.jpg">
+            <source src="videos/opgo-apparel.mp4" type="video/mp4">
+          </video>
+          <div class="vidmo-slide-overlay"></div>
+        </div>
+
+        <!-- Panel 2: Third Slide (Rises smoothly over Panel 1 on scroll down) -->
+        <div class="video-slide-item" data-index="2">
+          <video class="video-slide-media" autoplay muted loop playsinline webkit-playsinline preload="auto" poster="images/opgo-vision-poster.jpg">
+            <source src="videos/opgo-vision.mp4" type="video/mp4">
+          </video>
+          <div class="vidmo-slide-overlay"></div>
+        </div>
+      </div>
+
+      <!-- Vidmo Hero Content Overlay (Minimal: Button Left, Heading in the Middle, Dots Right) -->
+      <div class="vidmo-content-overlay vidmo-overlay-minimal">
+        <div class="vidmo-bottom-clean-row">
+          
+          <!-- Left: Action Button -->
+          <div class="vidmo-action-buttons">
+            <a href="programs.html" class="vidmo-btn-explore vidmo-btn-slide active" data-index="0">
+              <span>Explore Pathways</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            </a>
+            <a href="programs.html" class="vidmo-btn-explore vidmo-btn-slide" data-index="1">
+              <span>Explore Pathways</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            </a>
+            <a href="get-involved.html" class="vidmo-btn-explore vidmo-btn-slide" data-index="2">
+              <span>Get Involved</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            </a>
+          </div>
+
+          <!-- Middle: Headline in here in the middle! -->
+          <div class="vidmo-middle-headline-block">
+            <div class="vidmo-text-slides">
+              <!-- Slide 0 -->
+              <div class="vidmo-text-slide active" data-index="0">
+                <h1 class="vidmo-hero-title">BUILD THE FUTURE.</h1>
+              </div>
+
+              <!-- Slide 1 -->
+              <div class="vidmo-text-slide" data-index="1">
+                <h1 class="vidmo-hero-title">IGNITE YOUR CRAFT.</h1>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="vidmo-text-slide" data-index="2">
+                <h1 class="vidmo-hero-title">EARN WHILE YOU LEARN.</h1>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Minimal Slide Navigation Dots -->
+          <div class="vidmo-dots" role="tablist" aria-label="Video Slide Dots">
+            <button class="vidmo-dot active" data-slide-index="0" aria-label="Slide 1"></button>
+            <button class="vidmo-dot" data-slide-index="1" aria-label="Slide 2"></button>
+            <button class="vidmo-dot" data-slide-index="2" aria-label="Slide 3"></button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 1.5: PARTNER LOGO TEXT CAROUSEL (AFTER HERO)
+       ========================================================================== -->
+  <section class="partner-ticker-section" aria-label="Partner and Union Affiliations">
+    <div class="ticker-header-label">
+      <span>TRUSTED BY INDUSTRY, UNION &amp; COMMUNITY PARTNERS</span>
+    </div>
+    <div class="partner-ticker-viewport">
+      <div class="partner-ticker-track">
+        <!-- Set 1 -->
+        <div class="ticker-group">
+          <!-- 1. Carpenters Local 276 -->
+          <div class="partner-logo-item logo-carpenters" title="Carpenters Union Local 276">
+            <svg class="partner-logo-svg" viewBox="0 0 176 36" fill="currentColor" aria-label="Carpenters Local 276">
+              <g transform="translate(2, 2)">
+                <circle cx="16" cy="16" r="15" fill="none" stroke="currentColor" stroke-width="1.8"/>
+                <circle cx="16" cy="16" r="12" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="2 1.5"/>
+                <path d="M10 23 L16 9 L22 23" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <line x1="11.5" y1="19" x2="20.5" y2="19" stroke="currentColor" stroke-width="1.6"/>
+                <rect x="14.5" y="14.5" width="3" height="3" fill="currentColor"/>
+              </g>
+              <text x="40" y="17" font-family="'Montserrat', sans-serif" font-weight="800" font-size="11.5" letter-spacing="0.06em" fill="currentColor">CARPENTERS</text>
+              <text x="40" y="28" font-family="'Inter', sans-serif" font-weight="700" font-size="8.2" letter-spacing="0.14em" fill="currentColor">UNION LOCAL 276</text>
+            </svg>
+          </div>
+          <span class="ticker-dot">•</span>
+
+          <!-- 2. Milwaukee Tool -->
+          <div class="partner-logo-item logo-milwaukee" title="Milwaukee Tool">
+            <svg class="partner-logo-svg" viewBox="0 0 158 36" fill="currentColor" aria-label="Milwaukee Tool">
+              <g transform="translate(2, 2)">
+                <polygon points="17,1 7,17 15,17 9,30 25,12 17,12 23,1" class="logo-accent-milwaukee" fill="#DB0020"/>
+              </g>
+              <text x="34" y="22" font-family="'Impact', 'Arial Black', sans-serif" font-style="italic" font-weight="900" font-size="19" letter-spacing="0.02em" fill="currentColor">Milwaukee</text>
+              <text x="35" y="31" font-family="'Inter', sans-serif" font-weight="800" font-size="7" letter-spacing="0.28em" fill="currentColor">TOOL &reg;</text>
+            </svg>
+          </div>
+          <span class="ticker-dot">•</span>
+
+          <!-- 3. RochesterWorks! -->
+          <div class="partner-logo-item logo-rochesterworks" title="RochesterWorks!">
+            <svg class="partner-logo-svg" viewBox="0 0 178 36" fill="currentColor" aria-label="RochesterWorks!">
+              <g transform="translate(2, 3)">
+                <path d="M4 22 C10 10, 20 8, 25 12 C18 14, 12 18, 8 26 Z" class="logo-accent-rochester" fill="#0094EF"/>
+                <circle cx="24" cy="9" r="3.2" class="logo-accent-rochester-dot" fill="#10B981"/>
+              </g>
+              <text x="34" y="23" font-family="'Montserrat', sans-serif" font-weight="800" font-size="15" letter-spacing="-0.02em" fill="currentColor">Rochester<tspan font-weight="900" class="logo-accent-works">Works!</tspan></text>
+            </svg>
+          </div>
+          <span class="ticker-dot">•</span>
+
+          <!-- 4. DeWalt Industrial -->
+          <div class="partner-logo-item logo-dewalt" title="DEWALT Industrial Tools">
+            <svg class="partner-logo-svg" viewBox="0 0 148 36" fill="currentColor" aria-label="DeWalt">
+              <g transform="translate(2, 3)">
+                <polygon points="10,2 22,2 28,15 22,28 10,28 4,15" class="logo-accent-dewalt-bg" fill="#F59E0B"/>
+                <polygon points="12,6 20,6 24,15 20,24 12,24 8,15" fill="#0A0D14"/>
+                <polygon points="16,8 13,16 17,16 14,22 20,13 16,13" fill="#F59E0B"/>
+              </g>
+              <text x="36" y="23" font-family="'Montserrat', 'Impact', sans-serif" font-weight="900" font-size="19" letter-spacing="0.05em" fill="currentColor">DEWALT</text>
+            </svg>
+          </div>
+          <span class="ticker-dot">•</span>
+
+          <!-- 5. OSHA Safety -->
+          <div class="partner-logo-item logo-osha" title="OSHA Safety Institute">
+            <svg class="partner-logo-svg" viewBox="0 0 148 36" fill="currentColor" aria-label="OSHA Safety">
+              <g transform="translate(2, 2)">
+                <path d="M6 7 L17 3 L28 7 C28 18, 17 26, 17 29 C17 26, 6 18, 6 7 Z" fill="none" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M13 15 L16 18 L22 11" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+              <text x="36" y="19" font-family="'Montserrat', sans-serif" font-weight="900" font-size="15" letter-spacing="0.08em" fill="currentColor">OSHA</text>
+              <text x="37" y="29" font-family="'Inter', sans-serif" font-weight="700" font-size="7.5" letter-spacing="0.2em" fill="currentColor">CERTIFIED 10/30</text>
+            </svg>
+          </div>
+          <span class="ticker-dot">•</span>
+
+          <!-- 6. Nike -->
+          <div class="partner-logo-item logo-nike" title="Nike">
+            <svg class="partner-logo-svg" viewBox="0 0 128 36" fill="currentColor" aria-label="Nike">
+              <path d="M12 26 C6.5 26 2 23 1 18.5 c-1-4.2.8-8 5-10.5 5-2.8 12.5-2.8 21.5-.2 l4.5 1.3 -4.5 1.3 c-9 2.6-16 6-19.5 9.2 -2 1.9-2.2 3.7-.5 4.6 1.4.7 4 .2 8-1.5 l11.5-5.4 33-15.5 c1.7-.8 3.2-.8 4.2 0 .7.6.5 1.6-.6 2.6 L23.5 24.2 c-4.8 1.2-8.6 1.8-11.5 1.8 z" class="logo-accent-nike"/>
+              <text x="70" y="22" font-family="'Montserrat', 'Arial Black', sans-serif" font-weight="900" font-size="18.5" letter-spacing="-0.02em" fill="currentColor">NIKE</text>
+            </svg>
+          </div>
+          <span class="ticker-dot">•</span>
+
+          <!-- 7. City of Rochester NY -->
+          <div class="partner-logo-item logo-rochester" title="City of Rochester">
+            <svg class="partner-logo-svg" viewBox="0 0 178 36" fill="currentColor" aria-label="City of Rochester">
+              <g transform="translate(2, 2)">
+                <circle cx="16" cy="16" r="14" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                <circle cx="16" cy="10" r="3.2" fill="currentColor"/>
+                <circle cx="21" cy="14" r="3.2" fill="currentColor"/>
+                <circle cx="19" cy="20" r="3.2" fill="currentColor"/>
+                <circle cx="13" cy="20" r="3.2" fill="currentColor"/>
+                <circle cx="11" cy="14" r="3.2" fill="currentColor"/>
+                <circle cx="16" cy="16" r="1.8" fill="#FFFFFF"/>
+              </g>
+              <text x="38" y="16" font-family="'Montserrat', sans-serif" font-weight="800" font-size="11" letter-spacing="0.05em" fill="currentColor">CITY OF ROCHESTER</text>
+              <text x="38" y="27" font-family="'Inter', sans-serif" font-weight="600" font-size="8.2" letter-spacing="0.14em" fill="currentColor">FLOWER CITY NY</text>
+            </svg>
+          </div>
+          <span class="ticker-dot">•</span>
+
+          <!-- 8. Monroe County Youth Services -->
+          <div class="partner-logo-item logo-monroe" title="Monroe County Youth Services">
+            <svg class="partner-logo-svg" viewBox="0 0 175 36" fill="currentColor" aria-label="Monroe County Youth">
+              <g transform="translate(2, 2)">
+                <polygon points="16,4 19,12 27,12 21,17 23,25 16,20 9,25 11,17 5,12 13,12" fill="currentColor"/>
+              </g>
+              <text x="35" y="16" font-family="'Montserrat', sans-serif" font-weight="800" font-size="11" letter-spacing="0.04em" fill="currentColor">MONROE COUNTY</text>
+              <text x="35" y="27" font-family="'Inter', sans-serif" font-weight="700" font-size="8.2" letter-spacing="0.14em" fill="currentColor">YOUTH SERVICES</text>
+            </svg>
+          </div>
+          <span class="ticker-dot">•</span>
+
+          <!-- 9. Habitat for Humanity -->
+          <div class="partner-logo-item logo-habitat" title="Habitat for Humanity">
+            <svg class="partner-logo-svg" viewBox="0 0 185 36" fill="currentColor" aria-label="Habitat for Humanity">
+              <g transform="translate(2, 2)">
+                <path d="M16 4 L5 14 L9 14 L16 7.5 L23 14 L27 14 Z" fill="currentColor"/>
+                <path d="M9 22 C12 26, 20 26, 23 22 C20 20, 12 20, 9 22 Z" fill="currentColor"/>
+                <circle cx="16" cy="13" r="2.2" fill="currentColor"/>
+              </g>
+              <text x="36" y="17" font-family="'Montserrat', sans-serif" font-weight="800" font-size="11.5" letter-spacing="0.01em" fill="currentColor">Habitat for Humanity</text>
+              <text x="36" y="27" font-family="'Inter', sans-serif" font-weight="600" font-size="7.8" letter-spacing="0.12em" fill="currentColor">ROCHESTER &amp; MONROE</text>
+            </svg>
+          </div>
+          <span class="ticker-dot">•</span>
+
+          <!-- 10. Timber Guild -->
+          <div class="partner-logo-item logo-timber" title="Timber Framers Guild">
+            <svg class="partner-logo-svg" viewBox="0 0 170 36" fill="currentColor" aria-label="Timber Framers Guild">
+              <g transform="translate(2, 2)">
+                <rect x="13" y="6" width="6" height="20" rx="1" fill="currentColor"/>
+                <line x1="7" y1="10" x2="25" y2="22" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+                <line x1="7" y1="22" x2="25" y2="10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+              </g>
+              <text x="34" y="16" font-family="'Montserrat', sans-serif" font-weight="800" font-size="11.5" letter-spacing="0.04em" fill="currentColor">TIMBER GUILD</text>
+              <text x="34" y="27" font-family="'Inter', sans-serif" font-weight="600" font-size="8" letter-spacing="0.14em" fill="currentColor">NORTH AMERICA</text>
+            </svg>
+          </div>
+          <span class="ticker-dot">•</span>
+        </div>
+        <!-- Set 2 (Duplicate for seamless infinite marquee loop) -->
+        <div class="ticker-group" aria-hidden="true">
+          <!-- 1. Carpenters Local 276 -->
+          <div class="partner-logo-item logo-carpenters" title="Carpenters Union Local 276">
+            <svg class="partner-logo-svg" viewBox="0 0 176 36" fill="currentColor" aria-label="Carpenters Local 276">
+              <g transform="translate(2, 2)">
+                <circle cx="16" cy="16" r="15" fill="none" stroke="currentColor" stroke-width="1.8"/>
+                <circle cx="16" cy="16" r="12" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="2 1.5"/>
+                <path d="M10 23 L16 9 L22 23" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <line x1="11.5" y1="19" x2="20.5" y2="19" stroke="currentColor" stroke-width="1.6"/>
+                <rect x="14.5" y="14.5" width="3" height="3" fill="currentColor"/>
+              </g>
+              <text x="40" y="17" font-family="'Montserrat', sans-serif" font-weight="800" font-size="11.5" letter-spacing="0.06em" fill="currentColor">CARPENTERS</text>
+              <text x="40" y="28" font-family="'Inter', sans-serif" font-weight="700" font-size="8.2" letter-spacing="0.14em" fill="currentColor">UNION LOCAL 276</text>
+            </svg>
+          </div>
+          <span class="ticker-dot">•</span>
+
+          <!-- 2. Milwaukee Tool -->
+          <div class="partner-logo-item logo-milwaukee" title="Milwaukee Tool">
+            <svg class="partner-logo-svg" viewBox="0 0 158 36" fill="currentColor" aria-label="Milwaukee Tool">
+              <g transform="translate(2, 2)">
+                <polygon points="17,1 7,17 15,17 9,30 25,12 17,12 23,1" class="logo-accent-milwaukee" fill="#DB0020"/>
+              </g>
+              <text x="34" y="22" font-family="'Impact', 'Arial Black', sans-serif" font-style="italic" font-weight="900" font-size="19" letter-spacing="0.02em" fill="currentColor">Milwaukee</text>
+              <text x="35" y="31" font-family="'Inter', sans-serif" font-weight="800" font-size="7" letter-spacing="0.28em" fill="currentColor">TOOL &reg;</text>
+            </svg>
+          </div>
+          <span class="ticker-dot">•</span>
+
+          <!-- 3. RochesterWorks! -->
+          <div class="partner-logo-item logo-rochesterworks" title="RochesterWorks!">
+            <svg class="partner-logo-svg" viewBox="0 0 178 36" fill="currentColor" aria-label="RochesterWorks!">
+              <g transform="translate(2, 3)">
+                <path d="M4 22 C10 10, 20 8, 25 12 C18 14, 12 18, 8 26 Z" class="logo-accent-rochester" fill="#0094EF"/>
+                <circle cx="24" cy="9" r="3.2" class="logo-accent-rochester-dot" fill="#10B981"/>
+              </g>
+              <text x="34" y="23" font-family="'Montserrat', sans-serif" font-weight="800" font-size="15" letter-spacing="-0.02em" fill="currentColor">Rochester<tspan font-weight="900" class="logo-accent-works">Works!</tspan></text>
+            </svg>
+          </div>
+          <span class="ticker-dot">•</span>
+
+          <!-- 4. DeWalt Industrial -->
+          <div class="partner-logo-item logo-dewalt" title="DEWALT Industrial Tools">
+            <svg class="partner-logo-svg" viewBox="0 0 148 36" fill="currentColor" aria-label="DeWalt">
+              <g transform="translate(2, 3)">
+                <polygon points="10,2 22,2 28,15 22,28 10,28 4,15" class="logo-accent-dewalt-bg" fill="#F59E0B"/>
+                <polygon points="12,6 20,6 24,15 20,24 12,24 8,15" fill="#0A0D14"/>
+                <polygon points="16,8 13,16 17,16 14,22 20,13 16,13" fill="#F59E0B"/>
+              </g>
+              <text x="36" y="23" font-family="'Montserrat', 'Impact', sans-serif" font-weight="900" font-size="19" letter-spacing="0.05em" fill="currentColor">DEWALT</text>
+            </svg>
+          </div>
+          <span class="ticker-dot">•</span>
+
+          <!-- 5. OSHA Safety -->
+          <div class="partner-logo-item logo-osha" title="OSHA Safety Institute">
+            <svg class="partner-logo-svg" viewBox="0 0 148 36" fill="currentColor" aria-label="OSHA Safety">
+              <g transform="translate(2, 2)">
+                <path d="M6 7 L17 3 L28 7 C28 18, 17 26, 17 29 C17 26, 6 18, 6 7 Z" fill="none" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M13 15 L16 18 L22 11" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+              <text x="36" y="19" font-family="'Montserrat', sans-serif" font-weight="900" font-size="15" letter-spacing="0.08em" fill="currentColor">OSHA</text>
+              <text x="37" y="29" font-family="'Inter', sans-serif" font-weight="700" font-size="7.5" letter-spacing="0.2em" fill="currentColor">CERTIFIED 10/30</text>
+            </svg>
+          </div>
+          <span class="ticker-dot">•</span>
+
+          <!-- 6. Nike -->
+          <div class="partner-logo-item logo-nike" title="Nike">
+            <svg class="partner-logo-svg" viewBox="0 0 128 36" fill="currentColor" aria-label="Nike">
+              <path d="M12 26 C6.5 26 2 23 1 18.5 c-1-4.2.8-8 5-10.5 5-2.8 12.5-2.8 21.5-.2 l4.5 1.3 -4.5 1.3 c-9 2.6-16 6-19.5 9.2 -2 1.9-2.2 3.7-.5 4.6 1.4.7 4 .2 8-1.5 l11.5-5.4 33-15.5 c1.7-.8 3.2-.8 4.2 0 .7.6.5 1.6-.6 2.6 L23.5 24.2 c-4.8 1.2-8.6 1.8-11.5 1.8 z" class="logo-accent-nike"/>
+              <text x="70" y="22" font-family="'Montserrat', 'Arial Black', sans-serif" font-weight="900" font-size="18.5" letter-spacing="-0.02em" fill="currentColor">NIKE</text>
+            </svg>
+          </div>
+          <span class="ticker-dot">•</span>
+
+          <!-- 7. City of Rochester NY -->
+          <div class="partner-logo-item logo-rochester" title="City of Rochester">
+            <svg class="partner-logo-svg" viewBox="0 0 178 36" fill="currentColor" aria-label="City of Rochester">
+              <g transform="translate(2, 2)">
+                <circle cx="16" cy="16" r="14" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                <circle cx="16" cy="10" r="3.2" fill="currentColor"/>
+                <circle cx="21" cy="14" r="3.2" fill="currentColor"/>
+                <circle cx="19" cy="20" r="3.2" fill="currentColor"/>
+                <circle cx="13" cy="20" r="3.2" fill="currentColor"/>
+                <circle cx="11" cy="14" r="3.2" fill="currentColor"/>
+                <circle cx="16" cy="16" r="1.8" fill="#FFFFFF"/>
+              </g>
+              <text x="38" y="16" font-family="'Montserrat', sans-serif" font-weight="800" font-size="11" letter-spacing="0.05em" fill="currentColor">CITY OF ROCHESTER</text>
+              <text x="38" y="27" font-family="'Inter', sans-serif" font-weight="600" font-size="8.2" letter-spacing="0.14em" fill="currentColor">FLOWER CITY NY</text>
+            </svg>
+          </div>
+          <span class="ticker-dot">•</span>
+
+          <!-- 8. Monroe County Youth Services -->
+          <div class="partner-logo-item logo-monroe" title="Monroe County Youth Services">
+            <svg class="partner-logo-svg" viewBox="0 0 175 36" fill="currentColor" aria-label="Monroe County Youth">
+              <g transform="translate(2, 2)">
+                <polygon points="16,4 19,12 27,12 21,17 23,25 16,20 9,25 11,17 5,12 13,12" fill="currentColor"/>
+              </g>
+              <text x="35" y="16" font-family="'Montserrat', sans-serif" font-weight="800" font-size="11" letter-spacing="0.04em" fill="currentColor">MONROE COUNTY</text>
+              <text x="35" y="27" font-family="'Inter', sans-serif" font-weight="700" font-size="8.2" letter-spacing="0.14em" fill="currentColor">YOUTH SERVICES</text>
+            </svg>
+          </div>
+          <span class="ticker-dot">•</span>
+
+          <!-- 9. Habitat for Humanity -->
+          <div class="partner-logo-item logo-habitat" title="Habitat for Humanity">
+            <svg class="partner-logo-svg" viewBox="0 0 185 36" fill="currentColor" aria-label="Habitat for Humanity">
+              <g transform="translate(2, 2)">
+                <path d="M16 4 L5 14 L9 14 L16 7.5 L23 14 L27 14 Z" fill="currentColor"/>
+                <path d="M9 22 C12 26, 20 26, 23 22 C20 20, 12 20, 9 22 Z" fill="currentColor"/>
+                <circle cx="16" cy="13" r="2.2" fill="currentColor"/>
+              </g>
+              <text x="36" y="17" font-family="'Montserrat', sans-serif" font-weight="800" font-size="11.5" letter-spacing="0.01em" fill="currentColor">Habitat for Humanity</text>
+              <text x="36" y="27" font-family="'Inter', sans-serif" font-weight="600" font-size="7.8" letter-spacing="0.12em" fill="currentColor">ROCHESTER &amp; MONROE</text>
+            </svg>
+          </div>
+          <span class="ticker-dot">•</span>
+
+          <!-- 10. Timber Guild -->
+          <div class="partner-logo-item logo-timber" title="Timber Framers Guild">
+            <svg class="partner-logo-svg" viewBox="0 0 170 36" fill="currentColor" aria-label="Timber Framers Guild">
+              <g transform="translate(2, 2)">
+                <rect x="13" y="6" width="6" height="20" rx="1" fill="currentColor"/>
+                <line x1="7" y1="10" x2="25" y2="22" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+                <line x1="7" y1="22" x2="25" y2="10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+              </g>
+              <text x="34" y="16" font-family="'Montserrat', sans-serif" font-weight="800" font-size="11.5" letter-spacing="0.04em" fill="currentColor">TIMBER GUILD</text>
+              <text x="34" y="27" font-family="'Inter', sans-serif" font-weight="600" font-size="8" letter-spacing="0.14em" fill="currentColor">NORTH AMERICA</text>
+            </svg>
+          </div>
+          <span class="ticker-dot">•</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 2: ABOUT / PHILOSOPHY (SIDE-BY-SIDE WITH INSTAGRAM MEDIA & QUOTE)
+       Side-by-side layout featuring Operation GO Instagram media & quote:
+       "We think outside of the box when it comes to education and we believe that our programs are the future of education."
+       With GSAP scroll-driven color reveal (#146da3) and 5 connected program pillars below
+       ========================================================================== -->
+  <section class="manifesto-about-section" id="about" aria-label="About Operation GO">
+    <div class="manifesto-container">
+      
+      <!-- Side-by-Side: Media Card Left + Narrative Content Right -->
+      <div class="manifesto-side-by-side">
+        
+        <!-- Left: Image Card -->
+        <div class="manifesto-media-col">
+          <div class="manifesto-image-card">
+            <img 
+              src="images/instagram-education-future.jpg" 
+              alt="Operation GO youth cohort showcasing custom designed apparel, footwear, music, and aviation gear" 
+              class="manifesto-img"
+              loading="lazy"
+            >
+          </div>
+        </div>
+
+        <!-- Right: Text Content with GSAP Scroll Scrub Word Color Transition -->
+        <div class="manifesto-content-col">
+          <h2 class="manifesto-scroll-headline" id="manifestoHeadline">
+            <span class="m-word">WE</span>
+            <span class="m-word">THINK</span>
+            <span class="m-word">OUTSIDE</span>
+            <span class="m-word">OF</span>
+            <span class="m-word">THE</span>
+            <span class="m-word">BOX</span>
+            <span class="m-word">WHEN</span>
+            <span class="m-word">IT</span>
+            <span class="m-word">COMES</span>
+            <span class="m-word">TO</span>
+            <span class="m-word">EDUCATION,</span>
+            <span class="m-word">AND</span>
+            <span class="m-word">WE</span>
+            <span class="m-word">BELIEVE</span>
+            <span class="m-word">THAT</span>
+            <span class="m-word">OUR</span>
+            <span class="m-word">PROGRAMS</span>
+            <span class="m-word">ARE</span>
+            <span class="m-word">THE</span>
+            <span class="m-word">FUTURE</span>
+            <span class="m-word">OF</span>
+            <span class="m-word">EDUCATION.</span>
+          </h2>
+
+          <p class="manifesto-sub-desc">
+            Rochester’s youth don’t need more promises—they need real trades that build generational futures. Operation GO bridges classroom education with hands-on timber framing, custom sneaker and apparel labs, 4K cinema studios, and union career placements with zero student debt.
+          </p>
+
+          <div class="manifesto-actions">
+            <a href="programs.html" class="btn-charido-orange">
+              <span>Explore All Tracks</span>
+              <span class="arrow-box">→</span>
+            </a>
+            <a href="about.html" class="btn-manifesto-outline">
+              <span>Our Story</span>
+              <span class="arrow-box">↗</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ======================================================================
+           AUTO-SCROLLING REELS SLIDER (@operationgoroc/reels)
+           Continuous smooth ticker with Instagram Reels from Operation GO
+           ====================================================================== -->
+      <div class="manifesto-reels-container" aria-label="Operation GO Instagram Reels Slider">
+        
+        <!-- Header Row -->
+        <div class="manifesto-reels-header">
+          <div>
+            <span class="manifesto-reels-eyebrow">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+              <span>INSTAGRAM REELS &bull; @OPERATIONGOROC</span>
+            </span>
+            <h3 class="manifesto-reels-title">Real Moments. Real Skills. Real Futures.</h3>
+          </div>
+
+          <div class="manifesto-reels-nav">
+            <a href="https://www.instagram.com/operationgoroc/reels/" target="_blank" rel="noopener noreferrer" class="manifesto-reels-ig-link">
+              <span>View All Reels</span>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </a>
+            <div class="manifesto-reels-arrows">
+              <button class="reels-arrow-btn" id="manifestoReelsPrevBtn" aria-label="Previous reels">‹</button>
+              <button class="reels-arrow-btn" id="manifestoReelsNextBtn" aria-label="Next reels">›</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Auto-Scrolling Viewport & Track -->
+        <div class="manifesto-reels-viewport" id="manifestoReelsViewport">
+          <div class="manifesto-reels-track" id="manifestoReelsTrack">
+            
+            <!-- Reel 1: DD8cE1YR3V8 -->
+            <article class="reel-slide-card" data-code="DD8cE1YR3V8">
+              <a href="https://www.instagram.com/reel/DD8cE1YR3V8/" target="_blank" rel="noopener noreferrer" class="reel-card-link" aria-label="Watch Reel: Mind &amp; Wealth">
+                <div class="reel-media-wrapper">
+                  <img src="images/reels/reel-DD8cE1YR3V8.jpg" alt="Mind &amp; Wealth" class="reel-thumb-img" loading="lazy">
+                  <div class="reel-overlay-gradient"></div>
+                  <div class="reel-top-pill">
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    <span>Reel</span>
+                  </div>
+                  <div class="reel-caption-box">
+                    <h4 class="reel-title">Mind &amp; Wealth</h4>
+                    <span class="reel-watch-cta"><span>Watch Reel</span><span class="reel-arrow">↗</span></span>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <!-- Reel 2: DDYebQAx9z3 (With Live Video Motion) -->
+            <article class="reel-slide-card" data-code="DDYebQAx9z3">
+              <a href="https://www.instagram.com/reel/DDYebQAx9z3/" target="_blank" rel="noopener noreferrer" class="reel-card-link" aria-label="Watch Reel: Growth Mindset">
+                <div class="reel-media-wrapper">
+                  <video autoplay loop muted playsinline webkit-playsinline poster="images/reels/reel-DDYebQAx9z3.jpg" class="reel-video-element">
+                    <source src="videos/opgo-vision.mp4" type="video/mp4">
+                  </video>
+                  <div class="reel-overlay-gradient"></div>
+                  <div class="reel-top-pill">
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    <span>Reel</span>
+                  </div>
+                  <div class="reel-caption-box">
+                    <h4 class="reel-title">Growth Mindset</h4>
+                    <span class="reel-watch-cta"><span>Watch Reel</span><span class="reel-arrow">↗</span></span>
+                  </div>
+                  <div class="reel-frame-shield" aria-hidden="true"></div>
+                </div>
+              </a>
+            </article>
+
+            <!-- Reel 3: DDI0SkRxwvW -->
+            <article class="reel-slide-card" data-code="DDI0SkRxwvW">
+              <a href="https://www.instagram.com/reel/DDI0SkRxwvW/" target="_blank" rel="noopener noreferrer" class="reel-card-link" aria-label="Watch Reel: Financial Savvy">
+                <div class="reel-media-wrapper">
+                  <img src="images/reels/reel-DDI0SkRxwvW.jpg" alt="Financial Savvy" class="reel-thumb-img" loading="lazy">
+                  <div class="reel-overlay-gradient"></div>
+                  <div class="reel-top-pill">
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    <span>Reel</span>
+                  </div>
+                  <div class="reel-caption-box">
+                    <h4 class="reel-title">Financial Savvy</h4>
+                    <span class="reel-watch-cta"><span>Watch Reel</span><span class="reel-arrow">↗</span></span>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <!-- Reel 4: DC8CdpDxZDJ (With Live Video Motion) -->
+            <article class="reel-slide-card" data-code="DC8CdpDxZDJ">
+              <a href="https://www.instagram.com/reel/DC8CdpDxZDJ/" target="_blank" rel="noopener noreferrer" class="reel-card-link" aria-label="Watch Reel: Real-World Skills">
+                <div class="reel-media-wrapper">
+                  <video autoplay loop muted playsinline webkit-playsinline poster="images/reels/reel-DC8CdpDxZDJ.jpg" class="reel-video-element">
+                    <source src="videos/opgo-expo.mp4" type="video/mp4">
+                  </video>
+                  <div class="reel-overlay-gradient"></div>
+                  <div class="reel-top-pill">
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    <span>Reel</span>
+                  </div>
+                  <div class="reel-caption-box">
+                    <h4 class="reel-title">Real-World Skills</h4>
+                    <span class="reel-watch-cta"><span>Watch Reel</span><span class="reel-arrow">↗</span></span>
+                  </div>
+                  <div class="reel-frame-shield" aria-hidden="true"></div>
+                </div>
+              </a>
+            </article>
+
+            <!-- Reel 5: DC5TSlaxn5F -->
+            <article class="reel-slide-card" data-code="DC5TSlaxn5F">
+              <a href="https://www.instagram.com/reel/DC5TSlaxn5F/" target="_blank" rel="noopener noreferrer" class="reel-card-link" aria-label="Watch Reel: The Learning Curve">
+                <div class="reel-media-wrapper">
+                  <img src="images/reels/reel-DC5TSlaxn5F.jpg" alt="The Learning Curve" class="reel-thumb-img" loading="lazy">
+                  <div class="reel-overlay-gradient"></div>
+                  <div class="reel-top-pill">
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    <span>Reel</span>
+                  </div>
+                  <div class="reel-caption-box">
+                    <h4 class="reel-title">The Learning Curve</h4>
+                    <span class="reel-watch-cta"><span>Watch Reel</span><span class="reel-arrow">↗</span></span>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <!-- Reel 6: DC2fTaRyyxP (With Live Video Motion) -->
+            <article class="reel-slide-card" data-code="DC2fTaRyyxP">
+              <a href="https://www.instagram.com/reel/DC2fTaRyyxP/" target="_blank" rel="noopener noreferrer" class="reel-card-link" aria-label="Watch Reel: Tech &amp; Craft">
+                <div class="reel-media-wrapper">
+                  <video autoplay loop muted playsinline webkit-playsinline poster="images/reels/reel-DC2fTaRyyxP.jpg" class="reel-video-element">
+                    <source src="videos/opgo-apparel.mp4" type="video/mp4">
+                  </video>
+                  <div class="reel-overlay-gradient"></div>
+                  <div class="reel-top-pill">
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    <span>Reel</span>
+                  </div>
+                  <div class="reel-caption-box">
+                    <h4 class="reel-title">Tech &amp; Craft</h4>
+                    <span class="reel-watch-cta"><span>Watch Reel</span><span class="reel-arrow">↗</span></span>
+                  </div>
+                  <div class="reel-frame-shield" aria-hidden="true"></div>
+                </div>
+              </a>
+            </article>
+
+            <!-- Reel 7: C6cfC73M_TR -->
+            <article class="reel-slide-card" data-code="C6cfC73M_TR">
+              <a href="https://www.instagram.com/reel/C6cfC73M_TR/" target="_blank" rel="noopener noreferrer" class="reel-card-link" aria-label="Watch Reel: Youth Foundry">
+                <div class="reel-media-wrapper">
+                  <img src="images/reels/reel-C6cfC73M_TR.jpg" alt="Youth Foundry" class="reel-thumb-img" loading="lazy">
+                  <div class="reel-overlay-gradient"></div>
+                  <div class="reel-top-pill">
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    <span>Reel</span>
+                  </div>
+                  <div class="reel-caption-box">
+                    <h4 class="reel-title">Youth Foundry</h4>
+                    <span class="reel-watch-cta"><span>Watch Reel</span><span class="reel-arrow">↗</span></span>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <!-- Reel 8: C4Kb3qgAAK2 (With Live Video Motion) -->
+            <article class="reel-slide-card" data-code="C4Kb3qgAAK2">
+              <a href="https://www.instagram.com/reel/C4Kb3qgAAK2/" target="_blank" rel="noopener noreferrer" class="reel-card-link" aria-label="Watch Reel: Beyond Metrics">
+                <div class="reel-media-wrapper">
+                  <video autoplay loop muted playsinline webkit-playsinline poster="images/reels/reel-C4Kb3qgAAK2.jpg" class="reel-video-element">
+                    <source src="videos/welding-craft.webm" type="video/webm">
+                  </video>
+                  <div class="reel-overlay-gradient"></div>
+                  <div class="reel-top-pill">
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    <span>Reel</span>
+                  </div>
+                  <div class="reel-caption-box">
+                    <h4 class="reel-title">Beyond Metrics</h4>
+                    <span class="reel-watch-cta"><span>Watch Reel</span><span class="reel-arrow">↗</span></span>
+                  </div>
+                  <div class="reel-frame-shield" aria-hidden="true"></div>
+                </div>
+              </a>
+            </article>
+
+            <!-- DUPLICATE SET FOR SEAMLESS INFINITE LOOP (Reels 1 - 8) -->
+            <!-- Clone 1 -->
+            <article class="reel-slide-card clone" data-code="DD8cE1YR3V8" aria-hidden="true">
+              <a href="https://www.instagram.com/reel/DD8cE1YR3V8/" target="_blank" rel="noopener noreferrer" class="reel-card-link" tabindex="-1">
+                <div class="reel-media-wrapper">
+                  <img src="images/reels/reel-DD8cE1YR3V8.jpg" alt="Mind &amp; Wealth" class="reel-thumb-img" loading="lazy">
+                  <div class="reel-overlay-gradient"></div>
+                  <div class="reel-top-pill">
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    <span>Reel</span>
+                  </div>
+                  <div class="reel-caption-box">
+                    <h4 class="reel-title">Mind &amp; Wealth</h4>
+                    <span class="reel-watch-cta"><span>Watch Reel</span><span class="reel-arrow">↗</span></span>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <!-- Clone 2 -->
+            <article class="reel-slide-card clone" data-code="DDYebQAx9z3" aria-hidden="true">
+              <a href="https://www.instagram.com/reel/DDYebQAx9z3/" target="_blank" rel="noopener noreferrer" class="reel-card-link" tabindex="-1">
+                <div class="reel-media-wrapper">
+                  <video autoplay loop muted playsinline webkit-playsinline poster="images/reels/reel-DDYebQAx9z3.jpg" class="reel-video-element">
+                    <source src="videos/opgo-vision.mp4" type="video/mp4">
+                  </video>
+                  <div class="reel-overlay-gradient"></div>
+                  <div class="reel-top-pill">
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    <span>Reel</span>
+                  </div>
+                  <div class="reel-caption-box">
+                    <h4 class="reel-title">Growth Mindset</h4>
+                    <span class="reel-watch-cta"><span>Watch Reel</span><span class="reel-arrow">↗</span></span>
+                  </div>
+                  <div class="reel-frame-shield" aria-hidden="true"></div>
+                </div>
+              </a>
+            </article>
+
+            <!-- Clone 3 -->
+            <article class="reel-slide-card clone" data-code="DDI0SkRxwvW" aria-hidden="true">
+              <a href="https://www.instagram.com/reel/DDI0SkRxwvW/" target="_blank" rel="noopener noreferrer" class="reel-card-link" tabindex="-1">
+                <div class="reel-media-wrapper">
+                  <img src="images/reels/reel-DDI0SkRxwvW.jpg" alt="Financial Savvy" class="reel-thumb-img" loading="lazy">
+                  <div class="reel-overlay-gradient"></div>
+                  <div class="reel-top-pill">
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    <span>Reel</span>
+                  </div>
+                  <div class="reel-caption-box">
+                    <h4 class="reel-title">Financial Savvy</h4>
+                    <span class="reel-watch-cta"><span>Watch Reel</span><span class="reel-arrow">↗</span></span>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <!-- Clone 4 -->
+            <article class="reel-slide-card clone" data-code="DC8CdpDxZDJ" aria-hidden="true">
+              <a href="https://www.instagram.com/reel/DC8CdpDxZDJ/" target="_blank" rel="noopener noreferrer" class="reel-card-link" tabindex="-1">
+                <div class="reel-media-wrapper">
+                  <video autoplay loop muted playsinline webkit-playsinline poster="images/reels/reel-DC8CdpDxZDJ.jpg" class="reel-video-element">
+                    <source src="videos/opgo-expo.mp4" type="video/mp4">
+                  </video>
+                  <div class="reel-overlay-gradient"></div>
+                  <div class="reel-top-pill">
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    <span>Reel</span>
+                  </div>
+                  <div class="reel-caption-box">
+                    <h4 class="reel-title">Real-World Skills</h4>
+                    <span class="reel-watch-cta"><span>Watch Reel</span><span class="reel-arrow">↗</span></span>
+                  </div>
+                  <div class="reel-frame-shield" aria-hidden="true"></div>
+                </div>
+              </a>
+            </article>
+
+            <!-- Clone 5 -->
+            <article class="reel-slide-card clone" data-code="DC5TSlaxn5F" aria-hidden="true">
+              <a href="https://www.instagram.com/reel/DC5TSlaxn5F/" target="_blank" rel="noopener noreferrer" class="reel-card-link" tabindex="-1">
+                <div class="reel-media-wrapper">
+                  <img src="images/reels/reel-DC5TSlaxn5F.jpg" alt="The Learning Curve" class="reel-thumb-img" loading="lazy">
+                  <div class="reel-overlay-gradient"></div>
+                  <div class="reel-top-pill">
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    <span>Reel</span>
+                  </div>
+                  <div class="reel-caption-box">
+                    <h4 class="reel-title">The Learning Curve</h4>
+                    <span class="reel-watch-cta"><span>Watch Reel</span><span class="reel-arrow">↗</span></span>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <!-- Clone 6 -->
+            <article class="reel-slide-card clone" data-code="DC2fTaRyyxP" aria-hidden="true">
+              <a href="https://www.instagram.com/reel/DC2fTaRyyxP/" target="_blank" rel="noopener noreferrer" class="reel-card-link" tabindex="-1">
+                <div class="reel-media-wrapper">
+                  <video autoplay loop muted playsinline webkit-playsinline poster="images/reels/reel-DC2fTaRyyxP.jpg" class="reel-video-element">
+                    <source src="videos/opgo-apparel.mp4" type="video/mp4">
+                  </video>
+                  <div class="reel-overlay-gradient"></div>
+                  <div class="reel-top-pill">
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    <span>Reel</span>
+                  </div>
+                  <div class="reel-caption-box">
+                    <h4 class="reel-title">Tech &amp; Craft</h4>
+                    <span class="reel-watch-cta"><span>Watch Reel</span><span class="reel-arrow">↗</span></span>
+                  </div>
+                  <div class="reel-frame-shield" aria-hidden="true"></div>
+                </div>
+              </a>
+            </article>
+
+            <!-- Clone 7 -->
+            <article class="reel-slide-card clone" data-code="C6cfC73M_TR" aria-hidden="true">
+              <a href="https://www.instagram.com/reel/C6cfC73M_TR/" target="_blank" rel="noopener noreferrer" class="reel-card-link" tabindex="-1">
+                <div class="reel-media-wrapper">
+                  <img src="images/reels/reel-C6cfC73M_TR.jpg" alt="Youth Foundry" class="reel-thumb-img" loading="lazy">
+                  <div class="reel-overlay-gradient"></div>
+                  <div class="reel-top-pill">
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    <span>Reel</span>
+                  </div>
+                  <div class="reel-caption-box">
+                    <h4 class="reel-title">Youth Foundry</h4>
+                    <span class="reel-watch-cta"><span>Watch Reel</span><span class="reel-arrow">↗</span></span>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <!-- Clone 8 -->
+            <article class="reel-slide-card clone" data-code="C4Kb3qgAAK2" aria-hidden="true">
+              <a href="https://www.instagram.com/reel/C4Kb3qgAAK2/" target="_blank" rel="noopener noreferrer" class="reel-card-link" tabindex="-1">
+                <div class="reel-media-wrapper">
+                  <video autoplay loop muted playsinline webkit-playsinline poster="images/reels/reel-C4Kb3qgAAK2.jpg" class="reel-video-element">
+                    <source src="videos/welding-craft.webm" type="video/webm">
+                  </video>
+                  <div class="reel-overlay-gradient"></div>
+                  <div class="reel-top-pill">
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    <span>Reel</span>
+                  </div>
+                  <div class="reel-caption-box">
+                    <h4 class="reel-title">Beyond Metrics</h4>
+                    <span class="reel-watch-cta"><span>Watch Reel</span><span class="reel-arrow">↗</span></span>
+                  </div>
+                  <div class="reel-frame-shield" aria-hidden="true"></div>
+                </div>
+              </a>
+            </article>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 3: OUR PROGRAMS / NEXT-LEVEL PATHWAYS (EDITORIAL SHOWCASE)
+       ========================================================================== -->
+  <section class="editorial-campaign-section" id="programs">
+    <div class="editorial-container">
+      
+      <!-- Section Header (Clean Nike Aesthetic) -->
+      <div class="editorial-header-row">
+        <div>
+          <span class="editorial-eyebrow">OUR PROGRAMS</span>
+          <h2 class="editorial-main-title">Next-Level Pathways</h2>
+        </div>
+        <a href="programs.html" class="editorial-explore-all" aria-label="Explore all vocational and creative programs">
+          <span>Explore All Programs</span>
+          <span class="arrow">→</span>
+        </a>
+      </div>
+
+      <!-- Top Full-Width Hero Card (Featured Cohort - Clean Image with Text Below) -->
+      <div class="editorial-hero-banner">
+        <a href="programs.html#trades" class="editorial-hero-link" aria-label="Featuring the Operation GO Youth Apprenticeship Cohort">
+          <div class="editorial-hero-image-wrapper">
+            <img src="images/gdrive/generation-go-cohort.jpg" alt="Featuring the Operation GO Youth Apprenticeship Cohort">
+          </div>
+          <div class="editorial-hero-caption-below" style="margin-top: 14px; text-align: left;">
+            <h3 class="editorial-hero-title" style="color: #0F172A; font-size: 1.35rem; font-weight: 700; margin: 0 0 4px;">Featuring the Youth Apprenticeship Cohort</h3>
+            <p class="editorial-hero-sub" style="color: #64748B; font-size: 0.95rem; margin: 0;">2026 Rochester Skilled Trades &amp; Creative Foundry</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Clean 3-Column Editorial Grid with Title and Explore Links Only -->
+      <div class="editorial-tri-grid">
+        
+        <!-- Column 1: The Career Ladder & Skilled Trades -->
+        <article class="editorial-item">
+          <a href="programs.html#trades" class="editorial-card-link" aria-label="Explore The Career Ladder">
+            <div class="editorial-img-box">
+              <img src="images/gdrive/home-renovation.jpg" alt="The Career Ladder &amp; Skilled Trades">
+            </div>
+            <div class="editorial-item-content">
+              <h4 class="editorial-item-title">The Career Ladder</h4>
+              <span class="editorial-item-cta">Explore Trades</span>
+            </div>
+          </a>
+        </article>
+
+        <!-- Column 2: Custom Footwear & Apparel Lab -->
+        <article class="editorial-item">
+          <a href="programs.html#sneaker" class="editorial-card-link" aria-label="Explore Sneaker Lab & Apparel">
+            <div class="editorial-img-box">
+              <img src="images/gdrive/custom-sneakers-display.jpg" alt="Sneaker Lab &amp; Custom Footwear Lab">
+            </div>
+            <div class="editorial-item-content">
+              <h4 class="editorial-item-title">Sneaker Lab &amp; Apparel</h4>
+              <span class="editorial-item-cta">Explore Lab</span>
+            </div>
+          </a>
+        </article>
+
+        <!-- Column 3: Academic Focus & Creative Media -->
+        <article class="editorial-item">
+          <a href="programs.html#media" class="editorial-card-link" aria-label="Explore Academic & Media Studio">
+            <div class="editorial-img-box">
+              <img src="images/gdrive/go-film-photo.jpg" alt="Academic &amp; Media Studio">
+            </div>
+            <div class="editorial-item-content">
+              <h4 class="editorial-item-title">Academic &amp; Media Studio</h4>
+              <span class="editorial-item-cta">Explore Studio</span>
+            </div>
+          </a>
+        </article>
+
+        <!-- Column 4: Biz Brain -->
+        <article class="editorial-item">
+          <a href="programs.html#biz" class="editorial-card-link" aria-label="Explore Biz Brain">
+            <div class="editorial-img-box">
+              <img src="images/gdrive/marketing-agency.jpg" alt="Biz Brain Youth Entrepreneurship">
+            </div>
+            <div class="editorial-item-content">
+              <h4 class="editorial-item-title">Biz Brain</h4>
+              <span class="editorial-item-cta">Explore Biz Brain</span>
+            </div>
+          </a>
+        </article>
+
+        <!-- Column 5: Reprogram -->
+        <article class="editorial-item">
+          <a href="programs.html#reprogram" class="editorial-card-link" aria-label="Explore Reprogram">
+            <div class="editorial-img-box">
+              <img src="images/gdrive/generation-go-team.jpg" alt="Reprogram Mindset &amp; Leadership">
+            </div>
+            <div class="editorial-item-content">
+              <h4 class="editorial-item-title">Reprogram</h4>
+              <span class="editorial-item-cta">Explore Mindset</span>
+            </div>
+          </a>
+        </article>
+
+        <!-- Column 6: I Own Real Estate -->
+        <article class="editorial-item">
+          <a href="programs.html#realestate" class="editorial-card-link" aria-label="Explore I Own Real Estate">
+            <div class="editorial-img-box">
+              <img src="images/gdrive/studio-481A9231.jpg" alt="I Own Real Estate &amp; Financial Wealth">
+            </div>
+            <div class="editorial-item-content">
+              <h4 class="editorial-item-title">I Own Real Estate</h4>
+              <span class="editorial-item-cta">Explore Real Estate</span>
+            </div>
+          </a>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 3.5: OPERATION GO LEARNING & VOCATIONAL ECOSYSTEM BENTO GRID
+       [REMOVED FOR NOW AS REQUESTED]
+       ========================================================================== -->
+  <!-- 
+  <section class="opgo-bento-section" id="ecosystem" aria-label="Operation GO Learning and Trades Ecosystem">
+    <div class="opgo-bento-container">
+      
+      <div class="opgo-bento-grid">
+        
+        <div class="bento-card bento-card-brand">
+          <div class="bento-brand-icon-wrap">
+            <svg width="68" height="68" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+              <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+            </svg>
+          </div>
+          <h3 class="bento-brand-title">OPERATION GO</h3>
+          <span class="bento-brand-sub">LEARNING</span>
+        </div>
+
+        <div class="bento-card bento-card-stat-students">
+          <div class="bento-stat-top">
+            <div class="bento-cap-icon-circle">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/>
+              </svg>
+            </div>
+            <div class="bento-stat-num-box">
+              <strong>80K+</strong>
+              <span>Youth &amp; Students</span>
+            </div>
+          </div>
+          <div class="bento-avatars-row">
+            <img src="images/carpentry-student.jpg" alt="Student Apprentice">
+            <img src="images/construction-student.jpg" alt="Student Apprentice">
+            <img src="images/women-engineers.jpg" alt="Student Apprentice">
+            <img src="images/gdrive/sneaker-design-smiling.jpg" alt="Student Apprentice">
+          </div>
+        </div>
+
+        <div class="bento-card bento-card-stat-certs">
+          <div class="bento-certs-header">
+            <div class="bento-cap-icon-circle" style="width: 24px; height: 24px;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/>
+              </svg>
+            </div>
+            <span>OPERATION GO FOUNDRY</span>
+          </div>
+          <div class="bento-certs-body">
+            <strong>5K+</strong>
+            <span>Professional &amp; OSHA Certificates</span>
+          </div>
+        </div>
+
+        <div class="bento-card bento-card-tall-right">
+          <div class="bento-cap-icon-circle bento-tall-badge-top" style="background: rgba(2, 51, 58, 0.7); color: #FFFFFF; border: 1.5px solid rgba(255,255,255,0.3);">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/>
+            </svg>
+          </div>
+          <video autoplay loop muted playsinline webkit-playsinline poster="images/bento-classroom.jpg">
+            <source src="videos/opgo-expo.mp4" type="video/mp4">
+            <source src="videos/opgo-roc-presentation.mp4" type="video/mp4">
+          </video>
+          <a href="programs.html" class="bento-play-pill-btn" aria-label="Explore Course">
+            <span>Play Track</span>
+            <span>▶</span>
+          </a>
+        </div>
+
+        <div class="bento-card bento-card-center-preview">
+          <div class="bento-center-img-layer">
+            <img src="images/bento-center-student.jpg" alt="Student studying with learning analytics dashboard" loading="lazy">
+          </div>
+        </div>
+
+        <div class="bento-card bento-card-bottom-left">
+          <div class="bento-bottom-left-head">
+            <div class="bento-cap-icon-circle">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/>
+              </svg>
+            </div>
+            <h3>Get hands-on experience with our workshop trainings.</h3>
+          </div>
+          <div class="bento-pill-dual-img">
+            <div class="bento-arch-capsule">
+              <img src="images/carpentry-drill.jpg" alt="Workshop drill tool" loading="lazy">
+            </div>
+            <div class="bento-arch-capsule">
+              <img src="images/blueprint-class.jpg" alt="Blueprint class apprentice" loading="lazy">
+            </div>
+          </div>
+        </div>
+
+        <div class="bento-card bento-card-bottom-mentor">
+          <div class="bento-mentor-profile-row">
+            <img src="images/founder-justin-ortiz.jpg" alt="Justin Ortiz" class="bento-mentor-avatar">
+            <div class="bento-mentor-info">
+              <strong>Justin Ortiz</strong>
+              <span>Master Contractor &amp; Lead Director</span>
+              <div class="bento-mentor-rating">
+                <span style="color: #F59E0B;">★</span>
+                <span>4.9 (500+ reviews)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bento-card bento-card-bottom-testimonial">
+          <div class="bento-testimonial-left">
+            <div class="bento-cap-icon-circle" style="background: rgba(2, 51, 58, 0.7); color: #FFFFFF; border: 1.5px solid rgba(255,255,255,0.3);">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/>
+              </svg>
+            </div>
+            <h3>Read the amazing testimonies of our students.</h3>
+          </div>
+          <div class="bento-testimonial-quote-box">
+            <div class="bento-quote-author">
+              <img src="images/carpentry-student.jpg" alt="Marcus Jenkins">
+              <div class="bento-quote-author-info">
+                <strong>Marcus Jenkins</strong>
+                <span>Local 276 Apprentice</span>
+              </div>
+            </div>
+            <p class="bento-quote-text">
+              "Operation GO gave me union credentials and real skills at 18. The mentors are amazing and truly invested in our future."
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+  -->
+
+  
+
+  <!-- ==========================================================================
+       SECTION 5: COMMUNITY TESTIMONIAL COLLAGE (EXACT REFERENCE DESIGN)
+       Asymmetrical 4-column bento collage with unique card silhouettes & signatures
+       ========================================================================== -->
+  
+
+  <!-- ==========================================================================
+       SECTION 4.5: CINEMATIC WORKSHOP VIDEO SLIDER (FOUNDRY IN MOTION)
+       Interactive horizontal video slider with hardware-accelerated playback,
+       audio toggles, category badges, navigation arrows & progress bar
+       ========================================================================== -->
+  <section class="foundry-video-slider-section" id="workshopVideos" aria-label="Foundry in Motion Video Showcase">
+    <div class="fvs-container">
+      
+      <!-- Section Header with Controls -->
+      <div class="fvs-header">
+        <div class="fvs-header-left">
+          <span class="fvs-eyebrow">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            <span>FOUNDRY IN MOTION</span>
+          </span>
+          <h2 class="fvs-title">Real Workshops. Real Machines. Real Action.</h2>
+          <p class="fvs-subtitle">
+            Step directly onto our shop floor. Watch Rochester youth operating commercial framing rigs, laser cutting sneakers, torch welding structural steel, and filming 4K cinema productions.
+          </p>
+        </div>
+
+        <!-- Slider Navigation Controls -->
+        <div class="fvs-controls">
+          <div class="fvs-counter" aria-live="polite">
+            <span class="fvs-current-num">01</span>
+            <span class="fvs-counter-sep">/</span>
+            <span class="fvs-total-num">05</span>
+          </div>
+          <div class="fvs-nav-buttons">
+            <button class="fvs-nav-btn fvs-prev-btn" id="fvsPrevBtn" aria-label="Previous video slide">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
+            <button class="fvs-nav-btn fvs-next-btn" id="fvsNextBtn" aria-label="Next video slide">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slider Track Wrapper -->
+      <div class="fvs-slider-wrapper">
+        <div class="fvs-track" id="fvsTrack">
+          
+          <!-- Slide 1: Keynote & Community Showcase -->
+          <div class="fvs-slide active" data-slide="0">
+            <div class="fvs-video-card">
+              <div class="fvs-media-wrap">
+                <video class="fvs-video-el" autoplay loop muted playsinline webkit-playsinline preload="metadata" poster="images/gdrive/generation-go-cohort.jpg">
+                  <source src="videos/opgo-roc-presentation.mp4" type="video/mp4">
+                </video>
+                <div class="fvs-card-overlay"></div>
+                <span class="fvs-track-badge">Foundry Keynote &bull; Rochester NY</span>
+                <button class="fvs-sound-btn" aria-label="Toggle video sound">
+                  <span class="fvs-sound-icon-muted">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>
+                  </span>
+                  <span class="fvs-sound-icon-unmuted" style="display:none;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+                  </span>
+                  <span class="fvs-sound-label">Sound</span>
+                </button>
+              </div>
+              <div class="fvs-card-info">
+                <div class="fvs-card-header">
+                  <h3 class="fvs-card-title">Transforming Rochester’s Youth into Union Leaders</h3>
+                  <span class="fvs-timestamp">04:12 HD Presentation</span>
+                </div>
+                <p class="fvs-card-desc">
+                  Live keynote from our Rochester headquarters detailing how tuition-free apprenticeships eliminate student debt and prepare teens for $45K–$85K union trade careers.
+                </p>
+                <div class="fvs-card-footer">
+                  <span class="fvs-speaker">Presented by Justin Ortiz &bull; Operation GO</span>
+                  <a href="about.html" class="fvs-learn-link">
+                    <span>Learn The Vision</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2: Structural Metal & Welding -->
+          <div class="fvs-slide" data-slide="1">
+            <div class="fvs-video-card">
+              <div class="fvs-media-wrap">
+                <video class="fvs-video-el" loop muted playsinline webkit-playsinline preload="none" poster="images/gdrive/carpentry-trades-drill.jpg">
+                  <source src="videos/welding-craft.webm" type="video/webm">
+                </video>
+                <div class="fvs-card-overlay"></div>
+                <span class="fvs-track-badge">Track 01 &bull; Structural Trades</span>
+                <button class="fvs-sound-btn" aria-label="Toggle video sound">
+                  <span class="fvs-sound-icon-muted">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>
+                  </span>
+                  <span class="fvs-sound-icon-unmuted" style="display:none;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+                  </span>
+                  <span class="fvs-sound-label">Sound</span>
+                </button>
+              </div>
+              <div class="fvs-card-info">
+                <div class="fvs-card-header">
+                  <h3 class="fvs-card-title">MIG Welding &amp; Heavy Timber Framing Workshop</h3>
+                  <span class="fvs-timestamp">01:45 Workshop Reel</span>
+                </div>
+                <p class="fvs-card-desc">
+                  Students earn OSHA-10 and commercial certifications while learning structural joinery, framing layouts, and metal torch welding alongside seasoned journeymen.
+                </p>
+                <div class="fvs-card-footer">
+                  <span class="fvs-speaker">Mentors: Local 276 Carpenters &amp; Steelworkers</span>
+                  <a href="programs.html#trades" class="fvs-learn-link">
+                    <span>Explore Carpentry</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3: Sneaker Reconstruction & Streetwear -->
+          <div class="fvs-slide" data-slide="2">
+            <div class="fvs-video-card">
+              <div class="fvs-media-wrap">
+                <video class="fvs-video-el" loop muted playsinline webkit-playsinline preload="none" poster="images/gdrive/custom-sneakers-display.jpg">
+                  <source src="videos/opgo-apparel.mp4" type="video/mp4">
+                  <source src="videos/urban-fashion.webm" type="video/webm">
+                </video>
+                <div class="fvs-card-overlay"></div>
+                <span class="fvs-track-badge">Track 02 &bull; Sneaker &amp; Apparel</span>
+                <button class="fvs-sound-btn" aria-label="Toggle video sound">
+                  <span class="fvs-sound-icon-muted">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>
+                  </span>
+                  <span class="fvs-sound-icon-unmuted" style="display:none;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+                  </span>
+                  <span class="fvs-sound-label">Sound</span>
+                </button>
+              </div>
+              <div class="fvs-card-info">
+                <div class="fvs-card-header">
+                  <h3 class="fvs-card-title">Laser Cutting, Sole Reconstruction &amp; Streetwear</h3>
+                  <span class="fvs-timestamp">02:10 Design Lab</span>
+                </div>
+                <p class="fvs-card-desc">
+                  Youth deconstruct iconic silhouettes, master Italian leather skiving, and utilize digital embroidery machines to engineer real wearable capsule collections.
+                </p>
+                <div class="fvs-card-footer">
+                  <span class="fvs-speaker">Apparel &amp; Industrial Footwear Studio</span>
+                  <a href="programs.html#sneaker" class="fvs-learn-link">
+                    <span>Explore Sneaker Lab</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 4: 3D Prototyping -->
+          <div class="fvs-slide" data-slide="3">
+            <div class="fvs-video-card">
+              <div class="fvs-media-wrap">
+                <video class="fvs-video-el" loop muted playsinline webkit-playsinline preload="none" poster="images/blueprint-class.jpg">
+                  <source src="videos/3d-printing-craft.webm" type="video/webm">
+                </video>
+                <div class="fvs-card-overlay"></div>
+                <span class="fvs-track-badge">Track 04 &bull; Digital Fab &amp; 3D</span>
+                <button class="fvs-sound-btn" aria-label="Toggle video sound">
+                  <span class="fvs-sound-icon-muted">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>
+                  </span>
+                  <span class="fvs-sound-icon-unmuted" style="display:none;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+                  </span>
+                  <span class="fvs-sound-label">Sound</span>
+                </button>
+              </div>
+              <div class="fvs-card-info">
+                <div class="fvs-card-header">
+                  <h3 class="fvs-card-title">Additive Manufacturing &amp; CAD Prototyping</h3>
+                  <span class="fvs-timestamp">01:28 Fab Lab</span>
+                </div>
+                <p class="fvs-card-desc">
+                  From blueprint literacy to computer-aided design (CAD) and high-speed filament 3D printing. Preparing high schoolers for modern advanced manufacturing.
+                </p>
+                <div class="fvs-card-footer">
+                  <span class="fvs-speaker">Digital Engineering &amp; Tooling Cohort</span>
+                  <a href="programs.html#media" class="fvs-learn-link">
+                    <span>Explore Fab Lab</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 5: Annual Youth Trades Expo -->
+          <div class="fvs-slide" data-slide="4">
+            <div class="fvs-video-card">
+              <div class="fvs-media-wrap">
+                <video class="fvs-video-el" loop muted playsinline webkit-playsinline preload="none" poster="images/gdrive/workshop-team-dsc0041.jpg">
+                  <source src="videos/opgo-expo.mp4" type="video/mp4">
+                </video>
+                <div class="fvs-card-overlay"></div>
+                <span class="fvs-track-badge">Community &bull; Annual Trades Expo</span>
+                <button class="fvs-sound-btn" aria-label="Toggle video sound">
+                  <span class="fvs-sound-icon-muted">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>
+                  </span>
+                  <span class="fvs-sound-icon-unmuted" style="display:none;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+                  </span>
+                  <span class="fvs-sound-label">Sound</span>
+                </button>
+              </div>
+              <div class="fvs-card-info">
+                <div class="fvs-card-header">
+                  <h3 class="fvs-card-title">Trades Summit &amp; Direct Employer Hiring Day</h3>
+                  <span class="fvs-timestamp">03:05 Highlights</span>
+                </div>
+                <p class="fvs-card-desc">
+                  General contractors, master electricians, and union representatives meet directly with our graduating cohorts for on-the-spot interviews and tool giveaways.
+                </p>
+                <div class="fvs-card-footer">
+                  <span class="fvs-speaker">Rochester Convention Center &bull; Monroe County</span>
+                  <a href="careers.html" class="fvs-learn-link">
+                    <span>Employer Partnerships</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Progress Line & Quick Navigation Pills -->
+      <div class="fvs-bottom-bar">
+        <div class="fvs-progress-track">
+          <div class="fvs-progress-bar" id="fvsProgressBar" style="width: 20%;"></div>
+        </div>
+        <div class="fvs-dots" id="fvsDots">
+          <button class="fvs-dot active" data-index="0" aria-label="Slide 1"></button>
+          <button class="fvs-dot" data-index="1" aria-label="Slide 2"></button>
+          <button class="fvs-dot" data-index="2" aria-label="Slide 3"></button>
+          <button class="fvs-dot" data-index="4" aria-label="Slide 4"></button>
+          <button class="fvs-dot" data-index="4" aria-label="Slide 5"></button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 6: MINIMAL EDITORIAL MENTOR STRIP
+       ========================================================================== -->
+  <section class="editorial-mentor-strip">
+    <div class="container">
+      <div class="mentor-strip-inner">
+        <div class="mentor-strip-content">
+          <span class="mentor-strip-eyebrow">TEACH YOUR TRADE</span>
+          <h3 class="mentor-strip-heading">MENTOR THE NEXT GENERATION OF BUILDERS</h3>
+          <p class="mentor-strip-sub">Master contractors &amp; artisans: earn $45–$65/hr training small cohorts in Rochester.</p>
+        </div>
+        <div class="mentor-strip-action">
+          <a href="careers.html" class="btn-charido-orange">
+            <span>Become a Mentor</span>
+            <span class="arrow-box">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 6.5: LATEST FOUNDRY UPDATES & COMMUNITY DISPATCHES
+       Editorial 3-column + featured card magazine layout with category tags,
+       dates, high-resolution photography, and modal / link triggers
+       ========================================================================== -->
+  <section class="framer-updates-section" id="updates" aria-label="Foundry Dispatches and Cohort Updates">
+    <div class="framer-container">
+      
+      <!-- Section Header with Category Filters -->
+      <div class="framer-section-header updates-header-split">
+        <div class="framer-header-text">
+          <div class="framer-pill-badge">
+            <span class="badge-dot"></span>
+            <span>[ 05 ] DISPATCHES &amp; COHORT NEWS</span>
+          </div>
+          <h2 class="framer-section-title">
+            Foundry Dispatches &amp; <span class="editorial-serif">Cohort Updates</span>
+          </h2>
+          <p class="framer-section-sub">
+            Real-time breakthroughs, open cohort admissions, union apprentice signings, and student design capsules across Rochester.
+          </p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="framer-filter-bar" role="tablist" aria-label="Dispatch Categories">
+          <button type="button" class="framer-filter-btn active" data-filter="all" role="tab" aria-selected="true">
+            <span>All Updates</span>
+            <span class="framer-filter-count">4</span>
+          </button>
+          <button type="button" class="framer-filter-btn" data-filter="admissions" role="tab" aria-selected="false">
+            <span>Admissions</span>
+          </button>
+          <button type="button" class="framer-filter-btn" data-filter="trades" role="tab" aria-selected="false">
+            <span>Union Trades</span>
+          </button>
+          <button type="button" class="framer-filter-btn" data-filter="labs" role="tab" aria-selected="false">
+            <span>Design Labs</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Symmetrical 2x2 Grid with Identical Balanced Proportions -->
+      <div class="framer-updates-grid" id="framerUpdatesGrid">
+        
+        <!-- Dispatch 1: Admissions -->
+        <article class="framer-dispatch-card" data-category="admissions" data-dispatch-id="1">
+          <div class="framer-dispatch-media">
+            <img src="images/editorial-hero-cohort.jpg" alt="Operation GO cohort celebrating graduation" loading="lazy">
+            <span class="framer-dispatch-tag">Admissions Open</span>
+          </div>
+          <div class="framer-dispatch-body">
+            <div class="framer-dispatch-meta">
+              <span class="framer-dispatch-category">[ ADMISSIONS ]</span>
+              <span class="framer-dispatch-dot">•</span>
+              <span class="framer-dispatch-date">NOV 2026</span>
+              <span class="framer-dispatch-dot">•</span>
+              <span class="framer-dispatch-read">3 MIN READ</span>
+            </div>
+            <h3 class="framer-dispatch-title">
+              Spring 2027 Cohort Open: Paid Youth Apprenticeships ($16/hr) &amp; Milwaukee Toolsets
+            </h3>
+            <p class="framer-dispatch-excerpt">
+              Tuition-free enrollment is now open for Rochester youth ages 14–24. Every admitted student receives industry-standard Milwaukee power tools, complete safety PPE, and guaranteed paid work placement.
+            </p>
+            <div class="framer-dispatch-footer">
+              <span class="framer-dispatch-author">Admissions Desk</span>
+              <button type="button" class="framer-dispatch-action-btn">
+                <span>Read Dispatch</span>
+                <span class="arrow">→</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Dispatch 2: Design Labs -->
+        <article class="framer-dispatch-card" data-category="labs" data-dispatch-id="2">
+          <div class="framer-dispatch-media">
+            <img src="images/gdrive/custom-sneakers-craft.jpg" alt="Student reconstructing sneaker in lab" loading="lazy">
+            <span class="framer-dispatch-tag">Student Capsule</span>
+          </div>
+          <div class="framer-dispatch-body">
+            <div class="framer-dispatch-meta">
+              <span class="framer-dispatch-category">[ DESIGN LABS ]</span>
+              <span class="framer-dispatch-dot">•</span>
+              <span class="framer-dispatch-date">OCT 2026</span>
+              <span class="framer-dispatch-dot">•</span>
+              <span class="framer-dispatch-read">2 MIN READ</span>
+            </div>
+            <h3 class="framer-dispatch-title">
+              Youth Apparel Lab Debuts First 20-Pair Handcrafted Sneaker Capsule
+            </h3>
+            <p class="framer-dispatch-excerpt">
+              Combining 3D CAD modeling, laser cutting, and Italian leather skiving, our teen designers engineered a custom footwear collection that sold out in under 48 hours to regional art collectors.
+            </p>
+            <div class="framer-dispatch-footer">
+              <span class="framer-dispatch-author">Apparel Lab</span>
+              <button type="button" class="framer-dispatch-action-btn">
+                <span>Read Dispatch</span>
+                <span class="arrow">→</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Dispatch 3: Union Trades -->
+        <article class="framer-dispatch-card" data-category="trades" data-dispatch-id="3">
+          <div class="framer-dispatch-media">
+            <img src="images/carpentry-student.jpg" alt="Carpentry apprentice on site" loading="lazy">
+            <span class="framer-dispatch-tag">Career Placement</span>
+          </div>
+          <div class="framer-dispatch-body">
+            <div class="framer-dispatch-meta">
+              <span class="framer-dispatch-category">[ UNION TRADES ]</span>
+              <span class="framer-dispatch-dot">•</span>
+              <span class="framer-dispatch-date">SEP 2026</span>
+              <span class="framer-dispatch-dot">•</span>
+              <span class="framer-dispatch-read">3 MIN READ</span>
+            </div>
+            <h3 class="framer-dispatch-title">
+              Carpenters Local 276 Inks Direct Apprenticeship Pipeline for 15 Graduates
+            </h3>
+            <p class="framer-dispatch-excerpt">
+              Monroe County commercial builders welcome 15 certified Operation GO alumni onto active framing sites with full union healthcare, pension, and $26.50/hr starting journeyman progression.
+            </p>
+            <div class="framer-dispatch-footer">
+              <span class="framer-dispatch-author">Placement Desk</span>
+              <button type="button" class="framer-dispatch-action-btn">
+                <span>Read Dispatch</span>
+                <span class="arrow">→</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Dispatch 4: Media & Enterprise -->
+        <article class="framer-dispatch-card" data-category="labs" data-dispatch-id="4">
+          <div class="framer-dispatch-media">
+            <img src="images/gdrive/film-production-slate.jpg" alt="Student filming on cinema stage" loading="lazy">
+            <span class="framer-dispatch-tag">Enterprise Studio</span>
+          </div>
+          <div class="framer-dispatch-body">
+            <div class="framer-dispatch-meta">
+              <span class="framer-dispatch-category">[ MEDIA STUDIO ]</span>
+              <span class="framer-dispatch-dot">•</span>
+              <span class="framer-dispatch-date">AUG 2026</span>
+              <span class="framer-dispatch-dot">•</span>
+              <span class="framer-dispatch-read">2 MIN READ</span>
+            </div>
+            <h3 class="framer-dispatch-title">
+              Student 4K Cinema Crew Contracts First Three Commercial Video Campaigns
+            </h3>
+            <p class="framer-dispatch-excerpt">
+              Equipped with Hollywood-grade cinema optics, wireless audio, and DaVinci Resolve color grading, media track apprentices are delivering broadcast-ready commercials for local businesses.
+            </p>
+            <div class="framer-dispatch-footer">
+              <span class="framer-dispatch-author">Cinema Studio</span>
+              <button type="button" class="framer-dispatch-action-btn">
+                <span>Read Dispatch</span>
+                <span class="arrow">→</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Clean Minimalist Newsletter Strip -->
+      <div class="framer-newsletter-card">
+        <div class="framer-newsletter-content">
+          <div class="framer-newsletter-badge">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <span>FOUNDRY DISPATCHES</span>
+          </div>
+          <h4 class="framer-newsletter-title">Subscribe to Cohort Openings &amp; Community News</h4>
+          <p class="framer-newsletter-desc">Receive quarterly updates on student milestones, union signings, and upcoming free enrollments.</p>
+        </div>
+        <form class="framer-newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to Operation GO Foundry Dispatches!'); this.reset();">
+          <input type="email" class="framer-newsletter-input" placeholder="Enter your email address..." required aria-label="Email address for updates">
+          <button type="submit" class="framer-newsletter-submit-btn">
+            <span>Subscribe</span>
+            <span class="arrow">→</span>
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 8: FOOTER (EXACT CHARIDO DEEP FOREST GREEN FOOTER)
+       ========================================================================== -->
+  <!-- ==========================================================================
+       SECTION 8: MINIMALIST ELEGANT FOOTER
+       Clean, spacious, high-contrast typography and subtle social links
+       ========================================================================== -->
+    
+
+  <!-- ==========================================================================
+       SECTION 8: MINIMALIST ELEGANT FOOTER
+       Clean, spacious, high-contrast typography and subtle social links
+       ========================================================================== -->
+  <footer class="site-minimal-footer">
+    <div class="container">
+      
+      <!-- Main Footer Grid -->
+      <div class="footer-grid">
+        
+        <!-- Brand & Mission Column -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="footer-brand" aria-label="Operation GO Home">
+            <img src="images/logo.png" alt="Operation GO" class="footer-logo">
+          </a>
+          <p class="footer-desc">
+            Rochester’s nonprofit workforce foundry. Cultivating debt-free futures and living-wage careers for youth through hands-on mastery in skilled trades, design, and enterprise.
+          </p>
+          <div class="footer-badges">
+            <span class="footer-badge">501(c)(3) Public Charity</span>
+            <span class="footer-badge">Rochester, NY</span>
+          </div>
+        </div>
+
+        <!-- Links Column 1: Explore -->
+        <div class="footer-nav-col">
+          <h5 class="footer-col-title">Navigation</h5>
+          <ul class="footer-link-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Operation GO</a></li>
+            <li><a href="programs.html">All Vocational Tracks</a></li>
+            <li><a href="careers.html">Contractor Mentorship</a></li>
+            <li><a href="get-involved.html">Get Involved</a></li>
+            <li><a href="contact.html">Contact &amp; Visit</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Column 2: Foundry Tracks -->
+        <div class="footer-nav-col">
+          <h5 class="footer-col-title">Foundry Tracks</h5>
+          <ul class="footer-link-list">
+            <li><a href="programs.html#trades">The Career Ladder</a></li>
+            <li><a href="programs.html#sneaker">Sneaker Lab &amp; Apparel</a></li>
+            <li><a href="programs.html#media">Academic &amp; Media Studio</a></li>
+            <li><a href="programs.html#biz">Biz Brain Enterprise</a></li>
+            <li><a href="programs.html#reprogram">Reprogram Mindset</a></li>
+            <li><a href="programs.html#realestate">I Own Real Estate</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Column 3: Contact & Connect -->
+        <div class="footer-nav-col">
+          <h5 class="footer-col-title">Foundry &amp; Connect</h5>
+          <ul class="footer-link-list">
+            <li><span class="footer-meta-label">Location:</span> 100 Carlson Rd, Rochester, NY 14610</li>
+            <li><span class="footer-meta-label">Phone:</span> <a href="tel:5854840846">(585) 484-0846</a></li>
+            <li><span class="footer-meta-label">Email:</span> <a href="mailto:info@operationgo.org">info@operationgo.org</a></li>
+          </ul>
+          
+          <div class="footer-social-minimal">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor"></polygon>
+              </svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          © 2026 Operation GO™. All rights reserved.
+        </div>
+        <div class="footer-legal-links">
+          <a href="#">Privacy Policy</a>
+          <span class="sep">•</span>
+          <a href="#">Terms of Use</a>
+          <span class="sep">•</span>
+          <a href="#">501(c)(3) Disclosure</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MODAL 1: DONATION MODAL (EXACT CHARIDO FLOW)
+       ========================================================================== -->
+  <div class="charido-modal-overlay" id="donateModal">
+    <div class="charido-modal-card">
+      <button class="modal-close-btn" aria-label="Close modal">✕</button>
+      <div class="modal-header">
+        <h3>Support Rochester Youth Trades</h3>
+        <p>100% of your donation directly funds student toolboxes, OSHA-10 safety gear, and paid youth stipends.</p>
+      </div>
+
+      <form id="charidoDonationForm">
+        <label style="font-size: 0.88rem; font-weight: 700; color: #1B4D3E; margin-bottom: 8px; display: block;">Select Amount</label>
+        <div class="donation-preset-row">
+          <button type="button" class="preset-amount-btn active" data-amount="50">$50</button>
+          <button type="button" class="preset-amount-btn" data-amount="100">$100</button>
+          <button type="button" class="preset-amount-btn" data-amount="250">$250</button>
+          <button type="button" class="preset-amount-btn" data-amount="500">$500</button>
+        </div>
+
+        <div class="form-group-charido">
+          <label for="customAmountInput">Or Enter Custom Amount ($ USD)</label>
+          <input type="number" id="customAmountInput" value="50" min="5" required>
+        </div>
+
+        <div class="form-group-charido">
+          <label for="donationCauseSelect">Designate to Specific Cause</label>
+          <select id="donationCauseSelect">
+            <option value="general">General Youth Foundry Fund (Where Most Needed)</option>
+            <option value="carpentry">Carpentry &amp; Structural Framing Track</option>
+            <option value="sneaker">Sneaker Customization &amp; Design Lab</option>
+            <option value="cinema">4K Cinema &amp; Audio Production Studio</option>
+            <option value="stipends">Summer Youth Stipends ($16/hr Direct Wages)</option>
+          </select>
+        </div>
+
+        <div class="form-group-charido">
+          <label for="donorName">Your Full Name</label>
+          <input type="text" id="donorName" placeholder="Justin Ortiz" required>
+        </div>
+
+        <div class="form-group-charido">
+          <label for="donorEmail">Your Email (for 501(c)(3) Tax Receipt)</label>
+          <input type="email" id="donorEmail" placeholder="justin@example.com" required>
+        </div>
+
+        <button type="submit" class="btn-charido-orange" style="width: 100%; justify-content: center; margin-top: 10px;">
+          <span>Complete Secure Donation</span>
+          <span class="arrow-box">→</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL 2: STUDENT FREE ENROLLMENT MODAL
+       ========================================================================== -->
+  <div class="charido-modal-overlay" id="applyModal">
+    <div class="charido-modal-card">
+      <button class="modal-close-btn" aria-label="Close modal">✕</button>
+      <div class="modal-header">
+        <h3>Enroll in Operation GO™ Cohort</h3>
+        <p>Ages 12–18. Free equipment, OSHA-10 safety certification, and paid build wages.</p>
+      </div>
+
+      <form id="charidoStudentForm">
+        <div class="form-group-charido">
+          <label for="studentName">Student Full Name</label>
+          <input type="text" id="studentName" placeholder="Marcus Jenkins" required>
+        </div>
+
+        <div class="form-group-charido">
+          <label for="studentAge">Age &amp; Grade</label>
+          <input type="text" id="studentAge" placeholder="16 years old / 11th Grade" required>
+        </div>
+
+        <div class="form-group-charido">
+          <label for="trackSelect">Preferred Vocational Track</label>
+          <select id="trackSelect" required>
+            <option value="carpentry">Carpentry &amp; Structural Framing</option>
+            <option value="sneaker">Sneaker Customization &amp; Apparel Lab</option>
+            <option value="cinema">4K Cinema Production &amp; Soundstage</option>
+            <option value="barber">Barber Academy &amp; Hair Design</option>
+            <option value="summer">Summer Youth Employment Program ($16/hr)</option>
+          </select>
+        </div>
+
+        <div class="form-group-charido">
+          <label for="guardianPhone">Parent / Guardian Phone</label>
+          <input type="tel" id="guardianPhone" placeholder="(585) 555-0199" required>
+        </div>
+
+        <button type="submit" class="btn-charido-orange" style="width: 100%; justify-content: center; margin-top: 10px;">
+          <span>Submit Free Application</span>
+          <span class="arrow-box">→</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Video Lightbox Modal (For Full HD Watch Experience with Sound) -->
+  <div class="video-lightbox-modal" id="videoLightboxModal" role="dialog" aria-modal="true" aria-label="Operation GO Video Showcase">
+    <button class="video-lightbox-close" id="videoLightboxClose" aria-label="Close video">✕</button>
+    <div class="video-lightbox-inner">
+      <iframe 
+        id="lightboxIframe"
+        src="" 
+        title="Operation GO Video Player" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+
+  <!-- Application Scripts -->
+  <script src="js/main.js?v=20261111_testimonials_flip1"></script>
+</body>
+</html>

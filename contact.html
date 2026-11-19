@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us &bull; Visit Rochester Foundry | Operation GO™</title>
+  <meta name="description" content="Get in touch with Operation GO in Rochester, NY. Contact our admissions team, director Justin Ortiz, or schedule a tour of our skilled trades foundry.">
+  
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=20261119_contact_img">
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body class="contact-page-clean">
+
+  <!-- ==========================================================================
+       FLOATING FROSTED NAVBAR
+       ========================================================================== -->
+  <header class="charido-nav-wrapper">
+    <div class="container">
+      <div class="charido-nav-inner">
+        <!-- Brand Logo -->
+        <a href="index.html" class="charido-brand" aria-label="Operation GO Home">
+          <span class="brand-logo-badge">
+            <img src="images/logo.png" alt="Operation GO" class="brand-logo-img">
+          </span>
+        </a>
+
+        <!-- Menu Links -->
+        <nav class="charido-nav-links">
+          <a href="index.html" class="charido-nav-link">Home</a>
+          <a href="about.html" class="charido-nav-link">About</a>
+          <a href="programs.html" class="charido-nav-link">Programs</a>
+          <a href="gallery.html" class="charido-nav-link">Gallery</a>
+          <a href="careers.html" class="charido-nav-link">Careers</a>
+          <a href="get-involved.html" class="charido-nav-link">Get Involved</a>
+          <a href="contact.html" class="charido-nav-link active-page">Contact</a>
+        </nav>
+
+        <!-- Right Action Button -->
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <button class="btn-charido-orange" data-open-modal="donateModal">
+            <span>Donate Now</span>
+            <span class="arrow-box">→</span>
+          </button>
+          <button class="mobile-toggle-btn" id="charidoMobileToggle" aria-label="Toggle navigation">☰</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       MARWA-INSPIRED CLEAN MODERN CONTACT HERO & EXPERIENCE
+       Exact replication of user reference:
+       - Header with pill tag & split sub-text
+       - 2-Column: Clean Form + Autoplaying Video Card with "Your Journey" badge
+       - 3-Column Info Row: Call & WhatsApp, Working Hours, Write to Us
+       - Bottom Discover Banner with Dual Autoplaying Videos of Operation GO
+       ========================================================================== -->
+  <main class="opgo-contact-page">
+    <div class="opgo-contact-container">
+      
+      <!-- Top Header Row -->
+      <div class="opgo-contact-header">
+        <div class="opgo-contact-header-left">
+          <h1 class="opgo-contact-title">Contact Us</h1>
+        </div>
+        <div class="opgo-contact-header-right">
+          <p class="opgo-header-desc">
+            Tell us when and what you'd like to explore and we'll confirm availability within 24 hours.
+          </p>
+        </div>
+      </div>
+
+      <!-- Main 2-Column Grid: Form + Video Card -->
+      <div class="opgo-contact-grid">
+        
+        <!-- Left: Modern Form Card -->
+        <div class="opgo-form-card">
+          <form class="opgo-form" id="opgoContactForm" onsubmit="event.preventDefault(); alert('Thank you! Your request has been received. Our Rochester team will contact you within 24 hours.'); this.reset();">
+            
+            <!-- Row 1: Name & Email -->
+            <div class="opgo-form-row-2">
+              <div class="opgo-form-group">
+                <label for="contactName" class="opgo-form-label">Name</label>
+                <input type="text" id="contactName" class="opgo-form-input" placeholder="Your full name" required autocomplete="name">
+              </div>
+              <div class="opgo-form-group">
+                <label for="contactEmail" class="opgo-form-label">Email</label>
+                <input type="email" id="contactEmail" class="opgo-form-input" placeholder="you@example.com" required autocomplete="email">
+              </div>
+            </div>
+
+            <!-- Row 2: Phone & Select Track -->
+            <div class="opgo-form-row-2">
+              <div class="opgo-form-group">
+                <label for="contactPhone" class="opgo-form-label">Phone Number</label>
+                <input type="tel" id="contactPhone" class="opgo-form-input" placeholder="+1 (585) 434-2123" autocomplete="tel">
+              </div>
+              <div class="opgo-form-group">
+                <label for="contactTour" class="opgo-form-label">Select Your Track</label>
+                <select id="contactTour" class="opgo-form-select" required>
+                  <option value="" disabled selected>Choose your track...</option>
+                  <option value="carpentry">Carpentry & Structural Timber Framing</option>
+                  <option value="sneaker">Sneaker Lab & Urban Apparel Design</option>
+                  <option value="cinema">Cinema & Media Production Studio</option>
+                  <option value="trades">Commercial Electrician & Union Apprenticeship</option>
+                  <option value="mentorship">Licensed Master Contractor Mentorship</option>
+                  <option value="tour">Foundry Tour & Youth Admissions</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Row 3: Preferred Date & Number of Attendees -->
+            <div class="opgo-form-row-2">
+              <div class="opgo-form-group">
+                <label for="contactDate" class="opgo-form-label">Preferred Date</label>
+                <input type="date" id="contactDate" class="opgo-form-input">
+              </div>
+              <div class="opgo-form-group">
+                <label for="contactTravelers" class="opgo-form-label">Number of Attendees / Role</label>
+                <input type="text" id="contactTravelers" class="opgo-form-input" placeholder="1 student, 1 parent">
+              </div>
+            </div>
+
+            <!-- Row 4: Message -->
+            <div class="opgo-form-group">
+              <label for="contactMessage" class="opgo-form-label">Message / Special Requests</label>
+              <textarea id="contactMessage" class="opgo-form-textarea" rows="3" placeholder="Anything else we should know?"></textarea>
+            </div>
+
+            <!-- Submit Button Group: Pill + Circle Arrow -->
+            <div class="opgo-btn-group">
+              <button type="submit" class="opgo-btn-submit">
+                Reserve Your Spot
+              </button>
+              <button type="submit" class="opgo-btn-circle" aria-label="Submit Form">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
+                </svg>
+              </button>
+            </div>
+
+          </form>
+        </div>
+
+        <!-- Right: Clean Authentic Image Card of Operation GO Youth -->
+        <div class="opgo-video-card">
+          <img src="images/gdrive/workshop-action-dsc0170.jpg" alt="Operation GO Youth Apprentices Hands-On Workshop" loading="lazy">
+        </div>
+
+      </div>
+
+      <!-- 3-Column Info Row -->
+      <div class="opgo-info-row">
+        
+        <!-- Column 1: Call & WhatsApp -->
+        <div class="opgo-info-card">
+          <div class="opgo-info-icon-circle" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+          </div>
+          <h3 class="opgo-info-title">Call &amp; WhatsApp</h3>
+          <p class="opgo-info-lines">
+            <a href="tel:5854840846">+1 (585) 484-0846</a><br>
+            <a href="tel:5854342123">+1 (585) 434-2123</a>
+          </p>
+        </div>
+
+        <!-- Column 2: Working Hours -->
+        <div class="opgo-info-card">
+          <div class="opgo-info-icon-circle" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+          </div>
+          <h3 class="opgo-info-title">Working Hours</h3>
+          <p class="opgo-info-lines">
+            Daily: 8am–5pm<br>
+            Friday: On-Site Apprenticeship
+          </p>
+        </div>
+
+        <!-- Column 3: Write to Us -->
+        <div class="opgo-info-card">
+          <div class="opgo-info-icon-circle" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </div>
+          <h3 class="opgo-info-title">Write to Us</h3>
+          <p class="opgo-info-lines">
+            <a href="mailto:info@operationgo.org">info@operationgo.org</a><br>
+            <a href="mailto:admissions@operationgo.org">admissions@operationgo.org</a>
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Bottom Discover Banner with Dual Autoplaying Videos of Operation GO -->
+      <div class="opgo-discover-banner">
+        
+        <div class="opgo-discover-left">
+          <h2 class="opgo-discover-title">
+            Discover your next hands-on trade mastery
+          </h2>
+          <p class="opgo-discover-desc">
+            Plan your visit in minutes and experience our youth vocational foundry, timber framing, and creative studios firsthand.
+          </p>
+          <a href="programs.html" class="btn-charido-orange" style="display: inline-flex;">
+            <span>Explore All Tracks</span>
+            <span class="arrow-box">→</span>
+          </a>
+        </div>
+
+        <div class="opgo-discover-videos">
+          <div class="opgo-sub-video-card">
+            <video autoplay loop muted playsinline webkit-playsinline poster="images/gdrive/generation-go-cohort.jpg">
+              <source src="videos/opgo-apparel.mp4" type="video/mp4">
+              <source src="videos/urban-fashion.webm" type="video/webm">
+            </video>
+          </div>
+          <div class="opgo-sub-video-card">
+            <video autoplay loop muted playsinline webkit-playsinline poster="images/carpentry-student.jpg">
+              <source src="videos/opgo-vision.mp4" type="video/mp4">
+              <source src="videos/3d-printing-craft.webm" type="video/webm">
+            </video>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="site-minimal-footer">
+    <div class="container">
+      
+      <!-- Main Footer Grid -->
+      <div class="footer-grid">
+        
+        <!-- Brand & Mission Column -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="footer-brand" aria-label="Operation GO Home">
+            <img src="images/logo.png" alt="Operation GO" class="footer-logo">
+          </a>
+          <p class="footer-desc">
+            Rochester’s nonprofit workforce foundry. Cultivating debt-free futures and living-wage careers for youth through hands-on mastery in skilled trades, design, and enterprise.
+          </p>
+          <div class="footer-badges">
+            <span class="footer-badge">501(c)(3) Public Charity</span>
+            <span class="footer-badge">Rochester, NY</span>
+          </div>
+        </div>
+
+        <!-- Links Column 1: Navigation -->
+        <div class="footer-nav-col">
+          <h5 class="footer-col-title">Navigation</h5>
+          <ul class="footer-link-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Operation GO</a></li>
+            <li><a href="programs.html">All Vocational Tracks</a></li>
+            <li><a href="index.html#testimonials">Stories &amp; Testimonials</a></li>
+            <li><a href="careers.html">Contractor Mentorship</a></li>
+            <li><a href="get-involved.html">Get Involved</a></li>
+            <li><a href="contact.html">Contact &amp; Visit</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Column 2: Foundry Tracks -->
+        <div class="footer-nav-col">
+          <h5 class="footer-col-title">Foundry Tracks</h5>
+          <ul class="footer-link-list">
+            <li><a href="programs.html#trades">The Career Ladder</a></li>
+            <li><a href="programs.html#sneaker">Sneaker Lab &amp; Apparel</a></li>
+            <li><a href="programs.html#media">Academic &amp; Media Studio</a></li>
+            <li><a href="programs.html#biz">Biz Brain Enterprise</a></li>
+            <li><a href="programs.html#reprogram">Reprogram Mindset</a></li>
+            <li><a href="programs.html#realestate">I Own Real Estate</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Column 3: Contact & Connect -->
+        <div class="footer-nav-col">
+          <h5 class="footer-col-title">Foundry &amp; Connect</h5>
+          <ul class="footer-link-list">
+            <li><span class="footer-meta-label">Location:</span> 100 Carlson Rd, Rochester, NY 14610</li>
+            <li><span class="footer-meta-label">Phone:</span> <a href="tel:5854840846">(585) 484-0846</a></li>
+            <li><span class="footer-meta-label">Email:</span> <a href="mailto:info@operationgo.org">info@operationgo.org</a></li>
+          </ul>
+          
+          <div class="footer-social-minimal">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor"></polygon>
+              </svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          © 2026 Operation GO™. All rights reserved.
+        </div>
+        <div class="footer-legal-links">
+          <a href="#">Privacy Policy</a>
+          <span class="sep">•</span>
+          <a href="#">Terms of Use</a>
+          <span class="sep">•</span>
+          <a href="#">501(c)(3) Disclosure</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Donation Modal -->
+  <div class="charido-modal-overlay" id="donateModal">
+    <div class="charido-modal-card">
+      <button class="modal-close-btn" aria-label="Close modal">✕</button>
+      <div class="modal-header">
+        <h3>Support Rochester Youth Trades</h3>
+        <p>100% of your donation directly funds student toolboxes, OSHA-10 safety gear, and paid youth stipends.</p>
+      </div>
+
+      <form id="charidoDonationForm">
+        <div class="donation-preset-row">
+          <button type="button" class="preset-amount-btn" data-amount="50">$50</button>
+          <button type="button" class="preset-amount-btn" data-amount="100">$100</button>
+          <button type="button" class="preset-amount-btn" data-amount="250">$250</button>
+          <button type="button" class="preset-amount-btn active" data-amount="500">$500</button>
+        </div>
+
+        <div class="form-group-charido">
+          <label for="customAmountInput">Amount ($ USD)</label>
+          <input type="number" id="customAmountInput" value="500" min="5" required>
+        </div>
+
+        <div class="form-group-charido">
+          <label for="donorName">Your Full Name</label>
+          <input type="text" id="donorName" placeholder="Justin Ortiz" required>
+        </div>
+
+        <div class="form-group-charido">
+          <label for="donorEmail">Your Email (for 501(c)(3) Receipt)</label>
+          <input type="email" id="donorEmail" placeholder="justin@example.com" required>
+        </div>
+
+        <button type="submit" class="btn-charido-orange" style="width: 100%; justify-content: center; margin-top: 10px;">
+          <span>Complete Secure Donation</span>
+          <span class="arrow-box">→</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

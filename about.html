@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us • Founder Story &amp; Mission | Operation GO™</title>
+  <meta name="description" content="Learn about Operation GO, founded by Rochester City School District graduate and master contractor Justin Ortiz to empower local youth with skilled trades mastery.">
+  
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=20261119_badge_blue">
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body class="about-page-sombo">
+
+  <!-- ==========================================================================
+       FLOATING FROSTED NAVBAR (LIGHT THEME FOR ABOUT PAGE)
+       ========================================================================== -->
+  <header class="charido-nav-wrapper">
+    <div class="container sombo-container">
+      <div class="charido-nav-inner">
+        <a href="index.html" class="charido-brand" aria-label="Operation GO Home">
+          <span class="brand-logo-badge">
+            <img src="images/logo.png" alt="Operation GO" class="brand-logo-img">
+          </span>
+        </a>
+
+        <nav class="charido-nav-links">
+          <a href="index.html" class="charido-nav-link">Home</a>
+          <a href="about.html" class="charido-nav-link active-page">About</a>
+          <a href="programs.html" class="charido-nav-link">Programs</a>
+          <a href="gallery.html" class="charido-nav-link">Gallery</a>
+          <a href="updates.html" class="charido-nav-link">Updates</a>
+          <a href="careers.html" class="charido-nav-link">Careers</a>
+          <a href="get-involved.html" class="charido-nav-link">Get Involved</a>
+          <a href="contact.html" class="charido-nav-link">Contact</a>
+        </nav>
+
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <button class="sombo-btn-forest" data-open-modal="donateModal" style="padding: 10px 22px; font-size: 0.88rem;">
+            Donate
+          </button>
+          <button class="mobile-toggle-btn" id="charidoMobileToggle" aria-label="Toggle navigation" style="color: #111827;">☰</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       1. HERO SECTION (Warm Cream Background #FAF7F2)
+       Matches user's reference design with connected photo constellation
+       ========================================================================== -->
+  <section class="sombo-hero-section">
+    <div class="sombo-container">
+      <div class="sombo-hero-grid">
+        
+        <!-- Left Content -->
+        <div class="sombo-hero-content">
+          <h1 class="sombo-hero-title">
+            Do Something Great To Help Others
+          </h1>
+
+          <p class="sombo-hero-desc">
+            Operation GO equips Rochester youth with hands-on trade mastery, OSHA certifications, and direct pathways to debt-free union careers.
+          </p>
+
+          <div class="sombo-hero-actions">
+            <button class="sombo-btn-forest" data-open-modal="donateModal">
+              Donate Now
+            </button>
+            <a href="#about-mission" class="sombo-btn-play">
+              <span class="play-circle">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon points="6 3 20 12 6 21 6 3"></polygon>
+                </svg>
+              </span>
+              <span>Play Video</span>
+            </a>
+          </div>
+
+          <!-- Stats Row (15K, 100+, 600+) -->
+          <div class="sombo-hero-stats">
+            <div class="sombo-stat-item">
+              <strong>15K</strong>
+              <span>Hours of Trades Training</span>
+            </div>
+            <div class="sombo-stat-sep"></div>
+            <div class="sombo-stat-item">
+              <strong>100+</strong>
+              <span>Cohorts Graduated</span>
+            </div>
+            <div class="sombo-stat-sep"></div>
+            <div class="sombo-stat-item">
+              <strong>600+</strong>
+              <span>Rochester Youth Mentored</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Visual: Connected Photo Constellation -->
+        <div class="sombo-constellation-wrap">
+          <!-- Subtle Dotted Grid / Constellation SVG -->
+          <svg class="sombo-constellation-svg" viewBox="0 0 500 500" fill="none">
+            <!-- Connecting dashed lines -->
+            <line x1="250" y1="90" x2="250" y2="180" stroke="#E5E0D8" stroke-width="1.5" stroke-dasharray="4 4" />
+            <line x1="250" y1="320" x2="200" y2="390" stroke="#E5E0D8" stroke-width="1.5" stroke-dasharray="4 4" />
+            <line x1="320" y1="250" x2="380" y2="180" stroke="#E5E0D8" stroke-width="1.5" stroke-dasharray="4 4" />
+            <line x1="180" y1="250" x2="100" y2="220" stroke="#E5E0D8" stroke-width="1.5" stroke-dasharray="4 4" />
+            <line x1="320" y1="280" x2="370" y2="370" stroke="#E5E0D8" stroke-width="1.5" stroke-dasharray="4 4" />
+            <!-- Decorative Plus (+) Cross Marks -->
+            <path d="M70 120 h12 m-6 -6 v12" stroke="#D1D5DB" stroke-width="1.5" stroke-linecap="round" />
+            <path d="M420 90 h12 m-6 -6 v12" stroke="#D1D5DB" stroke-width="1.5" stroke-linecap="round" />
+            <path d="M440 310 h12 m-6 -6 v12" stroke="#D1D5DB" stroke-width="1.5" stroke-linecap="round" />
+            <path d="M80 340 h12 m-6 -6 v12" stroke="#D1D5DB" stroke-width="1.5" stroke-linecap="round" />
+            <path d="M260 40 h12 m-6 -6 v12" stroke="#D1D5DB" stroke-width="1.5" stroke-linecap="round" />
+          </svg>
+
+          <!-- Central Circular Seal Badge -->
+          <div class="sombo-center-badge">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+            </svg>
+            <span>OPERATION GO</span>
+            <strong>DO GOOD</strong>
+            <span>ROCHESTER NY</span>
+          </div>
+
+          <!-- Circular Thumbnail Satellites -->
+          <div class="sombo-thumb thumb-top">
+            <video autoplay loop muted playsinline webkit-playsinline poster="images/carpentry-student.jpg">
+              <source src="videos/opgo-expo.mp4" type="video/mp4">
+              <source src="videos/welding-craft.webm" type="video/webm">
+            </video>
+          </div>
+
+          <div class="sombo-thumb thumb-top-right">
+            <img src="images/gdrive/carpentry-workshop.jpg" alt="Apprentice reviewing blueprints and carpentry framing" loading="lazy">
+          </div>
+
+          <div class="sombo-thumb thumb-mid-left">
+            <img src="images/justin-ortiz-original.jpg" alt="Justin Ortiz founder" loading="lazy">
+          </div>
+
+          <div class="sombo-thumb thumb-bottom-left">
+            <video autoplay loop muted playsinline webkit-playsinline poster="images/gdrive/sneaker-design-smiling.jpg">
+              <source src="videos/opgo-apparel.mp4" type="video/mp4">
+              <source src="videos/urban-fashion.webm" type="video/webm">
+            </video>
+          </div>
+
+          <div class="sombo-thumb thumb-bottom-right">
+            <img src="images/gdrive/workshop-youth-dsc0111.jpg" alt="Construction apprentice" loading="lazy">
+          </div>
+
+          <!-- Floating Decorative Pastel Tag Pins -->
+          <div class="sombo-tag-pin pin-heart" title="Passion for Youth">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+          </div>
+
+          <div class="sombo-tag-pin pin-smile" title="Community Support">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+              <line x1="9" y1="9" x2="9.01" y2="9"></line>
+              <line x1="15" y1="9" x2="15.01" y2="9"></line>
+            </svg>
+          </div>
+
+          <div class="sombo-tag-pin pin-star" title="Union Pathways">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       2. MISSION SECTION (White Background #FFFFFF)
+       4-Photo Architectural Arch Collage + Dual Feature Points
+       ========================================================================== -->
+  <section class="sombo-mission-section" id="about-mission">
+    <div class="sombo-container">
+      <div class="sombo-mission-grid">
+        
+        <!-- Left Column: Featured Operation GO Student Showcase Card -->
+        <div class="sombo-cohort-showcase-wrap">
+          <div class="sombo-cohort-feature-card">
+            <img 
+              src="images/gdrive/workshop-team-dsc0080.jpg" 
+              alt="Operation GO Youth Student in Hands-on Trade Training" 
+              class="sombo-cohort-feature-img"
+              loading="lazy"
+            >
+          </div>
+        </div>
+
+        <!-- Right Column: Story & 2 Feature Items -->
+        <div class="sombo-mission-content">
+          <h2 class="sombo-section-title">
+            Helping People In Need Around The World
+          </h2>
+          <p class="sombo-mission-desc">
+            Founded in Rochester, NY by RCSD graduate and master contractor Justin Ortiz, Operation GO™ is a community-driven skilled trades and creative workforce foundry equipping urban youth ages 12–18 with OSHA credentials, paid apprentice stipends, and debt-free generational careers.
+          </p>
+
+          <div class="sombo-features-list">
+            <!-- Feature 1: Rose Icon -->
+            <div class="sombo-feature-item">
+              <div class="sombo-feature-icon icon-rose">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                </svg>
+              </div>
+              <div class="sombo-feature-body">
+                <h4>Tuition-Free Vocational Education</h4>
+                <p>100% free OSHA-10 certified instruction across commercial carpentry, bespoke footwear, cinema production, and structural trades.</p>
+              </div>
+            </div>
+
+            <!-- Feature 2: Yellow Icon -->
+            <div class="sombo-feature-item">
+              <div class="sombo-feature-icon icon-yellow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                </svg>
+              </div>
+              <div class="sombo-feature-body">
+                <h4>Living Wages &amp; Union Pipelines</h4>
+                <p>Direct placement into union apprenticeships (Carpenters Local 276, electrical, framing) paying $25–$45/hr starting wages with zero loan debt.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       3. CATEGORY / PROGRAM CARDS (Warm Cream Background #FAF7F2)
+       "Program to Empower Others"
+       ========================================================================== -->
+  <section class="sombo-programs-section">
+    <div class="sombo-container">
+      <div class="sombo-programs-header">
+        <h2 class="sombo-section-title">Program to Empower Others</h2>
+        <p class="sombo-section-subtitle">Comprehensive vocational mastery equipping youth for life-long career independence</p>
+      </div>
+
+      <div class="sombo-programs-grid">
+        <!-- Card 1: Commercial Carpentry (Yellow) -->
+        <div class="sombo-program-card">
+          <div class="sombo-program-icon icon-yellow">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+            </svg>
+          </div>
+          <h3>Commercial Carpentry</h3>
+          <p>Structural timber framing, architectural blueprint reading, joinery, and job-site safety.</p>
+          <a href="programs.html#trades" class="sombo-card-link">Learn More →</a>
+        </div>
+
+        <!-- Card 2: Sneaker Lab (Blue) -->
+        <div class="sombo-program-card">
+          <div class="sombo-program-icon icon-blue">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+              <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+              <path d="M2 2l7.586 7.586"></path>
+              <circle cx="11" cy="11" r="2"></circle>
+            </svg>
+          </div>
+          <h3>Sneaker &amp; Apparel Lab</h3>
+          <p>1-of-1 bespoke footwear fabrication, industrial leather stitching, and CAD patterning software.</p>
+          <a href="programs.html#sneaker" class="sombo-card-link">Learn More →</a>
+        </div>
+
+        <!-- Card 3: Mentorship (Purple) -->
+        <div class="sombo-program-card">
+          <div class="sombo-program-icon icon-purple">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </div>
+          <h3>Social Services &amp; Mentorship</h3>
+          <p>1-on-1 contractor guidance, financial literacy, emotional resilience, and mindset coaching.</p>
+          <a href="programs.html#reprogram" class="sombo-card-link">Learn More →</a>
+        </div>
+
+        <!-- Card 4: Cinema Studio (Pink) -->
+        <div class="sombo-program-card">
+          <div class="sombo-program-icon icon-pink">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect>
+              <line x1="7" y1="2" x2="7" y2="22"></line>
+              <line x1="17" y1="2" x2="17" y2="22"></line>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <line x1="2" y1="7" x2="7" y2="7"></line>
+              <line x1="2" y1="17" x2="7" y2="17"></line>
+              <line x1="17" y1="17" x2="22" y2="17"></line>
+              <line x1="17" y1="7" x2="22" y2="7"></line>
+            </svg>
+          </div>
+          <h3>Cinema &amp; Soundstage</h3>
+          <p>4K digital cinema camera packages, acoustic sound booth, lighting grid, and post-production suites.</p>
+          <a href="programs.html#media" class="sombo-card-link">Learn More →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       4. CAMPAIGN SHOWCASE (White Background #FFFFFF)
+       "Introduce Our Campaign"
+       ========================================================================== -->
+  <section class="sombo-campaign-section">
+    <div class="sombo-container">
+      <div class="sombo-section-header-row">
+        <div>
+          <h2 class="sombo-section-title">Introduce Our Campaign</h2>
+          <p class="sombo-section-subtitle">Every contribution directly equips Rochester youth with certified tools &amp; stipends</p>
+        </div>
+        <a href="programs.html" class="sombo-view-all-link">View All →</a>
+      </div>
+
+      <div class="sombo-campaign-grid">
+        <!-- Campaign Card 1 -->
+        <div class="sombo-campaign-card">
+          <div class="sombo-campaign-img-wrap">
+            <video autoplay loop muted playsinline webkit-playsinline poster="images/carpentry-drill.jpg">
+              <source src="videos/opgo-expo.mp4" type="video/mp4">
+              <source src="videos/welding-craft.webm" type="video/webm">
+            </video>
+          </div>
+          <div class="sombo-campaign-body">
+            <h3>Help Donate for Campus Trades &amp; Tool Kits</h3>
+            <p>Equip one Rochester high school apprentice with commercial DeWalt power tools, safety gear, and certified PPE.</p>
+            
+            <div class="sombo-progress-wrap">
+              <div class="sombo-progress-track">
+                <div class="sombo-progress-fill" style="width: 85%;"></div>
+              </div>
+              <div class="sombo-progress-meta">
+                <span>Raised: <strong>$17,000</strong></span>
+                <span>Goal: <strong>$20,000</strong></span>
+              </div>
+            </div>
+
+            <button class="sombo-btn-forest" data-open-modal="donateModal">
+              Donate Now
+            </button>
+          </div>
+        </div>
+
+        <!-- Campaign Card 2 -->
+        <div class="sombo-campaign-card">
+          <div class="sombo-campaign-img-wrap">
+            <video autoplay loop muted playsinline webkit-playsinline poster="images/gdrive/custom-sneakers-craft.jpg">
+              <source src="videos/opgo-apparel.mp4" type="video/mp4">
+              <source src="videos/urban-fashion.webm" type="video/webm">
+            </video>
+          </div>
+          <div class="sombo-campaign-body">
+            <h3>Campaign to Provide Tools for Creative Labs</h3>
+            <p>Provide industrial leather sewing machines, precision airbrushing stations, and raw materials for youth footwear designers.</p>
+            
+            <div class="sombo-progress-wrap">
+              <div class="sombo-progress-track">
+                <div class="sombo-progress-fill" style="width: 64%;"></div>
+              </div>
+              <div class="sombo-progress-meta">
+                <span>Raised: <strong>$12,800</strong></span>
+                <span>Goal: <strong>$20,000</strong></span>
+              </div>
+            </div>
+
+            <button class="sombo-btn-forest" data-open-modal="donateModal">
+              Donate Now
+            </button>
+          </div>
+        </div>
+
+        <!-- Campaign Card 3 -->
+        <div class="sombo-campaign-card">
+          <div class="sombo-campaign-img-wrap">
+            <video autoplay loop muted playsinline webkit-playsinline poster="images/gdrive/film-production-slate.jpg">
+              <source src="videos/opgo-vision.mp4" type="video/mp4">
+              <source src="videos/3d-printing-craft.webm" type="video/webm">
+            </video>
+          </div>
+          <div class="sombo-campaign-body">
+            <h3>Equip Cinema Soundstage &amp; Sound Booth</h3>
+            <p>Fund commercial 4K camera packages, acoustic treatment, lighting grids, and DaVinci grading suites.</p>
+            
+            <div class="sombo-progress-wrap">
+              <div class="sombo-progress-track">
+                <div class="sombo-progress-fill" style="width: 92%;"></div>
+              </div>
+              <div class="sombo-progress-meta">
+                <span>Raised: <strong>$18,400</strong></span>
+                <span>Goal: <strong>$20,000</strong></span>
+              </div>
+            </div>
+
+            <button class="sombo-btn-forest" data-open-modal="donateModal">
+              Donate Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       5. NEWS & UPDATES (Warm Cream Background #FAF7F2)
+       "News and Updates"
+       ========================================================================== -->
+  <section class="sombo-news-section">
+    <div class="sombo-container">
+      <div class="sombo-section-header-row">
+        <div>
+          <h2 class="sombo-section-title">News and Updates</h2>
+          <p class="sombo-section-subtitle">Stay informed with the latest apprentice triumphs, stories, and foundry milestones</p>
+        </div>
+        <a href="impact.html" class="sombo-view-all-link">All News →</a>
+      </div>
+
+      <div class="sombo-news-grid">
+        <!-- News 1 -->
+        <div class="sombo-news-card">
+          <div class="sombo-news-img-wrap">
+            <img src="images/gdrive/workshop-team-dsc0041.jpg" alt="Safety instructor teaching trade apprentice" loading="lazy">
+          </div>
+          <div class="sombo-news-body">
+            <span class="sombo-news-meta">OCTOBER 2026</span>
+            <h4>Facts About OSHA-10 Safety In High School Programs</h4>
+            <p>How certified job-site safety turns novice students into trusted, high-earning union apprentices.</p>
+            <a href="programs.html" class="sombo-card-link">Read More →</a>
+          </div>
+        </div>
+
+        <!-- News 2 -->
+        <div class="sombo-news-card">
+          <div class="sombo-news-img-wrap">
+            <img src="images/gdrive/generation-go-celebrate.jpg" alt="Cohort milestone celebration" loading="lazy">
+          </div>
+          <div class="sombo-news-body">
+            <span class="sombo-news-meta">SEPTEMBER 2026</span>
+            <h4>Youth Cohort Celebrates Union Apprenticeship Entry</h4>
+            <p>Celebrating Marcus T. and three classmates joining Carpenters Local 276 commercial framing.</p>
+            <a href="impact.html" class="sombo-card-link">Read More →</a>
+          </div>
+        </div>
+
+        <!-- News 3 -->
+        <div class="sombo-news-card">
+          <div class="sombo-news-img-wrap">
+            <img src="images/gdrive/custom-sneakers-display.jpg" alt="Custom sneakers design display" loading="lazy">
+          </div>
+          <div class="sombo-news-body">
+            <span class="sombo-news-meta">AUGUST 2026</span>
+            <h4>Sneaker Lab Unveils Bespoke Handcrafted Collection</h4>
+            <p>High school apprentices debut custom leather footwear at the regional creative design showcase.</p>
+            <a href="programs.html#sneaker" class="sombo-card-link">Read More →</a>
+          </div>
+        </div>
+
+        <!-- News 4 -->
+        <div class="sombo-news-card">
+          <div class="sombo-news-img-wrap">
+            <img src="images/gdrive/greenlight-card-photo.jpg" alt="Financial literacy and property investments class" loading="lazy">
+          </div>
+          <div class="sombo-news-body">
+            <span class="sombo-news-meta">JULY 2026</span>
+            <h4>Economic Mobility &amp; Debt-Free Career Paths</h4>
+            <p>Why skilled trade careers provide immediate living wages without crushing student debt.</p>
+            <a href="careers.html" class="sombo-card-link">Read More →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       6. CTA / COMMUNITY BANNER (White Background #FFFFFF)
+       "Participate In Charity Around The Whole World"
+       ========================================================================== -->
+  <section class="sombo-cta-section">
+    <div class="sombo-container">
+      <div class="sombo-cta-grid">
+        
+        <!-- Left Content -->
+        <div class="sombo-cta-content">
+          <h2 class="sombo-section-title">
+            Participate In Charity Around The Whole World
+          </h2>
+          <p class="sombo-cta-desc">
+            Join master contractors, union leaders, and local families in creating sustainable pathways for the next generation. Every hour and contribution builds a lifetime of pride.
+          </p>
+
+          <a href="get-involved.html" class="sombo-btn-forest">
+            Join Our Movement
+          </a>
+        </div>
+
+        <!-- Right Visual: Framed Image -->
+        <div class="sombo-cta-visual">
+          <div class="sombo-cta-img-card">
+            <img src="images/857405854_29990057873927598_5903710394121560792_n.jpg" alt="Operation GO Community Movement" loading="lazy">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       7. MINIMALIST OBSIDIAN-PINE FOOTER (STANDARDIZED)
+       ========================================================================== -->
+  <footer class="site-minimal-footer">
+    <div class="sombo-container">
+      
+      <!-- Main Footer Grid -->
+      <div class="footer-grid">
+        
+        <!-- Brand & Mission Column -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="footer-brand" aria-label="Operation GO Home">
+            <img src="images/logo.png" alt="Operation GO" class="footer-logo">
+          </a>
+          <p class="footer-desc">
+            Rochester’s nonprofit workforce foundry. Cultivating debt-free futures and living-wage careers for youth through hands-on mastery in skilled trades, design, and enterprise.
+          </p>
+          <div class="footer-badges">
+            <span class="footer-badge">501(c)(3) Public Charity</span>
+            <span class="footer-badge">Rochester, NY</span>
+          </div>
+        </div>
+
+        <!-- Links Column 1: Navigation -->
+        <div class="footer-nav-col">
+          <h5 class="footer-col-title">Navigation</h5>
+          <ul class="footer-link-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Operation GO</a></li>
+            <li><a href="programs.html">All Vocational Tracks</a></li>
+            <li><a href="index.html#testimonials">Stories &amp; Testimonials</a></li>
+            <li><a href="careers.html">Contractor Mentorship</a></li>
+            <li><a href="get-involved.html">Get Involved</a></li>
+            <li><a href="contact.html">Contact &amp; Visit</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Column 2: Foundry Tracks -->
+        <div class="footer-nav-col">
+          <h5 class="footer-col-title">Foundry Tracks</h5>
+          <ul class="footer-link-list">
+            <li><a href="programs.html#trades">The Career Ladder</a></li>
+            <li><a href="programs.html#sneaker">Sneaker Lab &amp; Apparel</a></li>
+            <li><a href="programs.html#media">Academic &amp; Media Studio</a></li>
+            <li><a href="programs.html#biz">Biz Brain Enterprise</a></li>
+            <li><a href="programs.html#reprogram">Reprogram Mindset</a></li>
+            <li><a href="programs.html#realestate">I Own Real Estate</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Column 3: Contact & Connect -->
+        <div class="footer-nav-col">
+          <h5 class="footer-col-title">Foundry &amp; Connect</h5>
+          <ul class="footer-link-list">
+            <li><span class="footer-meta-label">Location:</span> 100 Carlson Rd, Rochester, NY 14610</li>
+            <li><span class="footer-meta-label">Phone:</span> <a href="tel:5854840846">(585) 484-0846</a></li>
+            <li><span class="footer-meta-label">Email:</span> <a href="mailto:info@operationgo.org">info@operationgo.org</a></li>
+          </ul>
+          
+          <div class="footer-social-minimal">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor"></polygon>
+              </svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          © 2026 Operation GO™. All rights reserved.
+        </div>
+        <div class="footer-legal-links">
+          <a href="#">Privacy Policy</a>
+          <span class="sep">•</span>
+          <a href="#">Terms of Use</a>
+          <span class="sep">•</span>
+          <a href="#">501(c)(3) Disclosure</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Donation Modal -->
+  <div class="charido-modal-overlay" id="donateModal">
+    <div class="charido-modal-card">
+      <button class="modal-close-btn" aria-label="Close modal">✕</button>
+      <div class="modal-header">
+        <span class="section-kicker" style="margin-bottom: 8px;">TAX-DEDUCTIBLE 501(C)(3)</span>
+        <h3>Support Rochester Youth Trades</h3>
+        <p>100% of your donation directly funds student toolboxes, OSHA-10 safety gear, and paid youth stipends.</p>
+      </div>
+
+      <form id="charidoDonationForm">
+        <div class="donation-preset-row">
+          <button type="button" class="preset-amount-btn" data-amount="50">$50</button>
+          <button type="button" class="preset-amount-btn" data-amount="100">$100</button>
+          <button type="button" class="preset-amount-btn" data-amount="250">$250</button>
+          <button type="button" class="preset-amount-btn active" data-amount="500">$500</button>
+        </div>
+
+        <div class="form-group-charido">
+          <label for="customAmountInput">Amount ($ USD)</label>
+          <input type="number" id="customAmountInput" value="500" min="5" required>
+        </div>
+
+        <div class="form-group-charido">
+          <label for="donorName">Your Full Name</label>
+          <input type="text" id="donorName" placeholder="Justin Ortiz" required>
+        </div>
+
+        <div class="form-group-charido">
+          <label for="donorEmail">Your Email (for 501(c)(3) Receipt)</label>
+          <input type="email" id="donorEmail" placeholder="justin@example.com" required>
+        </div>
+
+        <button type="submit" class="sombo-btn-forest" style="width: 100%; justify-content: center; margin-top: 10px;">
+          <span>Complete Secure Donation</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
